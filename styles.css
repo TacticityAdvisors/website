@@ -532,6 +532,16 @@ h1 em { font-style: italic; color: var(--teal); }
 }
 .about-story p:last-child { margin-bottom: 0; }
 .about-story strong { font-weight: 500; color: var(--ink); }
+.about-talks {
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--ink-65);
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border);
+  font-style: italic;
+}
 
 /* ══ WORKING WITH US ══ */
 .working { padding: 6rem 0; background: var(--white); border-bottom: 1px solid var(--border); }
@@ -551,7 +561,17 @@ h1 em { font-style: italic; color: var(--teal); }
 .working-card:hover::after { transform: scaleX(1); }
 .working-card:nth-child(2n) { border-right: none; }
 .working-card:nth-child(3), .working-card:nth-child(4) { border-bottom: none; }
-.wc-num { font-family: var(--font-mono); font-size: .54rem; letter-spacing: .14em; color: var(--ink-18); margin-bottom: .6rem; }
+.wc-num {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+  color: var(--teal);
+  margin-bottom: .75rem;
+  padding-bottom: .5rem;
+  border-bottom: 1.5px solid var(--teal);
+  display: inline-block;
+}
 .wc-title { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; color: var(--ink); line-height: 1.25; margin-bottom: .75rem; }
 .wc-body { font-size: .875rem; font-weight: 300; color: var(--ink-65); line-height: 1.8; }
 
@@ -587,6 +607,14 @@ h1 em { font-style: italic; color: var(--teal); }
   letter-spacing: .08em; color: rgba(255,255,255,.18);
 }
 .footer-copy a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer-address {
+  display: block;
+  font-size: .5rem;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.14);
+  margin-top: .35rem;
+  font-style: normal;
+}
 .footer-nav { display: flex; gap: 1.75rem; }
 .footer-nav a { font-size: .78rem; color: rgba(255,255,255,.22); transition: color .15s; }
 .footer-nav a:hover { color: rgba(255,255,255,.6); }
