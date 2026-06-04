@@ -164,9 +164,9 @@ h2 em { font-style: italic; color: var(--teal); }
 ══════════════════════════════════ */
 .hero {
   padding-top: var(--nav-h);
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 420px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   background: var(--white);
   border-bottom: 1px solid var(--border);
   position: relative; overflow: hidden;
@@ -185,8 +185,9 @@ h2 em { font-style: italic; color: var(--teal); }
 .hero-copy {
   position: relative; z-index: 1;
   padding: 7rem 3.5rem 5rem;
-  display: flex; flex-direction: column; justify-content: center;
-  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  width: 100%;
+  max-width: 860px;
 }
 
 .hero-accent {
@@ -252,67 +253,12 @@ h1 em { font-style: italic; color: var(--teal); }
 
 .provenance-statement em { font-style: italic; color: var(--teal); }
 
-/* ── Hero right: visual panel ── */
-.hero-visual {
-  position: relative; z-index: 1;
-  background: var(--surface);
-  display: flex; flex-direction: column;
-  justify-content: center;
-  padding: 5rem 2.75rem;
-  overflow: hidden;
-  animation: fadeUp .55s var(--ease) .2s both;
-}
 
 
 
-/* Credential cards in the panel */
-.cred-panel-label {
-  font-family: var(--font-mono); font-size: .54rem;
-  letter-spacing: .2em; text-transform: uppercase; color: var(--ink-40);
-  margin-bottom: 1.5rem; padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.cred-cards { display: flex; flex-direction: column; gap: 0; }
-
-.cred-card {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border);
-  display: flex; gap: 1rem; align-items: flex-start;
-}
-.cred-card:last-child { border-bottom: none; }
-
-.cred-card-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--teal); flex-shrink: 0; margin-top: .45rem;
-}
-
-.cred-card-main {
-  font-size: .88rem; font-weight: 500; color: var(--ink);
-  line-height: 1.35; margin-bottom: .2rem;
-}
-
-.cred-card-sub {
-  font-family: var(--font-mono); font-size: .56rem;
-  letter-spacing: .1em; text-transform: uppercase; color: var(--teal);
-}
-
-/* Visual ruler / structural diagram element */
-.hero-diagram {
-  margin-top: 2.5rem;
-  border: 1px solid var(--border);
-  background: var(--white);
-  padding: 1.5rem;
-}
-
-.diagram-label {
-  font-family: var(--font-mono); font-size: .54rem;
-  letter-spacing: .16em; text-transform: uppercase;
-  color: var(--ink-40); margin-bottom: 1.25rem;
-}
 
 /* SVG risk-benefit diagram */
-.diagram-svg { width: 100%; }
+
 
 /* ══════════════════════════════════
    EXPERTISE STRIP
@@ -722,11 +668,6 @@ h1 em { font-style: italic; color: var(--teal); }
 }
 
 /* ══ RESPONSIVE ══ */
-@media (max-width: 1000px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
-  .hero-copy { border-right: none; padding: 5rem 2rem 4rem; }
-}
 @media (max-width: 900px) {
   .nav { padding: 0 1.5rem; }
   .nav-links, .nav-cta { display: none; }
