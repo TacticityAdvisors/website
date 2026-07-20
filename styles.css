@@ -475,3 +475,20 @@ h2 em { font-style: italic; color: var(--teal); }
   padding-bottom: 1px;
 }
 .cta-linkedin a:hover { color: var(--teal-light); border-color: var(--teal-light); }
+/* ---- Typewriter effect on hero kicker ---- */
+.hero-kicker.tw::after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background: var(--teal);
+  vertical-align: -0.15em;
+  animation: twBlink 0.9s steps(1) infinite;
+}
+.hero-kicker.tw.done::after { animation: twBlink 0.9s steps(1) 3; } /* cursor fades after typing */
+@keyframes twBlink { 50% { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kicker.tw::after { display: none; }  /* no cursor, text shows normally */
+}
