@@ -32,3 +32,35 @@
     });
   });
 })();
+/* ---- Typewriter effect: hero kicker ---- */
+(function () {
+  var el = document.querySelector('.hero-kicker');
+  if (!el) return;
+
+  // Respect reduced-motion: leave text as-is, no animation
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var full = el.textContent;
+  el.classList.add('tw');
+
+  // Keep the real text for screen readers; only hide it visually while typing
+  var sr = document.createElement('span');
+  sr.textContent = full;
+  sr.style.position = 'absolute';
+  sr.style.width = '1px'; sr.style.height = '1px';
+  sr.style.overflow = 'hidden'; sr.style.clip = 'rect(0 0 0 0)';
+  el.setAttribute('aria-hidden', 'false');
+
+  el.textContent = '';        // clear visible copy
+  var i = 0;
+  function type() {
+    if (i <= full.length) {
+      el.textContent = full.slice(0, i);
+      i++;
+      setTimeout(type, 38);   // ~38ms per character
+    } else {
+      el.classList.add('done'); // cursor blinks a few times then stops
+    }
+  }
+  setTimeout(type, 350);      // small delay after page fade-in
+})();
