@@ -201,13 +201,20 @@
 </nav>
 <div class="nav-drawer" id="drawer" role="dialog" aria-label="Mobile menu">
   <a href="what-we-do.html">What We Do</a>
-  <a href="services.html">Services</a>
+  <div class="drawer-parent">
+    <a href="services.html" class="drawer-parent-link">Services</a>
+    <button class="drawer-arrow-btn" id="servicesToggle" aria-expanded="false" aria-controls="servicesSubList" aria-label="Toggle Services submenu">
+      <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <div class="drawer-sub-list" id="servicesSubList">
     <a href="regulatory-strategy.html" class="drawer-sub">Regulatory Strategy & Pathway</a>
     <a href="premarket-submissions.html" class="drawer-sub">FDA Premarket Submissions</a>
     <a href="biocompatibility.html" class="drawer-sub">Biocompatibility & Materials Evaluation</a>
     <a href="testing-strategy.html" class="drawer-sub">Testing Strategy & Evidence Planning</a>
     <a href="quality-compliance.html" class="drawer-sub">Quality System & Compliance</a>
     <a href="enforcement-response.html" class="drawer-sub">FDA Enforcement Response & Remediation</a>
+  </div>
   <a href="how-we-work.html">How We Work</a>
   <a href="about.html">About</a>
   <a href="contact.html" class="nav-cta">Schedule Consultation</a>
