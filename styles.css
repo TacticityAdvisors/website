@@ -68,8 +68,8 @@ ul { list-style: none; }
 /* ── SECTION LABEL ── */
 .section-label {
   display: flex; align-items: center; gap: .75rem;
-  font-family: var(--font-mono); font-size: .74rem; font-weight: 500;
-  letter-spacing: .18em; text-transform: uppercase; color: var(--teal);
+  font-family: var(--font-mono); font-size: .92rem; font-weight: 500;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--teal);
   margin-bottom: 1.5rem;
 }
 .section-label::before {
