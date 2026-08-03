@@ -315,7 +315,7 @@ h2 em { font-style: italic; color: var(--teal); }
    SERVICES
    ============================================================ */
 .svc-intro { margin-top: 1.5rem; }
-.svc-intro-text { font-family: var(--font-serif); font-style: italic; font-size: 1.25rem; font-weight: 400; color: var(--teal); line-height: 1.55; margin-top: 20px; max-width: 68ch; }
+.svc-intro-text { font-family: var(--font-serif); font-style: italic; font-size: 1.45rem; font-weight: 600; color: var(--teal); line-height: 1.5; margin-top: 20px; max-width: 68ch; }
 .svc-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 3rem; border: 1px solid var(--border); }
 .svc-group { padding: 2rem 2.25rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); transition: background .18s; position: relative; overflow: hidden; }
 .svc-group::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%; background: var(--teal); transform: scaleY(0); transform-origin: top; transition: transform .35s var(--ease); }
