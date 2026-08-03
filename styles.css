@@ -294,7 +294,7 @@ h2 em { font-style: italic; color: var(--teal); }
 /* ============================================================
    WHY TACTICITY
    ============================================================ */
-.pullquote { background: var(--teal); padding: 2.25rem 2.75rem; border-left: 2.5px solid var(--teal-light); margin: 2rem 0; border-radius: 6px; }
+.pullquote { background: var(--teal); padding: 1.75rem 2rem; border-left: 2.5px solid var(--teal-light); margin: 2rem 0 2rem -2.13rem; border-radius: 6px; }
 .pullquote p { font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; line-height: 1.55; color: #ffffff; }
 
 /* ============================================================
@@ -328,7 +328,7 @@ h2 em { font-style: italic; color: var(--teal); }
 .svc-group-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; color: var(--ink); line-height: 1.2; margin-bottom: .4rem; }
 .svc-group-sub { font-family: var(--font-mono); font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-65); line-height: 1.5; }
 .svc-items { list-style: none; display: flex; flex-direction: column; counter-reset: svc-counter; }
-.svc-items li { font-size: 1.2rem; font-weight: 500; color: var(--ink); line-height: 1.6; padding: .6rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 1.1rem; counter-increment: svc-counter; }
+.svc-items li { padding: 1.35rem 0; border-bottom: 1px solid var(--border); display: flex; align-items: flex-start; gap: 1.1rem; counter-increment: svc-counter; }
 .svc-items li:last-child { border-bottom: none; }
 .svc-items li::before {
   content: counter(svc-counter, decimal-leading-zero);
@@ -339,7 +339,11 @@ h2 em { font-style: italic; color: var(--teal); }
   flex-shrink: 0;
   min-width: 2.2rem;
   line-height: 1;
+  padding-top: .1rem;
 }
+.svc-item-content { display: flex; flex-direction: column; gap: .45rem; }
+.svc-item-title { font-size: 1.2rem; font-weight: 500; color: var(--ink); line-height: 1.4; }
+.svc-item-desc { font-size: .98rem; font-weight: 400; color: var(--ink-65); line-height: 1.65; max-width: 62ch; }
 
 /* ============================================================
    STAGES
