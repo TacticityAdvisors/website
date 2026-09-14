@@ -1096,25 +1096,32 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
    ============================================================ */
 .team { padding: 6rem 0; background: var(--canvas); border-bottom: 1px solid var(--border); }
 .page-header h1.h1--team { max-width: 780px; font-size: clamp(1.5rem, 2.35vw, 1.92rem); line-height: 1.45; }
+@media (min-width: 1200px) {
+  .page-header h1.h1--team { width: calc(100% + 200px); max-width: none; font-size: 2.2rem; line-height: 1.4; }
+}
 
 /* Leadership — Tanmay Jain, Utkarsh Jain */
 .leader-card { border: 1px solid var(--border); margin-bottom: 2.75rem; overflow: hidden; transition: box-shadow .25s var(--ease); }
 .leader-card:last-of-type { margin-bottom: 0; }
 .leader-card:hover { box-shadow: 0 18px 38px rgba(23,23,26,.07); }
-.leader-top { display: flex; gap: 3rem; align-items: flex-start; padding: 3rem; }
-.leader-photo { width: 300px; height: 375px; flex-shrink: 0; overflow: hidden; border: 1px solid var(--border); }
-.leader-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; transition: transform .6s var(--ease); }
-.leader-card:hover .leader-photo img { transform: scale(1.03); }
-.leader-info { display: flex; flex-direction: column; justify-content: flex-start; padding-top: .5rem; min-width: 0; }
-.leader-name { font-family: var(--font-serif); font-size: 2.45rem; font-weight: 500; color: var(--ink); line-height: 1.1; margin-bottom: .55rem; }
-.leader-role { font-family: var(--font-mono); font-size: .88rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); line-height: 1.75; margin-bottom: 1.6rem; }
-.leader-summary { font-size: 1.16rem; font-weight: 400; line-height: 1.9; color: var(--ink-65); }
+.leader-hero { position: relative; width: 100%; height: 460px; overflow: hidden; }
+.leader-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center center; transition: transform .6s var(--ease); }
+.leader-card:hover .leader-hero img { transform: scale(1.03); }
+.leader-hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(15,40,34,.90) 0%, rgba(15,40,34,.45) 42%, rgba(15,40,34,0) 72%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 2.5rem 3rem;
+}
+.leader-name { font-family: var(--font-serif); font-size: 2.45rem; font-weight: 500; color: #ffffff; line-height: 1.1; margin-bottom: .5rem; }
+.leader-role { font-family: var(--font-mono); font-size: .88rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; color: #cfe9df; line-height: 1.75; }
+.leader-summary { padding: 2.5rem 3rem; font-size: 1.16rem; font-weight: 400; line-height: 1.9; color: var(--ink-65); }
 .team-label { font-family: var(--font-mono); font-size: 1rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.75rem; }
 
 /* Divider — "Our Scientific Advisors" */
 .team-divider { display: flex; align-items: center; gap: 1.5rem; margin: 5rem 0 3rem; }
 .team-divider::before, .team-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-.team-divider span { font-family: var(--font-mono); font-size: .8rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); white-space: nowrap; }
+.team-divider span { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); white-space: nowrap; }
 
 /* Scientific advisors — bigger standalone cards */
 .advisors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -1133,10 +1140,11 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .advisors-grid-single .advisor-card { width: 100%; max-width: 374px; }
 
 @media (max-width: 600px) {
-  .leader-top { flex-direction: column; padding: 1.75rem; gap: 1.5rem; }
-  .leader-photo { width: 100%; height: auto; aspect-ratio: 4/5; }
-  .leader-photo img { object-position: center 20%; }
-  .leader-name { font-size: 1.95rem; }
+  .leader-hero { height: 280px; }
+  .leader-hero-overlay { padding: 1.5rem 1.75rem; }
+  .leader-name { font-size: 1.7rem; }
+  .leader-role { font-size: .74rem; }
+  .leader-summary { padding: 1.75rem; font-size: 1.02rem; }
   .advisors-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .advisors-grid-single { margin-top: 0; }
   .advisors-grid-single .advisor-card { max-width: none; }
