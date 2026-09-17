@@ -1489,3 +1489,18 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
   color: var(--ink-40);
   margin-top: .6rem;
 }
+
+/* ============================================================
+   INVESTMENTS (Tacticity Capital)
+   ============================================================ */
+.inv-section { padding: 3.5rem 0; border-top: 1px solid var(--border); }
+.inv-section:first-of-type { border-top: none; }
+.inv-section-head { max-width: 62ch; margin-bottom: 1.8rem; }
+.inv-kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); font-weight: 500; margin-bottom: .6rem; }
+.inv-section-title { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 500; color: var(--ink); margin-bottom: .7rem; }
+.inv-section-sub { font-size: .98rem; color: var(--ink-65); line-height: 1.65; }
+.inv-diff-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 1.8rem; }
+.inv-diff-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 1.6rem; }
+.inv-diff-title { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--teal); margin-bottom: .6rem; }
+.inv-diff-body { font-size: .92rem; color: var(--ink-65); line-height: 1.6; }
+@media (max-width: 760px) { .inv-diff-grid { grid-template-columns: 1fr; } }
