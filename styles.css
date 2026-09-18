@@ -1496,7 +1496,10 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .inv-section { padding: 3.5rem 0; border-top: 1px solid var(--border); }
 .inv-section:first-of-type { border-top: none; }
 .inv-section-head { max-width: 62ch; margin-bottom: 1.8rem; }
-.inv-kicker { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); font-weight: 500; margin-bottom: .6rem; }
+.inv-kicker { font-family: var(--font-mono); font-size: .88rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); font-weight: 500; margin-bottom: .6rem; }
+.page-investments .section-label { font-size: 1.08rem; }
+.page-investments .hero-btns .btn-ghost-light { flex: 1 1 0; text-align: center; }
+@media (max-width: 600px) { .page-investments .hero-btns .btn-ghost-light { flex: none; width: 100%; } }
 .inv-section-title { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 500; color: var(--ink); margin-bottom: .7rem; }
 .inv-section-sub { font-size: .98rem; color: var(--ink-65); line-height: 1.65; }
 .inv-diff-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-top: 1.8rem; }
