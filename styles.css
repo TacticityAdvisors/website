@@ -1130,6 +1130,7 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .advisor-card:hover { box-shadow: 0 14px 30px rgba(23,23,26,.06); }
 .advisor-photo { width: 100%; height: 370px; overflow: hidden; border-bottom: 1px solid var(--border); background: var(--teal-pale); }
 .advisor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 16%; transition: transform .6s var(--ease); }
+.advisor-photo--abraham img { object-position: center 4%; }
 .advisor-card:hover .advisor-photo img { transform: scale(1.03); }
 .advisor-info { padding: 1.85rem 2rem 2.1rem; }
 .advisor-name { font-family: var(--font-serif); font-size: 1.42rem; font-weight: 500; color: var(--ink); line-height: 1.2; margin-bottom: .35rem; }
