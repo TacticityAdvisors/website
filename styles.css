@@ -1138,7 +1138,7 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 
 /* Third advisor — centered below, matching column width */
 .advisors-grid-single { display: flex; justify-content: center; margin-top: 2rem; }
-.advisors-grid-single .advisor-card { width: 100%; max-width: 374px; }
+.advisors-grid-single .advisor-card { width: 100%; max-width: 494px; }
 
 @media (max-width: 600px) {
   .leader-hero { height: 340px; }
