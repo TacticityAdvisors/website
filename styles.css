@@ -327,7 +327,8 @@ h2 em { font-style: italic; color: var(--teal); }
 .svc-group:hover { background: var(--teal-pale); }
 .svc-group:hover::before { transform: scaleY(1); }
 .svc-group:nth-child(2n) { border-right: none; }
-.svc-group:nth-last-child(-n+2) { border-bottom: none; }
+.svc-group:last-child { border-bottom: none; }
+.svc-group--wide { grid-column: 1 / -1; border-right: none; }
 .svc-group-header { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
 .svc-group-num { font-family: var(--font-mono); font-size: .6rem; letter-spacing: .12em; color: var(--teal); background: var(--teal-pale); border: 1px solid rgba(26,107,90,.2); padding: .25rem .6rem; flex-shrink: 0; margin-top: .1rem; }
 .svc-group-title { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 500; color: var(--ink); line-height: 1.2; margin-bottom: .4rem; }
@@ -527,9 +528,10 @@ h2 em { font-style: italic; color: var(--teal); }
   border-top: 1px solid var(--border);
   transition: background .25s var(--ease);
 }
-.exp-card:nth-last-child(-n+2) {
+.exp-card:last-child {
   border-bottom: 1px solid var(--border);
 }
+.exp-card--wide { grid-column: 1 / -1; }
 .exp-card:hover {
   background: var(--teal-pale);
 }
@@ -1131,7 +1133,8 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .advisor-photo { width: 100%; height: 370px; overflow: hidden; border-bottom: 1px solid var(--border); background: var(--teal-pale); }
 .advisor-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 16%; transition: transform .6s var(--ease); }
 .advisor-photo--abraham img { object-position: center 4%; }
-.advisor-photo--mamta img { object-position: center 40%; }
+.advisor-photo--mamta { height: 410px; }
+.advisor-photo--mamta img { object-position: center 35%; }
 .advisor-card:hover .advisor-photo img { transform: scale(1.03); }
 .advisor-info { padding: 1.85rem 2rem 2.1rem; }
 .advisor-name { font-family: var(--font-serif); font-size: 1.42rem; font-weight: 500; color: var(--ink); line-height: 1.2; margin-bottom: .35rem; }
