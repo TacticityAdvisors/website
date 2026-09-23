@@ -27,6 +27,7 @@ const newsletterArticles = [
     summary: "FDA's August 2026 update to its Human Factors and Usability Engineering guidance refreshes terminology, separates HFE development from submission content, and removes the fixed 2016 report structure in favor of risk-proportionate documentation. This guide walks through what changed, what has not, and a practical five-step review for manufacturers with an existing HFE program.",
     content: `
 
+<h3>What Changed? 2016 vs. 2026 at a Glance</h3>
 <div class="article-table-wrap">
 <table>
   <tr><th>Area</th><th>2016 Framework</th><th>2026 Update</th><th>What It Means</th></tr>
