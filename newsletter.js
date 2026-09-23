@@ -24,7 +24,7 @@
 
   grid.innerHTML = sorted.map(article => `
     <a href="newsletter-article.html?id=${encodeURIComponent(article.id)}" class="newsletter-card">
-      <img class="newsletter-card-image" src="${article.image}" alt="${article.title}" loading="lazy">
+      <img class="newsletter-card-image" src="${article.image}" alt="${article.title}" loading="lazy" style="object-fit:${article.imageFit || 'cover'};">
       <div class="newsletter-card-body">
         <p class="newsletter-card-date">${formatDate(article.date)}</p>
         <h3 class="newsletter-card-title">${article.title}</h3>

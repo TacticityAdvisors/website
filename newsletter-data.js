@@ -23,6 +23,7 @@ const newsletterArticles = [
     id: "fda-2026-human-factors-guidance-update",
     title: "FDA's 2026 Human Factors Guidance Update: What Medical Device Manufacturers Need to Know",
     image: "assets/newsletter/fda-2026-human-factors-guidance-update.jpg",
+    imageFit: "contain",
     date: "2026-09-23",
     summary: "FDA's August 2026 update to its Human Factors and Usability Engineering guidance refreshes terminology, separates HFE development from submission content, and removes the fixed 2016 report structure in favor of risk-proportionate documentation. This guide walks through what changed, what has not, and a practical five-step review for manufacturers with an existing HFE program.",
     content: `
