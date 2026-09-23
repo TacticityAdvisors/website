@@ -23,14 +23,14 @@
   };
 
   grid.innerHTML = sorted.map(article => `
-    <article class="newsletter-card">
+    <a href="newsletter-article.html?id=${encodeURIComponent(article.id)}" class="newsletter-card">
       <img class="newsletter-card-image" src="${article.image}" alt="${article.title}" loading="lazy">
       <div class="newsletter-card-body">
         <p class="newsletter-card-date">${formatDate(article.date)}</p>
         <h3 class="newsletter-card-title">${article.title}</h3>
         <p class="newsletter-card-summary">${article.summary}</p>
-        <a href="newsletter-article.html?id=${encodeURIComponent(article.id)}" class="btn btn-primary newsletter-card-btn">Read Full Article</a>
+        <span class="btn btn-primary newsletter-card-btn">Read Full Article</span>
       </div>
-    </article>
+    </a>
   `).join('');
 })();

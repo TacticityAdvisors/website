@@ -1176,6 +1176,8 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
 .newsletter-card:hover {
