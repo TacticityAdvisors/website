@@ -810,6 +810,30 @@ body.translucent { background: transparent; }
   margin: 14px 0 0;
   max-width: 640px;
 }
+.contact-quick {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+.contact-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--font-mono);
+  font-size: .95rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color .15s, border-color .15s;
+}
+.contact-phone:hover { color: var(--teal); border-color: var(--teal); }
+.contact-whatsapp { gap: .55rem; }
+.contact-whatsapp svg { flex-shrink: 0; }
+@media (max-width: 600px) {
+  .contact-quick { gap: 1rem 1.5rem; }
+}
 .svc-detail { padding: 48px 0 96px; background: var(--canvas); }
 .svc-back { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); }
 .back-link {
