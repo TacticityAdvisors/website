@@ -1634,13 +1634,6 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 /* ── INVESTMENTS: detail-page components (table, FAQ, spacing) ── */
 .inv-section--first { padding-top: 0; }
 .inv-section--last { padding-bottom: 0; }
-.inv-table-wrap { margin-top: 1.6rem; }
-.inv-table { width: 100%; border-collapse: collapse; font-size: .92rem; background: var(--white); border: 1px solid var(--border); }
-.inv-table th { background: var(--surface); font-family: var(--font-mono); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-65); text-align: left; padding: .85rem 1.1rem; border-bottom: 1px solid var(--border); }
-.inv-table td { padding: 1rem 1.1rem; border-bottom: 1px solid var(--border); color: var(--ink-65); line-height: 1.55; vertical-align: top; }
-.inv-table td:first-child { color: var(--ink); font-weight: 500; width: 27%; }
-.inv-table td:nth-child(2) { width: 27%; }
-.inv-table tr:last-child td { border-bottom: none; }
 .inv-table-note { font-size: .92rem; line-height: 1.6; color: var(--ink-65); margin-top: 1.1rem; max-width: 62ch; }
 
 .inv-faq { border-top: 1px solid var(--border); }
@@ -1648,15 +1641,6 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .inv-faq-item:last-child { border-bottom: none; }
 .inv-faq-q { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; line-height: 1.3; color: var(--ink); margin: 0 0 .5rem; }
 .inv-faq-a { font-size: .98rem; line-height: 1.65; color: var(--ink-65); max-width: 62ch; margin: 0; }
-.inv-faq-a a { color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
+.inv-section-sub a, .inv-faq-a a { color: var(--teal); text-decoration: underline; text-underline-offset: 2px; }
 .svc-item-link { margin-top: .35rem; }
 
-@media (max-width: 700px) {
-  .inv-table thead { display: none; }
-  .inv-table, .inv-table tbody, .inv-table tr, .inv-table td { display: block; width: 100%; }
-  .inv-table tr { padding: 1rem 0; border-bottom: 1px solid var(--border); }
-  .inv-table tr:last-child { border-bottom: none; }
-  .inv-table td { padding: .3rem 1.1rem; border-bottom: none; }
-  .inv-table td:first-child, .inv-table td:nth-child(2) { width: 100%; }
-  .inv-table td[data-label]::before { content: attr(data-label); display: block; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: .15rem; }
-}
