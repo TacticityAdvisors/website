@@ -397,7 +397,7 @@ h2 em { font-style: italic; color: var(--teal); }
 .footer-copy { font-family: var(--font-mono); font-size: .75rem; letter-spacing: .04em; color: rgba(255,255,255,.72); }
 .footer-copy a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .footer-address { display: block; font-size: .7rem; letter-spacing: .03em; color: rgba(255,255,255,.55); margin-top: .5rem; line-height: 1.6; }
-.footer-nav { display: flex; gap: 1.5rem; flex-wrap: nowrap; }
+.footer-nav { display: flex; gap: .6rem 1.5rem; flex-wrap: wrap; justify-content: flex-end; min-width: 0; }
 .footer-nav a { font-size: .78rem; color: rgba(255,255,255,.68); transition: color .15s; white-space: nowrap; }
 .footer-nav a:hover { color: #ffffff; }
 
@@ -1544,3 +1544,68 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .inv-diff-title { font-family: var(--font-serif); font-style: italic; font-size: 1.15rem; color: var(--teal); margin-bottom: .6rem; }
 .inv-diff-body { font-size: .92rem; color: var(--ink-65); line-height: 1.6; }
 @media (max-width: 760px) { .inv-diff-grid { grid-template-columns: 1fr; } }
+
+/* ── INVESTMENTS: at-a-glance, process, diligence, people ── */
+.inv-glance { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); background: var(--white); margin-top: 2.25rem; }
+.inv-glance-item { padding: 1.25rem 1.35rem 1.3rem; border-right: 1px solid var(--border); }
+.inv-glance-item:last-child { border-right: none; }
+.inv-glance-label { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: .55rem; }
+.inv-glance-value { font-family: var(--font-serif); font-size: 1.22rem; line-height: 1.25; color: var(--ink); }
+.inv-glance-note { font-size: .82rem; line-height: 1.45; color: var(--ink-65); margin-top: .4rem; }
+
+.inv-process { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--border); background: var(--white); }
+.inv-step { position: relative; padding: 1.5rem 1.5rem 1.6rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.inv-step:nth-child(3n) { border-right: none; }
+.inv-step:nth-last-child(-n+3) { border-bottom: none; }
+.inv-step--key { background: var(--teal-pale); }
+.inv-step-tag { position: absolute; top: 1.55rem; right: 1.5rem; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+.inv-step-num { font-family: var(--font-serif); font-style: italic; font-size: 1.3rem; line-height: 1; color: var(--teal); }
+.inv-step-title { font-size: 1.02rem; font-weight: 500; line-height: 1.35; color: var(--ink); margin: .6rem 0 .45rem; }
+.inv-step-body { font-size: .88rem; line-height: 1.6; color: var(--ink-65); }
+
+.inv-dd { margin-top: 3rem; }
+.inv-dd-head { margin-bottom: 1.25rem; }
+.inv-dd-label { font-family: var(--font-mono); font-size: .84rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-40); margin-bottom: .4rem; }
+.inv-dd-title { font-family: var(--font-serif); font-size: 1.45rem; font-weight: 500; color: var(--ink); }
+.inv-dd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.inv-dd-col { background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--border); padding: 1.4rem 1.5rem 1.5rem; }
+.inv-dd-col--lead { background: var(--teal-pale); border-top-color: var(--teal); }
+.inv-dd-tag { min-height: 1.1rem; margin-bottom: .6rem; font-family: var(--font-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
+.inv-dd-col-title { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 500; line-height: 1.25; color: var(--ink); margin-bottom: .8rem; min-height: 3.25rem; }
+.inv-dd-list { list-style: none; margin: 0; padding: 0; }
+.inv-dd-list li { font-size: .88rem; line-height: 1.55; color: var(--ink-65); padding: .7rem 0; border-top: 1px solid var(--border); }
+.inv-dd-col--lead .inv-dd-list li { color: var(--ink); border-top-color: rgba(26,107,90,.22); }
+
+.inv-diff-grid--2 { grid-template-columns: 1fr 1fr; }
+.inv-portfolio-note { margin-top: 1.5rem; max-width: 62ch; }
+.inv-links { display: flex; flex-wrap: wrap; gap: .6rem 2rem; margin-top: 1.25rem; }
+
+.inv-people { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.inv-person { display: flex; align-items: flex-start; gap: 1.25rem; background: var(--white); border: 1px solid var(--border); padding: 1.25rem; }
+.inv-person-photo { width: 112px; height: 149px; flex-shrink: 0; object-fit: cover; object-position: center 12%; border: 1px solid var(--border); background: var(--teal-pale); }
+.inv-person-text { flex: 1; min-width: 0; }
+.inv-person-name { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 500; line-height: 1.2; color: var(--ink); }
+.inv-person-role { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin: .35rem 0 .7rem; }
+.inv-person-body { font-size: .88rem; line-height: 1.6; color: var(--ink-65); margin: 0; }
+
+@media (max-width: 760px) {
+  .inv-glance { grid-template-columns: 1fr 1fr; }
+  .inv-glance-item:nth-child(2) { border-right: none; }
+  .inv-glance-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .inv-process { grid-template-columns: 1fr; }
+  .inv-step { border-right: none; }
+  .inv-step:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
+  .inv-step:last-child { border-bottom: none; }
+  .inv-dd-grid { grid-template-columns: 1fr; }
+  .inv-dd-col-title { min-height: 0; }
+  .inv-dd-tag:empty { display: none; }
+  .inv-diff-grid--2 { grid-template-columns: 1fr; }
+  .inv-people { grid-template-columns: 1fr; }
+}
+@media (max-width: 420px) {
+  .inv-glance { grid-template-columns: 1fr; }
+  .inv-glance-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .inv-glance-item:last-child { border-bottom: none; }
+  .inv-person { gap: 1rem; padding: 1rem; }
+  .inv-person-photo { width: 84px; height: 112px; }
+}
