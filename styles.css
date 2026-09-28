@@ -1609,3 +1609,24 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
   .inv-person { gap: 1rem; padding: 1rem; }
   .inv-person-photo { width: 84px; height: 112px; }
 }
+
+/* ── INVESTMENTS: path cards + expandable detail panels ── */
+.inv-paths { padding: 3.5rem 0; border-top: 1px solid var(--border); }
+.inv-paths-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; align-items: stretch; scroll-margin-top: calc(var(--nav-h) + 16px); }
+.inv-path { scroll-margin-top: calc(var(--nav-h) + 16px); display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.6rem 1.5rem 1.5rem; transition: border-color .2s, box-shadow .2s; }
+.inv-path.is-active { border-color: var(--teal); box-shadow: 0 10px 26px rgba(26,107,90,.12); }
+.inv-path-kicker { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; line-height: 1.5; color: var(--teal); margin-bottom: .9rem; min-height: 3.5rem; }
+.inv-path-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; line-height: 1.25; color: var(--ink); margin-bottom: .75rem; }
+.inv-path-desc { font-size: .92rem; line-height: 1.6; color: var(--ink-65); margin: 0 0 1.5rem; }
+.inv-path-btn { display: none; margin-top: auto; align-self: flex-start; }
+.inv-js .inv-path-btn { display: inline-flex; }
+
+.inv-panel { margin-top: 2.5rem; scroll-margin-top: calc(var(--nav-h) + 16px); }
+.inv-panel .inv-section { border-top: 1px solid var(--border); padding: 2.75rem 0 0; }
+.inv-js .inv-panel { display: none; }
+.inv-js .inv-panel.is-open { display: block; }
+
+@media (max-width: 900px) {
+  .inv-paths-grid { grid-template-columns: 1fr; }
+  .inv-path-kicker { min-height: 0; }
+}

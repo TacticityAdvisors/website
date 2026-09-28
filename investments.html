@@ -250,6 +250,29 @@
       </div>
     </div>
 
+    <div class="inv-paths" id="paths">
+      <div class="inv-paths-grid">
+        <div class="inv-path" data-panel="panel-founders">
+          <div class="inv-path-kicker">For founders looking for funding</div>
+          <div class="inv-path-title">Early-stage and seed-stage funding</div>
+          <p class="inv-path-desc">Capital with a regulatory read before the term sheet, and a regulatory team behind you through every FDA milestone.</p>
+          <button type="button" class="btn btn-primary inv-path-btn" aria-controls="panel-founders" aria-expanded="false">Read more</button>
+        </div>
+        <div class="inv-path" data-panel="panel-funds">
+          <div class="inv-path-kicker">For funds and family offices evaluating deals</div>
+          <div class="inv-path-title">Regulatory and scientific diligence</div>
+          <p class="inv-path-desc">A reviewer-side assessment of a healthcare or medtech target, for a single deal or as a standing resource across your pipeline.</p>
+          <button type="button" class="btn btn-primary inv-path-btn" aria-controls="panel-funds" aria-expanded="false">Read more</button>
+        </div>
+        <div class="inv-path" data-panel="panel-portfolio">
+          <div class="inv-path-kicker">For funds and family offices with healthcare holdings</div>
+          <div class="inv-path-title">FDA support for your portfolio companies</div>
+          <p class="inv-path-desc">We help the healthcare companies you already back plan, prepare, and defend their FDA submissions. No investment from us required.</p>
+          <button type="button" class="btn btn-primary inv-path-btn" aria-controls="panel-portfolio" aria-expanded="false">Read more</button>
+        </div>
+      </div>
+
+      <div class="inv-panel" id="panel-founders">
     <div class="inv-section" id="founders">
       <div class="inv-section-head">
         <div class="inv-kicker">For Founders</div>
@@ -264,7 +287,9 @@
         <li><span class="svc-item-content"><span class="svc-item-title">Follow-on informed by real submission progress</span><p class="svc-item-desc">Because the same team that invests also evaluates regulatory milestones directly, follow-on decisions rest on a genuine read of submission progress, not just a founder update deck.</p></span></li>
       </ul>
     </div>
+      </div>
 
+      <div class="inv-panel" id="panel-funds">
     <div class="inv-section" id="funds">
       <div class="inv-section-head">
         <div class="inv-kicker">For Funds and Family Offices &middot; Diligence</div>
@@ -278,7 +303,9 @@
         <li><span class="svc-item-content"><span class="svc-item-title">Empanelment for ongoing portfolio-wide diligence</span><p class="svc-item-desc">For funds with recurring healthcare deal flow, we act as a standing, pre-approved diligence resource across the pipeline rather than a one-off engagement rebuilt from scratch each time.</p></span></li>
       </ul>
     </div>
+      </div>
 
+      <div class="inv-panel" id="panel-portfolio">
     <div class="inv-section" id="portfolio-support">
       <div class="inv-section-head">
         <div class="inv-kicker">For Funds and Family Offices &middot; Portfolio Support</div>
@@ -307,6 +334,8 @@
       <div class="inv-links">
         <a href="services.html" class="back-link">See all regulatory services &rarr;</a>
         <a href="pharma-cmc.html" class="back-link">Pharma CMC and inspection readiness &rarr;</a>
+      </div>
+    </div>
       </div>
     </div>
 
@@ -381,5 +410,67 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script>
+  (function () {
+    var wrap = document.getElementById('paths');
+    if (!wrap) return;
+    var grid = wrap.querySelector('.inv-paths-grid');
+    var cards = wrap.querySelectorAll('.inv-path');
+    var panels = wrap.querySelectorAll('.inv-panel');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    wrap.classList.add('inv-js');
+    function stacked() { return window.matchMedia && window.matchMedia('(max-width: 900px)').matches; }
+
+    function closeAll() {
+      Array.prototype.forEach.call(panels, function (p) { p.classList.remove('is-open'); });
+      Array.prototype.forEach.call(cards, function (c) {
+        var b = c.querySelector('.inv-path-btn');
+        c.classList.remove('is-active');
+        b.setAttribute('aria-expanded', 'false');
+        b.textContent = 'Read more';
+      });
+    }
+
+    function openPanel(id) {
+      var panel = document.getElementById(id);
+      var card = wrap.querySelector('.inv-path[data-panel="' + id + '"]');
+      if (!panel || !card) return;
+      closeAll();
+      panel.classList.add('is-open');
+      card.classList.add('is-active');
+      var b = card.querySelector('.inv-path-btn');
+      b.setAttribute('aria-expanded', 'true');
+      b.textContent = 'Show less';
+      // Stacked layout (narrow screens): the content sits below all three cards, so go to it.
+      (stacked() ? panel : grid).scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    }
+
+    Array.prototype.forEach.call(cards, function (c) {
+      var b = c.querySelector('.inv-path-btn');
+      b.addEventListener('click', function () {
+        if (b.getAttribute('aria-expanded') === 'true') {
+          closeAll();
+          var back = stacked() ? c : grid;
+          if (back.getBoundingClientRect().top < 0) {
+            back.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+          }
+        } else {
+          openPanel(c.getAttribute('data-panel'));
+        }
+      });
+    });
+
+    // Deep links such as investments.html#funds open the matching panel.
+    function fromHash() {
+      var h = window.location.hash.slice(1);
+      if (!h) return;
+      var el = document.getElementById(h);
+      var panel = el && el.closest ? el.closest('.inv-panel') : null;
+      if (panel) openPanel(panel.id);
+    }
+    window.addEventListener('hashchange', fromHash);
+    fromHash();
+  })();
+  </script>
 </body>
 </html>
