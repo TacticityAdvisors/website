@@ -26,13 +26,13 @@ const newsletterArticles = [
     date: "2026-09-29",
     summary: "Choosing a first regulatory market is a product-development decision, not just a paperwork choice. This FDA-forward guide compares the 510(k) pathway with EU MDR and lays out a practical framework for deciding which market to enter first — and how to build evidence once that transfers to the second.",
     content: `
-<p style="font-style:italic;color:var(--ink-65);margin-top:-0.6rem;margin-bottom:1.8rem;">FDA 510(k) vs. EU MDR &mdash; A Practical, FDA-Forward Guide for Medical Device Founders</p>
+<p style="font-style:italic;color:var(--ink-65);margin-top:-0.6rem;margin-bottom:1.8rem;">FDA 510(k) vs. EU MDR: A Practical, FDA-Forward Guide for Medical Device Founders</p>
 
 <p>Choosing a first regulatory market is not simply a choice between &ldquo;FDA&rdquo; and &ldquo;CE.&rdquo; It is a product-development decision. The first market can influence intended use, predicate strategy, clinical evidence, testing, software and cybersecurity documentation, quality-system planning, regulatory spend and the timing of commercial milestones.</p>
 <p>This article uses the FDA 510(k) pathway as the primary planning lens and then compares the EU MDR pathway as a second-market option. The objective is not to declare one market universally better. It is to show why a U.S.-first strategy can be particularly practical for a startup when the device and business model fit the FDA pathway.</p>
 
 <h2><span class="num">01</span> Start With the U.S. Regulatory Question</h2>
-<p>For a device that is eligible for a 510(k), FDA asks whether the new device is substantially equivalent to a legally marketed predicate device. The comparison can involve intended use and technological characteristics, together with performance and other information needed to address safety and effectiveness. FDA also has other premarket pathways &mdash; such as De Novo and PMA &mdash; so &ldquo;U.S. first&rdquo; does not automatically mean &ldquo;510(k).&rdquo;</p>
+<p>For a device that is eligible for a 510(k), FDA asks whether the new device is substantially equivalent to a legally marketed predicate device. The comparison can involve intended use and technological characteristics, together with performance and other information needed to address safety and effectiveness. FDA also has other premarket pathways, such as De Novo and PMA, so &ldquo;U.S. first&rdquo; does not automatically mean &ldquo;510(k).&rdquo;</p>
 
 <div class="article-callout">
   <span class="article-callout-label">Founder Lens</span>
@@ -44,7 +44,7 @@ const newsletterArticles = [
 
 <h3>A credible predicate can shape the entire development plan</h3>
 <ul>
-  <li>Identify candidate predicates early &mdash; not after testing is complete.</li>
+  <li>Identify candidate predicates early, not after testing is complete.</li>
   <li>Compare intended use, indications, technological characteristics and relevant performance considerations.</li>
   <li>Identify differences and determine what evidence is needed to address their effect on safety and effectiveness.</li>
   <li>Use the predicate analysis to influence bench testing, biocompatibility, software, cybersecurity, labeling and, where appropriate, clinical planning.</li>
@@ -54,7 +54,7 @@ const newsletterArticles = [
 <p>FDA&rsquo;s Q-Submission Program provides several mechanisms for interaction between submitters and FDA. A Pre-Submission can provide FDA feedback before an intended premarket submission, including a planned 510(k), on specific questions such as biocompatibility, bench testing or cybersecurity. FDA states that a Pre-Sub is not a pre-review of the future submission and does not guarantee a favourable future decision.</p>
 
 <h3>eSTAR makes the U.S. submission workflow more structured</h3>
-<p>FDA requires most 510(k) submissions to be prepared and submitted electronically using eSTAR, unless an applicable exemption applies. eSTAR is a guided submission tool intended to improve completeness and consistency. For a startup, this means the submission should be built with the FDA electronic structure in mind from the beginning &mdash; not assembled as a final formatting exercise.</p>
+<p>FDA requires most 510(k) submissions to be prepared and submitted electronically using eSTAR, unless an applicable exemption applies. eSTAR is a guided submission tool intended to improve completeness and consistency. For a startup, this means the submission should be built with the FDA electronic structure in mind from the beginning, not assembled as a final formatting exercise.</p>
 
 <h2><span class="num">03</span> The FDA 510(k) Development-to-Submission Flow</h2>
 <h3>Review clock vs. real project time</h3>
@@ -75,7 +75,7 @@ const newsletterArticles = [
 </table>
 </div>
 
-<h2><span class="num">04</span> Where EU MDR Fits &mdash; and Why It May Be the Second Market</h2>
+<h2><span class="num">04</span> Where EU MDR Fits and Why It May Be the Second Market</h2>
 <p>The EU MDR uses a different regulatory architecture. The manufacturer must demonstrate conformity with applicable General Safety and Performance Requirements and follow the relevant conformity-assessment route. Depending on the device and route, third-party assessment by a Notified Body may be required. Clinical evaluation and sufficient clinical evidence are part of the MDR framework, with the level of evidence appropriate to the device and intended purpose.</p>
 
 <h3>The Notified Body is a planning dependency when required</h3>
@@ -89,7 +89,7 @@ const newsletterArticles = [
 <h3>EU MDR may be the better first-market fit when:</h3>
 <ul>
   <li>Europe is clearly the company&rsquo;s primary commercial market.</li>
-  <li>The device does not have a credible U.S. predicate and the U.S. pathway would therefore require a different strategy, such as De Novo.</li>
+  <li>The device does not have a credible U.S. predicate, and the U.S. pathway would therefore require a different strategy, such as De Novo.</li>
   <li>The development and clinical evidence plan has been designed around MDR requirements.</li>
   <li>The company has identified an appropriate Notified Body where one is required and has confirmed the relevant scope and engagement pathway.</li>
   <li>EU market access, European partnerships or European investor milestones are more important than an early U.S. milestone.</li>
@@ -97,7 +97,7 @@ const newsletterArticles = [
 
 <div class="article-table-wrap">
 <table>
-  <tr><th>Planning Question</th><th>FDA / U.S. &mdash; Primary Lens</th><th>EU MDR &mdash; Second-Market Lens</th></tr>
+  <tr><th>Planning Question</th><th>FDA / U.S. Primary Lens</th><th>EU MDR Second-Market Lens</th></tr>
   <tr>
     <td>Core regulatory question</td>
     <td>Can the device be shown substantially equivalent to a legally marketed predicate, where 510(k) is the applicable pathway?</td>
@@ -166,10 +166,10 @@ const newsletterArticles = [
 </div>
 
 <h2><span class="num">06</span> Software, Cybersecurity and AI: Where FDA-First Still Requires Global Thinking</h2>
-<p>For connected and software-enabled devices, cybersecurity should be built into product development rather than treated as a final submission appendix. FDA&rsquo;s February 2026 final cybersecurity guidance addresses device design, labeling and recommended premarket documentation for devices with cybersecurity risk and discusses statutory requirements for qualifying &ldquo;cyber devices&rdquo; under section 524B of the FD&amp;C Act.</p>
+<p>For connected and software-enabled devices, cybersecurity should be built into product development rather than treated as a final submission appendix. FDA&rsquo;s February 2026 final cybersecurity guidance addresses device design, labelling, and recommended premarket documentation for devices with cybersecurity risk and discusses statutory requirements for qualifying &ldquo;cyber devices&rdquo; under section 524B of the FD&amp;C Act.</p>
 <ul>
   <li>Define cybersecurity responsibilities and lifecycle ownership early.</li>
-  <li>Maintain threat modeling and security risk documentation.</li>
+  <li>Maintain threat modelling and security risk documentation.</li>
   <li>Establish a controlled software bill of materials (SBOM) process where applicable.</li>
   <li>Plan vulnerability identification, monitoring and response activities.</li>
   <li>Ensure the eSTAR cybersecurity section is accurate and complete for applicable submissions.</li>
@@ -177,7 +177,7 @@ const newsletterArticles = [
 <p>The same engineering evidence can support EU MDR work, but the regulatory mapping is not identical. For an FDA-first program, the practical objective is to build the cybersecurity evidence once at the engineering level and then package it separately for each regulatory framework.</p>
 
 <h3>AI-enabled devices</h3>
-<p>If the product incorporates AI, keep the medical-device regulatory strategy separate from &mdash; but coordinated with &mdash; AI-specific requirements. The EU AI Act has specific rules for high-risk AI, including AI embedded in regulated products. Following the 2026 AI Omnibus changes, the current application date for high-risk AI embedded in products is 2 August 2028. This should be treated as a live planning item because EU implementation guidance and supporting standards continue to evolve.</p>
+<p>If the product incorporates AI, keep the medical device regulatory strategy separate from, but coordinated with, AI-specific requirements. The EU AI Act has specific rules for high-risk AI, including AI embedded in regulated products. Following the 2026 AI Omnibus changes, the current application date for high-risk AI embedded in products is 2 August 2028. This should be treated as a live planning item because EU implementation guidance and supporting standards continue to evolve.</p>
 
 <h2><span class="num">07</span> For Indian MedTech Companies: What an FDA-First Strategy Means</h2>
 <p>For an India-based company, choosing the U.S. first does not replace Indian regulatory obligations. CDSCO states that medical devices in India are regulated under the Drugs and Cosmetics Act, 1940 and the Medical Devices Rules, 2017, with risk-based classification and specific licensing pathways.</p>
@@ -214,7 +214,7 @@ const newsletterArticles = [
 
 <h2><span class="num">09</span> When an FDA-First Strategy Is Particularly Practical</h2>
 <ul>
-  <li>A credible 510(k) predicate exists and the technological differences can be addressed with a focused evidence plan.</li>
+  <li>A credible 510(k) predicate exists, and the technological differences can be addressed with a focused evidence plan.</li>
   <li>The U.S. is an important commercial or fundraising milestone.</li>
   <li>The company values a defined mechanism for obtaining FDA feedback before the planned submission.</li>
   <li>The device can generate a strong non-clinical evidence package, where appropriate.</li>
@@ -301,7 +301,7 @@ const newsletterArticles = [
 <h2><span class="num">13</span> Tacticity Advisors: Practical Regulatory Strategy</h2>
 <p>The most efficient market-entry programs are usually designed around a common evidence backbone rather than around isolated submissions. For an FDA-first strategy, that means identifying the U.S. pathway and predicate early, using FDA interaction mechanisms where they add value, and simultaneously identifying which evidence can support the second market.</p>
 <ul>
-  <li>Plan regulatory strategy from product design &mdash; not after development is complete.</li>
+  <li>Plan regulatory strategy from product design, not after development is complete.</li>
   <li>Define the U.S. pathway and predicate before locking the evidence plan.</li>
   <li>Use Pre-Submission strategically when a targeted FDA question could materially change development or submission preparation.</li>
   <li>Build reusable evidence and traceability across risk, testing, software, cybersecurity and clinical activities.</li>
@@ -313,26 +313,26 @@ const newsletterArticles = [
 <h2><span class="num">14</span> Key Takeaway</h2>
 <div class="article-callout">
   <span class="article-callout-label">Final Key Takeaway</span>
-  <p>For a MedTech startup with a credible 510(k) pathway and a meaningful U.S. commercial objective, the FDA can be a practical first-market choice &mdash; not because it is universally easier, but because the pathway can be built around a predicate, a structured submission process and a formal opportunity for targeted FDA feedback before the planned submission. Build the technical evidence once where possible, map it carefully to EU MDR and other markets, and choose the sequence based on the device, evidence, resources and business plan.</p>
+  <p>For a MedTech startup with a credible 510(k) pathway and a meaningful U.S. commercial objective, the FDA can be a practical first-market choice, not because it is universally easier, but because the pathway can be built around a predicate, a structured submission process and a formal opportunity for targeted FDA feedback before the planned submission. Build the technical evidence once where possible, map it carefully to EU MDR and other markets, and choose the sequence based on the device, evidence, resources and business plan.</p>
 </div>
 
 <h2><span class="num">15</span> Sources</h2>
 <ul class="article-sources">
-  <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/requests-feedback-and-meetings-medical-device-submissions-q-submission-program" target="_blank" rel="noopener">FDA &mdash; Requests for Feedback and Meetings for Medical Device Submissions: The Q-Submission Program, Final Guidance, May 2025</a></li>
-  <li><a href="https://www.fda.gov/media/114034/download" target="_blank" rel="noopener">FDA &mdash; Q-Submission Final Guidance PDF (Pre-Submission section)</a></li>
-  <li><a href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/premarket-submissions-selecting-and-preparing-correct-submission" target="_blank" rel="noopener">FDA &mdash; Premarket Submissions: Selecting and Preparing the Correct Submission</a></li>
-  <li><a href="https://www.fda.gov/medical-devices/premarket-notification-510k/how-prepare-traditional-510k" target="_blank" rel="noopener">FDA &mdash; How to Prepare a Traditional 510(k)</a></li>
-  <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/electronic-submission-template-medical-device-510k-submissions" target="_blank" rel="noopener">FDA &mdash; Electronic Submission Template for Medical Device 510(k) Submissions, Final Guidance</a></li>
-  <li><a href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar-program" target="_blank" rel="noopener">FDA &mdash; eSTAR Program</a></li>
-  <li><a href="https://www.fda.gov/medical-devices/premarket-notification-510k/510k-submission-process" target="_blank" rel="noopener">FDA &mdash; 510(k) Submission Process</a></li>
-  <li><a href="https://eur-lex.europa.eu/eli/reg/2017/745/2017-05-05/eng" target="_blank" rel="noopener">EUR-Lex &mdash; Regulation (EU) 2017/745 on Medical Devices (MDR), including Article 61 on clinical evaluation</a></li>
-  <li><a href="https://health.ec.europa.eu/medical-devices-topics-interest/reprocessing-devices/manufacturers-md_en" target="_blank" rel="noopener">European Commission &mdash; Medical Devices: Manufacturers MD</a></li>
-  <li><a href="https://health.ec.europa.eu/medical-devices-topics-interest/notified-bodies-medical-devices_en" target="_blank" rel="noopener">European Commission &mdash; Notified Bodies for Medical Devices</a></li>
-  <li><a href="https://health.ec.europa.eu/document/download/9c9c532f-013a-477c-9378-0a9e714e5549_en" target="_blank" rel="noopener">MDCG 2019-6 Rev.5 &mdash; Questions and Answers: Requirements Relating to Notified Bodies</a></li>
-  <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cybersecurity-medical-devices-quality-management-system-considerations-and-content-premarket" target="_blank" rel="noopener">FDA &mdash; Cybersecurity in Medical Devices: Quality Management System Considerations and Content of Premarket Submissions, February 2026</a></li>
-  <li><a href="https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act" target="_blank" rel="noopener">European Commission &mdash; Navigating the AI Act</a></li>
-  <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission &mdash; AI Act / Application Timeline</a></li>
-  <li><a href="https://www.cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/Medical-Device-Diagnostics/" target="_blank" rel="noopener">CDSCO &mdash; Medical Device &amp; Diagnostics / Medical Devices Rules, 2017</a></li>
+  <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/requests-feedback-and-meetings-medical-device-submissions-q-submission-program" target="_blank" rel="noopener">FDA: Requests for Feedback and Meetings for Medical Device Submissions: The Q-Submission Program, Final Guidance, May 2025</a></li>
+  <li><a href="https://www.fda.gov/media/114034/download" target="_blank" rel="noopener">FDA: Q-Submission Final Guidance PDF (Pre-Submission section)</a></li>
+  <li><a href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/premarket-submissions-selecting-and-preparing-correct-submission" target="_blank" rel="noopener">FDA: Premarket Submissions: Selecting and Preparing the Correct Submission</a></li>
+  <li><a href="https://www.fda.gov/medical-devices/premarket-notification-510k/how-prepare-traditional-510k" target="_blank" rel="noopener">FDA: How to Prepare a Traditional 510(k)</a></li>
+  <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/electronic-submission-template-medical-device-510k-submissions" target="_blank" rel="noopener">FDA: Electronic Submission Template for Medical Device 510(k) Submissions, Final Guidance</a></li>
+  <li><a href="https://www.fda.gov/medical-devices/how-study-and-market-your-device/estar-program" target="_blank" rel="noopener">FDA: eSTAR Program</a></li>
+  <li><a href="https://www.fda.gov/medical-devices/premarket-notification-510k/510k-submission-process" target="_blank" rel="noopener">FDA: 510(k) Submission Process</a></li>
+  <li><a href="https://eur-lex.europa.eu/eli/reg/2017/745/2017-05-05/eng" target="_blank" rel="noopener">EUR-Lex: Regulation (EU) 2017/745 on Medical Devices (MDR), including Article 61 on clinical evaluation</a></li>
+  <li><a href="https://health.ec.europa.eu/medical-devices-topics-interest/reprocessing-devices/manufacturers-md_en" target="_blank" rel="noopener">European Commission: Medical Devices: Manufacturers MD</a></li>
+  <li><a href="https://health.ec.europa.eu/medical-devices-topics-interest/notified-bodies-medical-devices_en" target="_blank" rel="noopener">European Commission: Notified Bodies for Medical Devices</a></li>
+  <li><a href="https://health.ec.europa.eu/document/download/9c9c532f-013a-477c-9378-0a9e714e5549_en" target="_blank" rel="noopener">MDCG 2019-6 Rev.5: Questions and Answers: Requirements Relating to Notified Bodies</a></li>
+  <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cybersecurity-medical-devices-quality-management-system-considerations-and-content-premarket" target="_blank" rel="noopener">FDA: Cybersecurity in Medical Devices: Quality Management System Considerations and Content of Premarket Submissions, February 2026</a></li>
+  <li><a href="https://digital-strategy.ec.europa.eu/en/faqs/navigating-ai-act" target="_blank" rel="noopener">European Commission: Navigating the AI Act</a></li>
+  <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">European Commission: AI Act / Application Timeline</a></li>
+  <li><a href="https://www.cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/Medical-Device-Diagnostics/" target="_blank" rel="noopener">CDSCO: Medical Device &amp; Diagnostics / Medical Devices Rules, 2017</a></li>
 </ul>
 
 <div class="article-closing">
