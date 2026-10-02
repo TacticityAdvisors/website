@@ -135,3 +135,30 @@
       });
   });
 })();
+
+/* ============================================================
+   CONTACT FORM — pre-select "Investments" when arriving from
+   investments.html (?inquiry=investments&as=founder|fund), and
+   seed the details field with who's asking.
+   ============================================================ */
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('inquiry') !== 'investments') return;
+
+  var checkbox = document.querySelector('input[name="areaOfInquiry"][value="Investments"]');
+  if (checkbox) {
+    checkbox.checked = true;
+    var label = checkbox.closest('.checkbox-item');
+    if (label) label.classList.add('checkbox-item--highlight');
+  }
+
+  var details = document.getElementById('details');
+  if (details && !details.value) {
+    var as = params.get('as');
+    if (as === 'founder') {
+      details.value = "I'm a founder raising capital and would like to learn more about Tacticity Capital.\n\n";
+    } else if (as === 'fund') {
+      details.value = "I'm reaching out on behalf of a fund or family office interested in Tacticity Capital.\n\n";
+    }
+  }
+})();
