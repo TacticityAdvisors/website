@@ -501,6 +501,10 @@ h2 em { font-style: italic; color: var(--teal); }
   font-family: var(--font-mono);
   font-size: .62rem;
   letter-spacing: .06em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .6rem 1.75rem;
 }
 .cta-linkedin a {
   display: inline-flex;
