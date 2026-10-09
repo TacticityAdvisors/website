@@ -497,24 +497,24 @@ h2 em { font-style: italic; color: var(--teal); }
 .footer-linkedin svg { flex-shrink: 0; }
 
 .cta-linkedin {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
   font-family: var(--font-mono);
-  font-size: .62rem;
+  font-size: .9rem;
   letter-spacing: .06em;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: .6rem 1.75rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 .cta-linkedin a {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
+  gap: .65rem;
   color: rgba(255,255,255,.55);
   text-decoration: none;
   transition: color .2s;
   border-bottom: 1px solid rgba(255,255,255,.15);
-  padding-bottom: 1px;
+  padding-bottom: 3px;
 }
 .cta-linkedin a:hover { color: var(--teal-light); border-color: var(--teal-light); }
 
