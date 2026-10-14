@@ -1591,7 +1591,6 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
 .inv-step { position: relative; padding: 1.5rem 1.5rem 1.6rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .inv-step:nth-child(3n) { border-right: none; }
 .inv-step:nth-last-child(-n+3) { border-bottom: none; }
-.inv-step--key { background: var(--teal-pale); }
 .inv-step-tag { position: absolute; top: 1.55rem; right: 1.5rem; font-family: var(--font-mono); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
 .inv-step-num { font-family: var(--font-serif); font-style: italic; font-size: 1.3rem; line-height: 1; color: var(--teal); }
 .inv-step-title { font-size: 1.02rem; font-weight: 500; line-height: 1.35; color: var(--ink); margin: .6rem 0 .45rem; }
