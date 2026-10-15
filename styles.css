@@ -388,7 +388,8 @@ h2 em { font-style: italic; color: var(--teal); }
 .cta h2 { color: #fff; }
 .cta h2 em { color: var(--teal-light); }
 .cta-body { font-family: var(--font-serif); font-style: italic; font-size: 1.7rem; font-weight: 400; color: rgba(255,255,255,.85); line-height: 1.55; max-width: 52ch; margin: 0 auto 2.5rem; }
-.cta-body-feature { font-family: var(--font-serif); font-style: italic; font-size: 1.75rem; font-weight: 400; color: #ffffff; line-height: 1.45; max-width: 52ch; margin: 0 auto 2.5rem; }
+.cta-body-feature { font-family: var(--font-serif); font-style: italic; font-size: 2.5rem; font-weight: 400; color: #ffffff; line-height: 1.45; max-width: 52ch; margin: 0 auto 2.5rem; }
+@media (max-width: 600px) { .cta-body-feature { font-size: 1.85rem; } }
 
 /* ============================================================
    FOOTER
@@ -517,6 +518,8 @@ h2 em { font-style: italic; color: var(--teal); }
   padding-bottom: 3px;
 }
 .cta-linkedin a:hover { color: var(--teal-light); border-color: var(--teal-light); }
+@media (max-width: 600px) { .cta-linkedin { font-size: .74rem; letter-spacing: .02em; } .cta-linkedin a { gap: .5rem; } }
+@media (max-width: 360px) { .cta-linkedin { font-size: .62rem; letter-spacing: 0; } .cta-linkedin a { gap: .4rem; } }
 
 /* ═══════════════════════════════════════════════════════════
    HOMEPAGE ENHANCEMENTS — expertise cards, hero-alt, spacing
