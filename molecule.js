@@ -178,7 +178,7 @@
     var d = fig.dataset, canvas = fig.querySelector('canvas'), wrap = fig.querySelector('.mol-wrap'), plate = fig.querySelector('.mol-plate');
     var cycle = (d.cycle || d.mol || 'segment').split(',').map(function (s) { return s.trim(); }).filter(function (s) { return BUILD[s]; });
     if (!cycle.length) cycle = ['segment'];
-    var holdMs = parseFloat(d.hold || '9000'), showNotes = d.notes !== 'false';
+    var holdMs = parseFloat(d.hold || '9000'), showNotes = d.notes === 'true';
 
     var api = { cur: cycle[0], show: function () {}, stage: fig };
     fig.__mol = api;
@@ -260,7 +260,7 @@
       var nm = plate.querySelector('.mol-name'), rl = plate.querySelector('.mol-role'), nt = plate.querySelector('.mol-note'), un = plate.querySelector('.mol-units'), tabs = plate.querySelector('.mol-tabs');
       if (nm) nm.textContent = cur.name; if (rl) rl.textContent = cur.role;
       if (nt) { nt.classList.remove('swap'); nt.innerHTML = showNotes ? '<b>Tap a hexagon</b><span>Each marker on the molecule explains one part of the structure.</span>' : ''; }
-      if (un) { un.hidden = !cur.units; if (cur.units) { un.querySelector('.n').textContent = 'n = ' + units[curName]; } }
+      if (un) { un.hidden = !cur.units; if (cur.units) { un.querySelector('.n').textContent = String(units[curName]); } }
       if (tabs) [].forEach.call(tabs.children, function (t) { t.classList.toggle('on', t.dataset.m === curName); t.setAttribute('aria-pressed', t.dataset.m === curName); });
     }
     function show(name, opts) {
@@ -336,9 +336,9 @@
     function pick(i, user) {
       cur = i; items.forEach(function (b, k) { b.classList.toggle('on', k === i); b.setAttribute('aria-selected', k === i ? 'true' : 'false'); });
       var d = items[i].dataset;
-      card.querySelector('.hx-title').textContent = d.title; card.querySelector('.hx-sub').textContent = d.sub; card.querySelector('.hx-meta').textContent = d.metaphor;
+      var ta = card.querySelector('.hx-title a'); ta.textContent = d.title; ta.href = d.href; card.querySelector('.hx-sub').textContent = d.sub;
       var ul = card.querySelector('.hx-points'); ul.innerHTML = ''; d.points.split('|').forEach(function (p) { var li = document.createElement('li'); li.textContent = p; ul.appendChild(li); });
-      card.querySelector('.hx-link').href = d.href; card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap');
+      card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap');
       if (fig && fig.__mol) fig.__mol.show(d.mol);
       if (user) { touched = true; clearInterval(timer); }
     }
@@ -362,4 +362,38 @@
       c.addEventListener('pointerleave', function () { c.classList.remove('live'); c.style.setProperty('--rx', '0deg'); c.style.setProperty('--ry', '0deg'); });
     });
   }
+
+  /* ---------------- keyword emphasis: key terms in alpine green, text itself untouched ---------------- */
+  (function () {
+    var main = document.getElementById('main'); if (!main) return;
+    var phrases = ['ex-FDA Lead Reviewer', 'former FDA CDRH scientist', 'former FDA reviewers?', 'FDA reviewers?', 'ex-FDA', 'lead reviewer', 'regulatory strategy', 'regulatory pathway', 'pathway strategy', 'testing strategy',
+      '510\\(k\\)', 'De Novo', 'Q-Sub(?:mission)?s?', 'Pre-Sub(?:mission)?s?', 'ISO 10993(?:-\\d+)?', 'ISO 13485', '21 CFR Part \\d+', 'ASTM F\\d+', 'Declaration of Conformity', 'substantial equivalence', 'predicate', 'biocompatibility',
+      'biological evaluation', 'chemical characterization', 'extractables(?: and leachables)?', 'leachables', 'toxicological risk(?: assessment)?', 'design controls', 'deficienc(?:y|ies)', 'Breakthrough Device', 'premarket', 'post-market',
+      'consensus standards', 'intended use', 'Refuse to Accept', 'Warning Letters?', 'Form 483', 'inspection readiness', 'data integrity', 'E&L'];
+    phrases.sort(function (a, b) { return b.length - a.length; });
+    var re = new RegExp('(^|[^A-Za-z0-9])(' + phrases.join('|') + '|PMA|IDE|IVD|SaMD|CRO|UDI|QSR)(?![A-Za-z0-9])', 'g');
+    // acronyms are case-sensitive, phrases are matched case-insensitively by lowering the check
+    var reI = new RegExp('(^|[^A-Za-z0-9])(' + phrases.join('|') + ')(?![A-Za-z0-9])', 'gi'), reC = /(^|[^A-Za-z0-9])(PMA|IDE|IVD|SaMD|CRO|UDI|QSR)(?![A-Za-z0-9])/g;
+    var skipTag = /^(H1|H2|H3|H4|A|BUTTON|SCRIPT|STYLE|LABEL|SELECT|OPTION|TEXTAREA|SVG|CANVAS|TITLE|EM|STRONG|CODE|FIGURE|NOSCRIPT)$/;
+    var skipCls = /(section-label|hero-kicker|exp-|el-|cta|pullquote|newsletter-signup|leader-hero|explore-title|explore-num|stat-|kw|mol-|hx|svc-group-num|wc-num|inv-glance-label|team-|logo|footer)/;
+    function skip(n) { for (var e = n.parentNode; e && e !== main; e = e.parentNode) { if (e.nodeType !== 1) continue; if (skipTag.test(e.tagName.toUpperCase())) return true; if (e.getAttribute('aria-hidden') === 'true') return true; if (e.className && typeof e.className === 'string' && skipCls.test(e.className)) return true; } return false; }
+    function wrapText(node) {
+      var t = node.nodeValue, hits = [], m;
+      [reI, reC].forEach(function (r) { r.lastIndex = 0; while ((m = r.exec(t))) { var start = m.index + m[1].length; hits.push([start, start + m[2].length]); if (m[0].length === 0) r.lastIndex++; } });
+      if (!hits.length) return;
+      hits.sort(function (a, b) { return a[0] - b[0] || b[1] - a[1]; });
+      var out = [], pos = 0; hits.forEach(function (h) { if (h[0] < pos) return; out.push([h[0], h[1]]); pos = h[1]; });
+      var frag = document.createDocumentFragment(), last = 0;
+      out.forEach(function (h) { if (h[0] > last) frag.appendChild(document.createTextNode(t.slice(last, h[0]))); var sp = document.createElement('span'); sp.className = 'kw'; sp.textContent = t.slice(h[0], h[1]); frag.appendChild(sp); last = h[1]; });
+      if (last < t.length) frag.appendChild(document.createTextNode(t.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    }
+    function run() {
+      var w = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, null), list = [], n;
+      while ((n = w.nextNode())) { if (n.nodeValue.trim().length > 2 && !skip(n)) list.push(n); }
+      list.forEach(wrapText);
+    }
+    run();
+    if (window.MutationObserver) { var tm; new MutationObserver(function (ms) { if (ms.every(function (m) { return m.target.closest && m.target.closest('.kw'); })) return; clearTimeout(tm); tm = setTimeout(run, 120); }).observe(main, { childList: true, subtree: true }); }
+  })();
 })();

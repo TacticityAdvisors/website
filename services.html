@@ -138,8 +138,8 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Jost:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
 
   <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="styles.css">
@@ -152,15 +152,6 @@
 
 <!-- ══ NAV ══ -->
 <header>
-<div class="topbar" role="region" aria-label="Contact details">
-  <div class="wrap">
-    <div class="tb-info">
-      <a href="mailto:contact@tacticityadvisors.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>contact@tacticityadvisors.com</a>
-      <span class="tb-loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Baner, Pune, Maharashtra</span>
-    </div>
-    <a class="tb-cta" href="contact.html">Send an inquiry</a>
-  </div>
-</div>
 <nav class="nav" id="nav">
   <a href="index.html" class="logo-link" aria-label="Tacticity Advisors - Home">
     <!-- Mark: 5 bars, isotactic rhythm, scaled up for nav -->
@@ -239,33 +230,28 @@
 </section>
 
 <!-- ══ SERVICE MAP — a hexagon for each service ══ -->
-<section class="svc-map" aria-labelledby="map-h">
+<section class="svc-map" aria-label="Services">
   <div class="section-inner--wide">
-    <p class="section-label reveal" aria-hidden="true">Explore by structure</p>
-    <h2 id="map-h" class="reveal">Every service has a <em>structure.</em></h2>
-    <p class="lede reveal reveal-d1">Materials get their behaviour from how their atoms are joined. A regulatory program works the same way. Choose a hexagon to see the molecule we use to think about that service, then tap the markers on it.</p>
-    <div class="map-grid reveal reveal-d2">
+    <div class="map-grid reveal">
       <div class="map-left" data-hexmap data-stage="#svc-stage">
         <div class="hexmap" role="tablist" aria-label="Services">
-          <div class="hx core" style="--dx:0;--dy:0" aria-hidden="true"><svg viewBox="0 0 42 38"><rect x="0" y="12" width="5" height="16"/><rect x="9" y="5" width="5" height="28"/><rect x="18" y="8" width="5" height="22"/><rect x="27" y="5" width="5" height="28"/><rect x="36" y="12" width="5" height="16"/></svg><span class="ht">Services</span></div>
-      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:-0.5;--dy:-1" data-mol="peg" data-title="Regulatory Strategy &amp; Pathway" data-sub="From first classification decision to submission-ready plan" data-metaphor="A straight chain of repeating units: one clear path, each decision attached to the one before it." data-points="FDA pathway strategy and submission planning|Device classification, product code assessment, and 510(k) exemption analysis|Combination product determination and RFD support" data-href="regulatory-strategy.html"><span class="hn">01</span><span class="ht">Strategy &amp; Pathway</span></button>
-      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:0.5;--dy:-1" data-mol="pdms" data-title="FDA Premarket Submissions" data-sub="Full preparation and support for every premarket pathway" data-metaphor="A backbone with side groups: one spine, with a branch for every section a submission must carry." data-points="510(k): Traditional, Abbreviated, and Special|PMA: Premarket Approval Application and supplements|De Novo: Classification request preparation" data-href="premarket-submissions.html"><span class="hn">02</span><span class="ht">Premarket Submissions</span></button>
-      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:1;--dy:0" data-mol="peek" data-title="Biocompatibility &amp; Materials Evaluation" data-sub="Risk-based biological safety grounded in materials science" data-metaphor="A ring-based implant polymer: stable, rigid and well characterized, so the argument holds." data-points="ISO 10993 strategy and biological evaluation planning|Biological evaluation plans (BEP) and reports (BER)|Chemical characterization: systematic identification and quantification of chemical substances released from device materials, including extractables and leachables" data-href="biocompatibility.html"><span class="hn">03</span><span class="ht">Biocompatibility &amp; Materials</span></button>
-      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:0.5;--dy:1" data-mol="nylon" data-title="Testing Strategy &amp; Evidence Planning" data-sub="Designing the evidence before committing the budget" data-metaphor="Two strands held together by hydrogen bonds: test plan and evidence, matched point for point." data-points="Testing matrix recommendation and gap analysis|Performance test design aligned with FDA-recognized standards|Sterilization, shelf-life, packaging, and usability testing strategy" data-href="testing-strategy.html"><span class="hn">04</span><span class="ht">Testing &amp; Evidence</span></button>
-      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:-0.5;--dy:1" data-mol="helix" data-title="Quality System &amp; Compliance" data-sub="Regulatory obligations beyond the submission" data-metaphor="A double helix: two strands joined by rungs that repeat the same way every time." data-points="FDA QSR (21 CFR Part 820) / ISO 13485 gap assessment|Design controls review and documentation support|Establishment registration and device listing (21 CFR Part 807)" data-href="quality-compliance.html"><span class="hn">05</span><span class="ht">Quality System</span></button>
-      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:-1;--dy:0" data-mol="poss" data-title="FDA Enforcement Response &amp; Remediation" data-sub="Strategic and scientific support when FDA has questions" data-metaphor="A cage with groups radiating from the core: one root cause, every corrective action leading out of it." data-points="FDA deficiency and Additional Information (AI) response strategy|Warning Letter response: root cause analysis, CAPA, and response drafting|FDA Form 483 response: observation-by-observation strategy" data-href="enforcement-response.html"><span class="hn">06</span><span class="ht">Enforcement Response</span></button>
+          <div class="hx core" style="--dx:0;--dy:0" aria-hidden="true"><svg viewBox="0 0 42 38"><rect x="0" y="12" width="5" height="16"/><rect x="9" y="5" width="5" height="28"/><rect x="18" y="8" width="5" height="22"/><rect x="27" y="5" width="5" height="28"/><rect x="36" y="12" width="5" height="16"/></svg></div>
+      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:-0.5;--dy:-1" data-mol="peg" data-title="Regulatory Strategy &amp; Pathway" data-sub="From first classification decision to submission-ready plan" data-points="FDA pathway strategy and submission planning|Device classification, product code assessment, and 510(k) exemption analysis|Combination product determination and RFD support" data-href="regulatory-strategy.html"><span class="hn">01</span><span class="ht">Regulatory Strategy &amp; Pathway</span></button>
+      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:0.5;--dy:-1" data-mol="pdms" data-title="FDA Premarket Submissions" data-sub="Full preparation and support for every premarket pathway" data-points="510(k): Traditional, Abbreviated, and Special|PMA: Premarket Approval Application and supplements|De Novo: Classification request preparation" data-href="premarket-submissions.html"><span class="hn">02</span><span class="ht">FDA Premarket Submissions</span></button>
+      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:1;--dy:0" data-mol="peek" data-title="Biocompatibility &amp; Materials Evaluation" data-sub="Risk-based biological safety grounded in materials science" data-points="ISO 10993 strategy and biological evaluation planning|Biological evaluation plans (BEP) and reports (BER)|Chemical characterization: systematic identification and quantification of chemical substances released from device materials, including extractables and leachables" data-href="biocompatibility.html"><span class="hn">03</span><span class="ht">Biocompatibility &amp; Materials Evaluation</span></button>
+      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:0.5;--dy:1" data-mol="nylon" data-title="Testing Strategy &amp; Evidence Planning" data-sub="Designing the evidence before committing the budget" data-points="Testing matrix recommendation and gap analysis|Performance test design aligned with FDA-recognized standards|Sterilization, shelf-life, packaging, and usability testing strategy" data-href="testing-strategy.html"><span class="hn">04</span><span class="ht">Testing Strategy &amp; Evidence Planning</span></button>
+      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:-0.5;--dy:1" data-mol="helix" data-title="Quality System &amp; Compliance" data-sub="Regulatory obligations beyond the submission" data-points="FDA QSR (21 CFR Part 820) / ISO 13485 gap assessment|Design controls review and documentation support|Establishment registration and device listing (21 CFR Part 807)" data-href="quality-compliance.html"><span class="hn">05</span><span class="ht">Quality System &amp; Compliance</span></button>
+      <button type="button" class="hx" role="tab" aria-selected="false" style="--dx:-1;--dy:0" data-mol="poss" data-title="FDA Enforcement Response &amp; Remediation" data-sub="Strategic and scientific support when FDA has questions" data-points="FDA deficiency and Additional Information (AI) response strategy|Warning Letter response: root cause analysis, CAPA, and response drafting|FDA Form 483 response: observation-by-observation strategy" data-href="enforcement-response.html"><span class="hn">06</span><span class="ht">FDA Enforcement Response &amp; Remediation</span></button>
         </div>
         <div class="hx-card" aria-live="polite">
-          <h3 class="hx-title"></h3>
+          <h3 class="hx-title"><a href="#"></a></h3>
           <p class="hx-sub"></p>
-          <p class="hx-meta"></p>
           <ul class="hx-points"></ul>
-          <a class="hx-link" href="#">View this service →</a>
         </div>
       </div>
-      <figure class="mol-stage " data-mol-stage data-mol="peg" data-cycle="peg,pdms,peek,nylon,helix,poss" data-auto="false" data-tabs="false" id="svc-stage">
-        <div class="mol-wrap"><div class="glow"></div><canvas aria-label="Interactive 3D model: a molecule that changes with each service. Drag to rotate."></canvas><div class="mol-hot"></div></div>
-        <figcaption class="mol-plate"><span class="mol-name"></span><span class="mol-role"></span><div class="mol-note" aria-live="polite"></div><div class="mol-ctrl"><div class="mol-tabs"></div><div class="mol-units" hidden><button type="button" data-d="-" aria-label="Remove one repeat unit">&minus;</button><span class="n"></span><button type="button" data-d="+" aria-label="Add one repeat unit">+</button></div></div></figcaption>
+      <figure class="mol-stage " data-mol-stage data-mol="peg" data-cycle="peg,pdms,peek,nylon,helix,poss" data-notes="false" data-auto="false" data-tabs="false" id="svc-stage">
+        <div class="mol-wrap"><div class="glow"></div><canvas role="img" aria-label="Interactive 3D molecule. Drag to rotate."></canvas></div>
+        <div class="mol-plate"><div class="mol-ctrl"><div class="mol-tabs"></div><div class="mol-units" hidden><button type="button" data-d="-" aria-label="Remove one repeat unit"></button><span class="n" aria-live="polite"></span><button type="button" data-d="+" aria-label="Add one repeat unit"></button></div></div></div>
       </figure>
     </div>
   </div>
