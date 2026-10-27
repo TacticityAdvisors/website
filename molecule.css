@@ -517,3 +517,10 @@ body.bg-pathway .why, body.bg-evidence .stages { background: linear-gradient(180
 .newsletter .sib-form { max-width: 920px; margin-inline: auto !important; }
 .newsletter-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; width: 100%; max-width: none; margin: 2.5rem 0 0; transform: none; padding: 0 var(--edge); }
 .newsletter-card { flex: 0 1 380px; width: 380px; max-width: 100%; margin: 0; }
+
+/* services: the hexagon map and molecule sit together inside one box, like the cards below */
+.svc-map .map-grid { background: var(--paper); border: 1px solid var(--hair); padding: clamp(22px, 3.6vw, 52px); gap: clamp(28px, 4.5vw, 64px); align-items: center; }
+.svc-map .map-left { gap: 24px; }
+.svc-map .hx-card { border-top: 1px solid var(--hair); }
+.svc-map .mol-stage { align-self: center; }
+@media (max-width: 900px) { .svc-map .map-grid { padding: 22px 18px; } }
