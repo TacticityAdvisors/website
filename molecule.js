@@ -347,14 +347,6 @@
     if (!reduce) timer = setInterval(function () { if (!document.hidden && !touched) pick((cur + 1) % items.length, false); }, 9000);
   });
 
-  /* ---------------- scroll chain (grows along the nav as you read) ---------------- */
-  var nav = document.getElementById('nav');
-  if (nav) {
-    var tick = false;
-    function prog() { var h = document.documentElement.scrollHeight - innerHeight; nav.style.setProperty('--p', (h > 0 ? Math.min(1, Math.max(0, scrollY / h)) : 0).toFixed(4)); tick = false; }
-    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(prog); } }, { passive: true }); prog();
-  }
-
   /* ---------------- gentle tilt on explore cards ---------------- */
   if (!reduce && window.matchMedia('(hover:hover)').matches) {
     [].forEach.call(document.querySelectorAll('.explore-card'), function (c) {
@@ -389,6 +381,7 @@
       node.parentNode.replaceChild(frag, node);
     }
     function run() {
+      [].forEach.call(main.querySelectorAll('.svc-items > li'), function (li) { if (li.querySelector('.svc-item-content, .svc-item-text')) return; var sp = document.createElement('span'); sp.className = 'svc-item-text'; while (li.firstChild) sp.appendChild(li.firstChild); li.appendChild(sp); });
       var w = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, null), list = [], n;
       while ((n = w.nextNode())) { if (n.nodeValue.trim().length > 2 && !skip(n)) list.push(n); }
       list.forEach(wrapText);
