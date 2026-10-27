@@ -51,7 +51,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
-  <meta name="theme-color" content="#1a6b5a">
+  <meta name="theme-color" content="#07130f">
   <meta name="msapplication-TileColor" content="#1a6b5a">
 
   <!-- ═══ STRUCTURED DATA — Organisation ═══ -->
@@ -137,26 +137,18 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..600,50&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..600,50&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 
   <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="polymer.css">
 </head>
-<body class="translucent">
+<body class="page-home">
 
  
 
 <a href="#main" class="skip">Skip to content</a>
-
-<!-- Tacticity animated mark background — EXPERIMENT -->
-<div class="tac-bg" aria-hidden="true">
-  <div class="tac-bar"></div>
-  <div class="tac-bar"></div>
-  <div class="tac-bar"></div>
-  <div class="tac-bar"></div>
-  <div class="tac-bar"></div>
-</div>
 
 <!-- ══ NAV ══ -->
 <header>
@@ -227,15 +219,12 @@
 
 <main id="main">
 
-<!-- ══ HERO ══ -->
-<section class="hero" aria-labelledby="h1">
-  <div class="hero-bg" aria-hidden="true"></div>
+<!-- ══ HERO — 3D polymer ══ -->
+<section class="p-hero" aria-labelledby="h1">
+  <canvas class="p-hero-canvas" data-poly data-arch="linear" data-auto="true" data-offsetx="4.4" data-zoom="1.0" data-hold="5" aria-hidden="true"></canvas>
+  <div class="p-hero-shade" aria-hidden="true"></div>
 
-  <!-- LEFT: copy -->
-  <div class="hero-copy">
-    <div class="hero-accent" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span>
-    </div>
+  <div class="p-hero-copy">
     <p class="hero-kicker">U.S. FDA Regulatory Science · Medical Devices · Regulatory Strategy</p>
 
     <h1 id="h1">The regulatory strategy your device deserves, built by scientists who know <em>exactly how FDA reviews it.</em></h1>
@@ -247,12 +236,18 @@
       <a href="services.html" class="btn btn-outline">Explore Services</a>
     </div>
 
+    <ul class="p-hero-meta" aria-label="Highlights">
+      <li>Ex-FDA Lead Reviewer</li>
+      <li>Polymer scientist</li>
+      <li>510(k) · De Novo · PMA</li>
+    </ul>
   </div>
 
+  <div class="p-hero-label" aria-hidden="true">Polymer architecture<b id="archLabel">Linear chain</b></div>
 </section>
 
-<!-- ══ EXPERTISE STRIP ══ -->
-<section class="expertise" aria-label="Areas of Expertise" aria-label="Areas of expertise">
+<!-- ══ EXPERTISE ══ -->
+<section class="expertise" aria-label="Areas of expertise">
   <div class="section-inner--wide">
   <p class="exp-kicker">Areas of Expertise</p>
   <h2 class="exp-heading reveal">Where our depth <em>matters most.</em></h2>
@@ -270,35 +265,23 @@
 </section>
 
 <!-- ══ STAT STRIP ══ -->
-<div class="stat-strip" role="region" aria-label="Practice Credentials" aria-label="Key facts about Tacticity Advisors">
+<div class="stat-strip" role="region" aria-label="Key facts about Tacticity Advisors">
   <div class="stat-strip-inner">
-    <div class="stat-item">
-      <span class="stat-val">300+</span>
-      <span class="stat-label">FDA Submissions Reviewed</span>
-    </div>
+    <div class="stat-item"><span class="stat-val">300+</span><span class="stat-label">FDA Submissions Reviewed</span></div>
     <div class="stat-divider" aria-hidden="true"></div>
-    <div class="stat-item">
-      <span class="stat-val">50+</span>
-      <span class="stat-label">Companies Supported</span>
-    </div>
+    <div class="stat-item"><span class="stat-val">50+</span><span class="stat-label">Companies Supported</span></div>
     <div class="stat-divider" aria-hidden="true"></div>
-    <div class="stat-item">
-      <span class="stat-val">7+ Years</span>
-      <span class="stat-label">FDA Reviewer Experience</span>
-    </div>
+    <div class="stat-item"><span class="stat-val">7+ Years</span><span class="stat-label">FDA Reviewer Experience</span></div>
     <div class="stat-divider" aria-hidden="true"></div>
-    <div class="stat-item">
-      <span class="stat-val">Pre &amp; Post</span>
-      <span class="stat-label">Submission Support</span>
-    </div>
+    <div class="stat-item"><span class="stat-val">Pre &amp; Post</span><span class="stat-label">Submission Support</span></div>
   </div>
 </div>
 
 <!-- ══ EXPLORE ══ -->
 <section class="explore" aria-labelledby="explore-h">
-  <div class="section-inner">
+  <div class="section-inner--wide">
     <p class="section-label reveal" aria-hidden="true">Explore</p>
-    <h2 id="explore-h" class="reveal">Learn more about how we work.</h2>
+    <h2 id="explore-h" class="reveal">Learn more about <em>how we work.</em></h2>
     <div class="explore-grid">
       <a href="what-we-do.html" class="explore-card reveal">
         <span class="explore-num" aria-hidden="true">01</span>
@@ -328,13 +311,14 @@
   </div>
 </section>
 
-
 <!-- ══ CTA ══ -->
 <section class="cta" id="contact" aria-labelledby="cta-h">
   <div class="cta-bg" aria-hidden="true"></div>
+  <canvas class="cta-canvas" data-poly data-arch="network" data-zoom="1.05" data-speed=".1" aria-hidden="true"></canvas>
   <p class="section-label">Engage</p>
   <h2 id="cta-h">Know what FDA is looking for, <em>before you submit.</em></h2>
   <p class="cta-body">Whether you are an Indian company pursuing U.S. FDA clearance, a global manufacturer managing an India-based regulatory program, or a CRO seeking expert scientific alignment, <span class="cta-emphasis">we help you build a U.S. FDA regulatory strategy grounded in evidence, scientific logic, and direct reviewer experience.</span></p>
+  <a href="mailto:contact@tacticityadvisors.com" class="btn btn-primary">Schedule a Complimentary Call</a>
 </section>
 
 </main>
@@ -368,6 +352,16 @@
   </nav>
 </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="polymer.js" defer></script>
+  <script>
+  (function () {
+    var c = document.querySelector('.p-hero-canvas'), l = document.getElementById('archLabel');
+    if (!c || !l) return;
+    var names = { linear: 'Linear chain', helix: 'Double helix', branched: 'Branched chain', network: 'Cross-linked network', block: 'Block copolymer', star: 'Star polymer' };
+    c.addEventListener('polymorph', function (e) { l.textContent = names[e.detail] || ''; });
+  })();
+  </script>
   <script src="script.js" defer></script>
 </body>
 </html>

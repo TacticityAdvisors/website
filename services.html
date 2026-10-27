@@ -52,7 +52,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
-  <meta name="theme-color" content="#1a6b5a">
+  <meta name="theme-color" content="#07130f">
   <meta name="msapplication-TileColor" content="#1a6b5a">
 
   <!-- ═══ STRUCTURED DATA - Organisation ═══ -->
@@ -138,11 +138,12 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..600,50&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,50;1,9..144,300..600,50&family=Hanken+Grotesk:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 
   <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="polymer.css">
 </head>
 <body class="bg-docs">
  
@@ -220,11 +221,46 @@
 <main id="main">
 
 <section class="page-header">
+  <canvas class="ph-canvas" data-poly data-arch="branched" data-speed=".09" data-offsetx="0" aria-hidden="true"></canvas>
+  
   <div class="section-inner">
     <p class="section-label reveal" aria-hidden="true">Services</p>
     <h1 class="reveal">FDA regulatory support, from first submission to full lifecycle <em>management.</em></h1>
   </div>
 </section>
+
+<!-- ══ POLYMER EXPLORER ══ -->
+<section class="pe-section" aria-labelledby="pe-h">
+  <div class="section-inner--wide">
+    <p class="section-label reveal" aria-hidden="true">Explore by architecture</p>
+    <h2 id="pe-h" class="reveal">Every service has a <em>shape.</em></h2>
+    <p class="pe-lede reveal reveal-d1">A polymer gets its properties from how its chains are built. A regulatory program works the same way. Pick a service to see the architecture we use to think about it.</p>
+    <div class="pe-wrap reveal reveal-d2" data-explorer>
+      <div class="pe-list" role="tablist" aria-label="Services">
+      <button class="pe-item" role="tab" aria-selected="false" data-arch="linear" data-archname="Linear chain" data-title="Regulatory Strategy &amp; Pathway" data-sub="From first classification decision to submission-ready plan" data-metaphor="A linear chain: one clear path, each decision attached to the one before it." data-points="FDA pathway strategy and submission planning|Device classification, product code assessment, and 510(k) exemption analysis|Combination product determination and RFD support" data-href="regulatory-strategy.html"><span class="pe-n">01</span><span class="pe-t">Regulatory Strategy &amp; Pathway</span></button>
+      <button class="pe-item" role="tab" aria-selected="false" data-arch="branched" data-archname="Branched chain" data-title="FDA Premarket Submissions" data-sub="Full preparation and support for every premarket pathway" data-metaphor="A branched chain: one backbone with a side chain for every section a submission must carry." data-points="510(k): Traditional, Abbreviated, and Special|PMA: Premarket Approval Application and supplements|De Novo: Classification request preparation" data-href="premarket-submissions.html"><span class="pe-n">02</span><span class="pe-t">FDA Premarket Submissions</span></button>
+      <button class="pe-item" role="tab" aria-selected="false" data-arch="network" data-archname="Cross-linked network" data-title="Biocompatibility &amp; Materials Evaluation" data-sub="Risk-based biological safety grounded in materials science" data-metaphor="A cross-linked network: materials, chemistry and toxicology tied into one connected argument." data-points="ISO 10993 strategy and biological evaluation planning|Biological evaluation plans (BEP) and reports (BER)|Chemical characterization: systematic identification and quantification of chemical substances released from device materials, including extractables and leachables" data-href="biocompatibility.html"><span class="pe-n">03</span><span class="pe-t">Biocompatibility &amp; Materials Evaluation</span></button>
+      <button class="pe-item" role="tab" aria-selected="false" data-arch="block" data-archname="Block copolymer" data-title="Testing Strategy &amp; Evidence Planning" data-sub="Designing the evidence before committing the budget" data-metaphor="A block copolymer: tightly ordered blocks of evidence joined to flexible planning." data-points="Testing matrix recommendation and gap analysis|Performance test design aligned with FDA-recognized standards|Sterilization, shelf-life, packaging, and usability testing strategy" data-href="testing-strategy.html"><span class="pe-n">04</span><span class="pe-t">Testing Strategy &amp; Evidence Planning</span></button>
+      <button class="pe-item" role="tab" aria-selected="false" data-arch="helix" data-archname="Double helix" data-title="Quality System &amp; Compliance" data-sub="Regulatory obligations beyond the submission" data-metaphor="A double helix: two strands, quality and design, held together by repeating rungs." data-points="FDA QSR (21 CFR Part 820) / ISO 13485 gap assessment|Design controls review and documentation support|Establishment registration and device listing (21 CFR Part 807)" data-href="quality-compliance.html"><span class="pe-n">05</span><span class="pe-t">Quality System &amp; Compliance</span></button>
+      <button class="pe-item" role="tab" aria-selected="false" data-arch="star" data-archname="Star polymer" data-title="FDA Enforcement Response &amp; Remediation" data-sub="Strategic and scientific support when FDA has questions" data-metaphor="A star polymer: one core cause, with every corrective action radiating from it." data-points="FDA deficiency and Additional Information (AI) response strategy|Warning Letter response: root cause analysis, CAPA, and response drafting|FDA Form 483 response: observation-by-observation strategy" data-href="enforcement-response.html"><span class="pe-n">06</span><span class="pe-t">FDA Enforcement Response &amp; Remediation</span></button>
+      </div>
+      <div class="pe-stage">
+        <canvas data-poly data-arch="linear" data-zoom="1" data-speed=".11" aria-label="3D polymer model that changes shape for each service"></canvas>
+        <span class="pe-hint" aria-hidden="true">Move your cursor to turn it</span>
+        <div class="pe-card" aria-live="polite">
+          <span class="pe-arch">Linear chain</span>
+          <h3 class="pe-title"></h3>
+          <p class="pe-sub"></p>
+          <p class="pe-meta"></p>
+          <ul class="pe-points"></ul>
+          <a class="pe-link" href="#">View this service →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 <!-- ══ SERVICES ══ -->
@@ -384,6 +420,8 @@
   </nav>
 </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="polymer.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>
