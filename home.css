@@ -241,6 +241,28 @@ html:has(body.home) { background: #f8f9f6; }
 .home .footer-copy, .home .footer-nav a { font-family: var(--font-sans); font-weight: 300; letter-spacing: .06em; }
 .home .footer .logo-name { font-weight: 500; }
 
+/* ── atmosphere: soft, blurred alpine-green washes in the empty white space ──
+   Large, multi-stop feathered radial gradients placed across the whole
+   section (not just corners) so they melt into each other. Background-only,
+   so nothing can overlap content. */
+.home .hero {
+  background-image:
+    radial-gradient(60% 70% at 12% 85%, rgba(44,90,71,.16) 0%, rgba(44,90,71,.07) 40%, rgba(44,90,71,0) 80%),
+    radial-gradient(50% 55% at 45% 20%, rgba(167,196,181,.34) 0%, rgba(167,196,181,.14) 45%, rgba(167,196,181,0) 80%);
+}
+.home .expertise {
+  background-image:
+    radial-gradient(55% 65% at 85% 25%, rgba(167,196,181,.45) 0%, rgba(167,196,181,.18) 45%, rgba(167,196,181,0) 82%),
+    radial-gradient(50% 60% at 20% 70%, rgba(44,90,71,.12) 0%, rgba(44,90,71,.05) 45%, rgba(44,90,71,0) 82%),
+    radial-gradient(40% 50% at 55% 100%, rgba(167,196,181,.30) 0%, rgba(167,196,181,0) 80%);
+}
+.home .explore {
+  background-image:
+    radial-gradient(55% 65% at 15% 20%, rgba(167,196,181,.44) 0%, rgba(167,196,181,.18) 45%, rgba(167,196,181,0) 82%),
+    radial-gradient(55% 65% at 80% 75%, rgba(44,90,71,.14) 0%, rgba(44,90,71,.06) 45%, rgba(44,90,71,0) 82%),
+    radial-gradient(35% 45% at 50% 50%, rgba(167,196,181,.22) 0%, rgba(167,196,181,0) 80%);
+}
+
 /* ── tablet & mobile ── */
 /* side-by-side layout (molecule on the right) down to small laptop / tablet-landscape widths */
 @media (min-width: 821px) and (max-width: 1100px) {

@@ -55,7 +55,7 @@ body.wwd { --section-y: clamp(64px, 8vw, 104px); }
 .wwd .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; }
 .wwd .chips li {
   font-size: var(--fs-label); letter-spacing: .16em; text-transform: uppercase; font-weight: 400;
-  color: var(--alpine); border: 1px solid var(--teal-light); background: var(--teal-pale);
+  color: var(--on-alpine); border: 1px solid var(--alpine); background: var(--alpine);
   padding: 9px 16px; line-height: 1;
 }
 
@@ -125,6 +125,29 @@ body.wwd { --section-y: clamp(64px, 8vw, 104px); }
 .wwd .pullquote em { color: var(--sage); }
 .wwd .btn-light { background: var(--on-alpine); color: var(--alpine-deep); border: 1px solid var(--on-alpine); }
 .wwd .btn-light:hover { background: transparent; color: var(--on-alpine); }
+
+/* ── atmosphere: soft, blurred alpine-green washes in the empty white space ── */
+.wwd main > .page-header {
+  background-image:
+    radial-gradient(58% 80% at 10% 90%, rgba(44,90,71,.15) 0%, rgba(44,90,71,.06) 45%, rgba(44,90,71,0) 82%),
+    radial-gradient(50% 70% at 50% 15%, rgba(167,196,181,.36) 0%, rgba(167,196,181,.14) 45%, rgba(167,196,181,0) 82%);
+}
+.wwd main > .what {
+  background-image:
+    radial-gradient(55% 70% at 80% 30%, rgba(167,196,181,.44) 0%, rgba(167,196,181,.17) 45%, rgba(167,196,181,0) 82%),
+    radial-gradient(48% 60% at 15% 80%, rgba(44,90,71,.11) 0%, rgba(44,90,71,.045) 45%, rgba(44,90,71,0) 82%);
+}
+.wwd main > .clients {
+  background-image:
+    radial-gradient(55% 70% at 20% 25%, rgba(167,196,181,.42) 0%, rgba(167,196,181,.16) 45%, rgba(167,196,181,0) 82%),
+    radial-gradient(55% 65% at 80% 80%, rgba(44,90,71,.13) 0%, rgba(44,90,71,.05) 45%, rgba(44,90,71,0) 82%),
+    radial-gradient(35% 45% at 55% 45%, rgba(167,196,181,.20) 0%, rgba(167,196,181,0) 80%);
+}
+.wwd main > .why {
+  background-image:
+    radial-gradient(50% 65% at 80% 25%, rgba(255,255,255,.80) 0%, rgba(255,255,255,.3) 45%, rgba(255,255,255,0) 82%),
+    radial-gradient(55% 70% at 20% 75%, rgba(44,90,71,.14) 0%, rgba(44,90,71,.055) 45%, rgba(44,90,71,0) 82%);
+}
 
 /* ── responsive ── */
 @media (max-width: 1100px) {
