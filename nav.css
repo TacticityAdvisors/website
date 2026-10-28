@@ -1,0 +1,47 @@
+/* ============================================================
+   Shared site header — loaded last on every page so the nav is
+   identical everywhere: Cormorant wordmark, Jost links, alpine
+   green. Three zones: logo left, links centred, button right.
+   ============================================================ */
+.nav.nav {
+  --nav-green: #2c5a47;
+  --nav-green-deep: #173a2c;
+  display: grid; grid-template-columns: minmax(max-content, 1fr) auto minmax(max-content, 1fr);
+  align-items: center; column-gap: clamp(1rem, 2.5vw, 2.5rem);
+  padding-inline: max(24px, calc((100vw - 1360px) / 2 + 24px));
+  background: rgba(248, 249, 246, .88);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid #dde4de; box-shadow: none;
+}
+.nav.nav .logo-link { justify-self: start; }
+.nav.nav .logo-name { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 1.65rem; letter-spacing: .02em; color: #14231c; }
+.nav.nav .nav-links { justify-self: center; margin: 0; gap: clamp(1rem, 1.9vw, 2rem); flex-wrap: nowrap; }
+.nav.nav .nav-link {
+  font-family: 'Jost', 'Avenir Next', system-ui, sans-serif; font-weight: 400; font-size: 12.5px;
+  letter-spacing: .14em; text-transform: uppercase; color: #66766d; white-space: nowrap;
+}
+.nav.nav .nav-link:hover { color: #14231c; }
+.nav.nav .nav-link::after { background: var(--nav-green); }
+.nav.nav .nav-link.active { color: var(--nav-green); }
+.nav.nav .nav-cta {
+  justify-self: end; white-space: nowrap;
+  font-family: 'Jost', 'Avenir Next', system-ui, sans-serif; font-weight: 400; font-size: 11.5px;
+  letter-spacing: .16em; text-transform: uppercase;
+  background: transparent; color: var(--nav-green); border: 1px solid var(--nav-green);
+  padding: .8rem 1.25rem; transition: background .3s, color .3s;
+}
+.nav.nav .nav-cta:hover { background: var(--nav-green); color: #f3f6f2; }
+.nav.nav .nav-toggle { justify-self: end; grid-column: 3; }
+.dropdown-menu { border-radius: 0; box-shadow: none; background: rgba(248, 249, 246, .98); border: 1px solid #dde4de; }
+.dropdown-link { font-family: 'Jost', 'Avenir Next', system-ui, sans-serif; font-weight: 300; font-size: .92rem; }
+.nav-drawer a { font-family: 'Jost', 'Avenir Next', system-ui, sans-serif; font-weight: 300; }
+.nav-drawer .nav-cta { background: var(--nav-green, #2c5a47); color: #f3f6f2; }
+
+@media (min-width: 901px) and (max-width: 1399px) {
+  .nav.nav .nav-link { font-size: 11.5px; letter-spacing: .1em; }
+  .nav.nav .nav-links { gap: clamp(.8rem, 1.4vw, 1.3rem); }
+  .nav.nav .nav-cta { display: none; }   /* "Contact" is already in the menu */
+}
+@media (max-width: 900px) {
+  .nav.nav { display: flex; justify-content: space-between; }
+}

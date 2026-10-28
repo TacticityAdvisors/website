@@ -138,13 +138,15 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
 
   <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="nav.css">
 </head>
-<body class="bg-pathway">
+<body class="home wwd">
  
 
 <a href="#main" class="skip">Skip to content</a>
@@ -222,62 +224,81 @@
 <section class="page-header">
   <div class="section-inner">
     <p class="section-label reveal" aria-hidden="true">What We Do</p>
-    <h1 class="reveal">Regulatory strategy shaped by <em>science and FDA review experience.</em></h1>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">Regulatory strategy shaped by <em>science and FDA review experience.</em></h1>
+        <p class="ph-lead reveal reveal-d1">We support medical technology companies across U.S. FDA pathway strategy, evidence planning, submission preparation, and review response, from first concept through post-market compliance.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
   </div>
 </section>
-
 
 <!-- ══ WHAT WE DO ══ -->
 <section class="what" id="what" aria-labelledby="what-h">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">What We Do</p>
-    
-    <div class="body-copy reveal reveal-d1">
-      <p>We support medical technology companies across U.S. FDA pathway strategy, evidence planning, submission preparation, and review response, from first concept through post-market compliance.</p>
-      <p class="body-copy">Deficiency response, biocompatibility strategy, chemical characterization, and E&amp;L: we've got you covered.</p>
-      <p class="body-copy">The difference isn't access to more information. Everything FDA expects is publicly available in guidance documents and the Code of Federal Regulations. The difference is knowing how a reviewer actually reads a submission: which claims draw scrutiny first, which testing gaps get flagged before anything else, and which arguments have already failed for other companies making a similar case.</p>
-      <p class="body-copy">That perspective shapes every engagement. We don't recommend testing because it's conventional or because a checklist calls for it. We recommend it because a specific risk in your device's profile requires it, and we can explain exactly why FDA will expect to see it addressed, not just that it should be.</p>
-    </div>
-
-    <!-- WHO WE WORK WITH -->
-    <div class="client-types reveal reveal-d2">
-      <p class="client-types-label">Who We Work With</p>
-      <div class="client-grid">
-        <div class="client-card">
-          <div class="client-card-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 21V7l3-3 3 3v14M9 12h6"/></svg>
-          </div>
-          <h3 class="client-card-title">Indian MedTech Companies</h3>
-          <p class="client-card-body">Indian device manufacturers seeking U.S. FDA clearance or approval, including 510(k), De Novo, and PMA, who need a regulatory partner with direct FDA experience.</p>
-        </div>
-        <div class="client-card">
-          <div class="client-card-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3 class="client-card-title">International Companies</h3>
-          <p class="client-card-body">Global medical device companies, including U.S., European, and APAC manufacturers, seeking support with U.S. FDA submissions, testing strategy, and CRO coordination for India-based studies.</p>
-        </div>
-        <div class="client-card">
-          <div class="client-card-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-          </div>
-          <h3 class="client-card-title">CROs &amp; Testing Laboratories</h3>
-          <p class="client-card-body">Contract research organisations and testing labs in India seeking scientific protocol design, regulatory alignment review, and expert guidance on what FDA actually requires from their studies.</p>
-        </div>
-        <div class="client-card">
-          <div class="client-card-icon" aria-hidden="true">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <h3 class="client-card-title">Startups &amp; Deep-Tech Ventures</h3>
-          <p class="client-card-body">Early-stage medical technology companies, including those in deep-tech incubators and innovation programs, building their regulatory strategy from the ground up, often for the first time.</p>
-        </div>
+    <div class="split">
+      <div class="split-head">
+        <p class="section-label reveal" aria-hidden="true">Our Approach</p>
+        <h2 id="what-h" class="reveal">Knowing how a reviewer <em>actually reads.</em></h2>
+      </div>
+      <div class="split-body reveal reveal-d1">
+        <ul class="chips" role="list" aria-label="Core capabilities">
+          <li>Deficiency response</li>
+          <li>Biocompatibility strategy</li>
+          <li>Chemical characterization</li>
+          <li>E&amp;L</li>
+        </ul>
+        <p class="lede">Deficiency response, biocompatibility strategy, chemical characterization, and E&amp;L: we've got you covered.</p>
+        <p>The difference isn't access to more information. Everything FDA expects is publicly available in guidance documents and the Code of Federal Regulations. The difference is knowing how a reviewer actually reads a submission: which claims draw scrutiny first, which testing gaps get flagged before anything else, and which arguments have already failed for other companies making a similar case.</p>
+        <p>That perspective shapes every engagement. We don't recommend testing because it's conventional or because a checklist calls for it. We recommend it because a specific risk in your device's profile requires it, and we can explain exactly why FDA will expect to see it addressed, not just that it should be.</p>
       </div>
     </div>
-    <div class="principles reveal reveal-d2">
-      <div class="principle"><p class="p-tag-label">Principle 01</p><p class="p-text"><strong>Define the right regulatory question</strong> <span style="color:var(--ink-65)"> before generating the evidence.</span></p></div>
-      <div class="principle"><p class="p-tag-label">Principle 02</p><p class="p-text"><strong>Match evidence to risk</strong> <span style="color:var(--ink-65)">, not to convention or volume.</span></p></div>
-      <div class="principle"><p class="p-tag-label">Principle 03</p><p class="p-text"><strong>Anticipate the reviewer's lens</strong> <span style="color:var(--ink-65)"> at every stage of the program.</span></p></div>
-      <div class="principle"><p class="p-tag-label">Principle 04</p><p class="p-text"><strong>Present the case as a technical argument</strong> <span style="color:var(--ink-65)"> that withstands expert review.</span></p></div>
+  </div>
+</section>
+
+<!-- ══ WHO WE WORK WITH ══ -->
+<section class="clients" aria-labelledby="clients-h">
+  <div class="section-inner">
+    <p class="section-label reveal" aria-hidden="true">Who We Work With</p>
+    <h2 id="clients-h" class="reveal">Built for teams <em>at every stage.</em></h2>
+    <div class="client-grid">
+      <article class="client-card reveal">
+        <span class="client-num" aria-hidden="true">01</span>
+        <h3 class="client-card-title">Indian MedTech Companies</h3>
+        <p class="client-card-body">Indian device manufacturers seeking U.S. FDA clearance or approval, including 510(k), De Novo, and PMA, who need a regulatory partner with direct FDA experience.</p>
+      </article>
+      <article class="client-card reveal reveal-d1">
+        <span class="client-num" aria-hidden="true">02</span>
+        <h3 class="client-card-title">International Companies</h3>
+        <p class="client-card-body">Global medical device companies, including U.S., European, and APAC manufacturers, seeking support with U.S. FDA submissions, testing strategy, and CRO coordination for India-based studies.</p>
+      </article>
+      <article class="client-card reveal reveal-d2">
+        <span class="client-num" aria-hidden="true">03</span>
+        <h3 class="client-card-title">CROs &amp; Testing Laboratories</h3>
+        <p class="client-card-body">Contract research organisations and testing labs in India seeking scientific protocol design, regulatory alignment review, and expert guidance on what FDA actually requires from their studies.</p>
+      </article>
+      <article class="client-card reveal reveal-d3">
+        <span class="client-num" aria-hidden="true">04</span>
+        <h3 class="client-card-title">Startups &amp; Deep-Tech Ventures</h3>
+        <p class="client-card-body">Early-stage medical technology companies, including those in deep-tech incubators and innovation programs, building their regulatory strategy from the ground up, often for the first time.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRINCIPLES ══ -->
+<section class="principles-band" aria-labelledby="principles-h">
+  <div class="section-inner">
+    <p class="section-label reveal" aria-hidden="true">Principles</p>
+    <h2 id="principles-h" class="reveal">How we think <em>about every case.</em></h2>
+    <div class="principles">
+      <div class="principle reveal"><p class="p-tag-label">Principle 01</p><p class="p-text"><strong>Define the right regulatory question</strong> before generating the evidence.</p></div>
+      <div class="principle reveal reveal-d1"><p class="p-tag-label">Principle 02</p><p class="p-text"><strong>Match evidence to risk</strong>, not to convention or volume.</p></div>
+      <div class="principle reveal reveal-d2"><p class="p-tag-label">Principle 03</p><p class="p-text"><strong>Anticipate the reviewer's lens</strong> at every stage of the program.</p></div>
+      <div class="principle reveal reveal-d3"><p class="p-tag-label">Principle 04</p><p class="p-text"><strong>Present the case as a technical argument</strong> that withstands expert review.</p></div>
     </div>
   </div>
 </section>
@@ -285,16 +306,30 @@
 <!-- ══ WHY TACTICITY ══ -->
 <section class="why" id="why" aria-labelledby="why-h">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">Why Tacticity</p>
-    <h2 id="why-h" class="reveal">Because FDA review is <em>not just document review.</em></h2>
-    <p class="body-copy reveal reveal-d1">Tacticity helps companies define the right questions early, generate the right evidence, and present the case clearly.</p>
-    <p class="body-copy reveal reveal-d1">A reviewer isn't working through a checklist. They're tracing whether your risk assessment, your testing plan, and your claims all agree with each other, and where they don't, that gap becomes the first question you're asked. A submission can be complete on paper and still generate a deficiency, because completeness and a sound argument are not the same thing.</p>
-    <p class="body-copy reveal reveal-d1">That distinction is what this practice is built around. We don't just assemble the documents a submission requires. We build the reasoning that has to survive contact with an actual reviewer: where the argument is genuinely strong, where it's merely assumed to be, and where it needs rebuilding before FDA finds the gap first.</p>
-    <blockquote class="pullquote reveal reveal-d2">
-      <p>The strength of a submission is determined by how clearly the evidence answers the relevant risk questions, not by its volume.</p>
-    </blockquote>
+    <div class="split">
+      <div class="split-head">
+        <p class="section-label reveal" aria-hidden="true">Why Tacticity</p>
+        <h2 id="why-h" class="reveal">Because FDA review is <em>not just document review.</em></h2>
+      </div>
+      <div class="split-body reveal reveal-d1">
+        <p class="lede">Tacticity helps companies define the right questions early, generate the right evidence, and present the case clearly.</p>
+        <p>A reviewer isn't working through a checklist. They're tracing whether your risk assessment, your testing plan, and your claims all agree with each other, and where they don't, that gap becomes the first question you're asked. A submission can be complete on paper and still generate a deficiency, because completeness and a sound argument are not the same thing.</p>
+        <p>That distinction is what this practice is built around. We don't just assemble the documents a submission requires. We build the reasoning that has to survive contact with an actual reviewer: where the argument is genuinely strong, where it's merely assumed to be, and where it needs rebuilding before FDA finds the gap first.</p>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ══ PULLQUOTE ══ -->
+<section class="cta" aria-label="Closing statement">
+  <p class="section-label">In Short</p>
+  <blockquote class="pullquote reveal">
+    <p>The strength of a submission is determined by how clearly the evidence answers the relevant risk questions, <em>not by its volume.</em></p>
+  </blockquote>
+  <a href="contact.html" class="btn btn-light">Schedule a Consultation</a>
+</section>
+
+</main>
 
 
 <!-- ══ FOOTER ══ -->
@@ -326,5 +361,7 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>

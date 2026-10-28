@@ -88,7 +88,7 @@
   group.rotation.set(.25, -.35, .35);
 
   /* faint dust */
-  var N = 140, pos = new Float32Array(N * 3);
+  var N = canvas.hasAttribute('data-minimal') ? 36 : 140, pos = new Float32Array(N * 3);
   for (i = 0; i < N; i++) {
     var rr = 7 + Math.random() * 7, th = Math.random() * 6.283, ph = Math.acos(2 * Math.random() - 1);
     pos[i * 3] = rr * Math.sin(ph) * Math.cos(th);
