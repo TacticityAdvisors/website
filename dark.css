@@ -1,0 +1,206 @@
+/* ============================================================
+   Dark mode + theme toggle — loaded LAST on every page.
+   Everything dark is scoped to html[data-theme="dark"], so the
+   light site is untouched. Palette: deep forest-black with
+   alpine-green / sage accents.
+   ============================================================ */
+
+/* ── theme toggle (always styled, both themes) ── */
+.nav-actions { display: flex; align-items: center; gap: 1.1rem; justify-self: end; margin-left: auto; }
+.nav.nav .nav-actions .nav-cta { justify-self: auto; }
+
+.theme-toggle {
+  --tt-w: 58px; --tt-h: 30px; --tt-pad: 3px;
+  position: relative; flex: none; width: var(--tt-w); height: var(--tt-h);
+  border-radius: 999px; padding: 0; cursor: pointer;
+  border: 1px solid #c9d6ce; background: linear-gradient(180deg, #ffffff, #eaf0eb);
+  box-shadow: inset 0 1px 2px rgba(23,58,44,.08);
+  transition: background .45s ease, border-color .45s ease, box-shadow .45s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle:hover { border-color: #2c5a47; }
+.theme-toggle:focus-visible { outline: 1px solid #2c5a47; outline-offset: 4px; }
+.theme-toggle .tt-icon {
+  position: absolute; top: 50%; width: 15px; height: 15px; margin-top: -7.5px;
+  display: grid; place-items: center; transition: opacity .35s ease, color .35s ease;
+}
+.theme-toggle .tt-icon svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.theme-toggle .tt-sun  { left: 9px;  color: #fbfcfa; }   /* sits on the knob when light */
+.theme-toggle .tt-moon { right: 9px; color: #66766d; }
+.theme-toggle .tt-knob {
+  position: absolute; top: var(--tt-pad); left: var(--tt-pad);
+  width: calc(var(--tt-h) - 2 * var(--tt-pad) - 2px); height: calc(var(--tt-h) - 2 * var(--tt-pad) - 2px);
+  border-radius: 50%; background: #2c5a47;
+  box-shadow: 0 1px 4px rgba(23,58,44,.35), inset 0 0 0 1px rgba(255,255,255,.12);
+  transition: transform .5s cubic-bezier(.22,1,.36,1), background .45s ease;
+}
+.theme-toggle .tt-sun, .theme-toggle .tt-moon { z-index: 1; }
+
+html[data-theme="dark"] .theme-toggle {
+  border-color: #2c4a3c; background: linear-gradient(180deg, #0f1c16, #14261d);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.5);
+}
+html[data-theme="dark"] .theme-toggle:hover { border-color: #8fbfa6; }
+html[data-theme="dark"] .theme-toggle .tt-knob {
+  transform: translateX(calc(var(--tt-w) - var(--tt-h)));
+  background: #a7c4b5; box-shadow: 0 0 14px rgba(143,191,166,.45), inset 0 0 0 1px rgba(255,255,255,.25);
+}
+html[data-theme="dark"] .theme-toggle .tt-sun  { color: #6f8a7b; }
+html[data-theme="dark"] .theme-toggle .tt-moon { color: #0e1f17; }
+
+@media (max-width: 900px) {
+  .nav-actions { gap: .6rem; margin-right: .6rem; }
+  .theme-toggle { --tt-w: 52px; --tt-h: 28px; }
+}
+
+/* smooth cross-fade while switching */
+html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after {
+  transition: background-color .45s ease, border-color .45s ease, color .35s ease, fill .35s ease, stroke .35s ease !important;
+}
+
+/* ============================================================
+   DARK PALETTE
+   ============================================================ */
+html[data-theme="dark"] { background: #0c1410 !important; color-scheme: dark; }
+
+/* tokens — beats both :root (styles.css) and body.home (home.css) */
+html[data-theme="dark"] body,
+html[data-theme="dark"] body.home {
+  --ink:        #e8efea;
+  --ink-65:     #a6b5ac;
+  --ink-40:     #7b8b82;
+  --ink-18:     #2a3a31;
+  --canvas:     #0c1410;
+  --white:      #121d17;
+  --surface:    #101a15;
+  --border:     #22332a;
+  --teal:       #8fbfa6;
+  --teal-mid:   #a7d2bb;
+  --teal-pale:  #15251d;
+  --teal-light: #3f6b57;
+  --alpine:     #8fbfa6;
+  --alpine-deep:#12291f;
+  --sage:       #a7c4b5;
+  --mist:       #15251d;
+  --on-alpine:  #eef4f0;
+  --atom-c: #8fbfa6; --atom-o: #cfe6da; --atom-h: #eef4f0; --atom-n: #5f9a80; --bond: #47604f;
+  background: #0c1410;
+  color: var(--ink);
+}
+html[data-theme="dark"] body.home { background: #0c1410; }
+html[data-theme="dark"] body.translucent { background: transparent; }
+
+/* ── header ── */
+html[data-theme="dark"] .nav.nav,
+html[data-theme="dark"] .home .nav {
+  background: rgba(12,20,16,.82); border-bottom-color: #22332a;
+  --nav-green: #8fbfa6;
+}
+html[data-theme="dark"] .nav.scrolled { box-shadow: 0 1px 28px rgba(0,0,0,.45); }
+html[data-theme="dark"] .nav.nav .logo-name { color: #e8efea; }
+html[data-theme="dark"] .nav.nav .nav-link { color: #a6b5ac; }
+html[data-theme="dark"] .nav.nav .nav-link:hover { color: #ffffff; }
+html[data-theme="dark"] .nav.nav .nav-link.active { color: #8fbfa6; }
+html[data-theme="dark"] .nav.nav .nav-cta { color: #8fbfa6; border-color: #8fbfa6; background: transparent; }
+html[data-theme="dark"] .nav.nav .nav-cta:hover { background: #8fbfa6; color: #0c1410; }
+html[data-theme="dark"] .nav-toggle span { background: #e8efea; }
+html[data-theme="dark"] .logo-link svg rect { fill: #8fbfa6; }
+html[data-theme="dark"] .logo-divider { background: #22332a; }
+html[data-theme="dark"] .dropdown-menu,
+html[data-theme="dark"] .home .dropdown-menu { background: rgba(14,24,19,.97); border-color: #22332a; box-shadow: 0 18px 40px rgba(0,0,0,.5); }
+html[data-theme="dark"] .dropdown-link { color: #c9d6ce; }
+html[data-theme="dark"] .dropdown-link:hover { background: #15251d; color: #ffffff; }
+html[data-theme="dark"] .nav-drawer { background: #0f1914; border-bottom-color: #22332a; }
+html[data-theme="dark"] .nav-drawer a { color: #e8efea; border-bottom-color: #22332a; }
+html[data-theme="dark"] .nav-drawer .nav-cta { background: #8fbfa6; color: #0c1410; border-color: #8fbfa6; }
+html[data-theme="dark"] .home .nav-drawer .nav-cta { background: #8fbfa6; color: #0c1410; }
+
+/* ── buttons: light-green fill needs dark text ── */
+html[data-theme="dark"] .btn-primary,
+html[data-theme="dark"] .home .btn-primary { background: #8fbfa6; border-color: #8fbfa6; color: #0c1410; }
+html[data-theme="dark"] .btn-primary:hover,
+html[data-theme="dark"] .home .btn-primary:hover { background: #a7d2bb; border-color: #a7d2bb; color: #0c1410; }
+html[data-theme="dark"] .btn-outline,
+html[data-theme="dark"] .home .btn-outline { background: transparent; color: #8fbfa6; border-color: #8fbfa6; }
+html[data-theme="dark"] .btn-outline:hover,
+html[data-theme="dark"] .home .btn-outline:hover { background: #8fbfa6; color: #0c1410; border-color: #8fbfa6; }
+
+/* ── dark bands: stay deep green with light text ── */
+html[data-theme="dark"] .cta,
+html[data-theme="dark"] .home .cta { background: #12291f; }
+html[data-theme="dark"] .cta h2, html[data-theme="dark"] .cta-body-feature { color: #eef4f0; }
+html[data-theme="dark"] .stat-strip,
+html[data-theme="dark"] .home .stat-strip { background: #12291f; border-bottom-color: #1d3a2d; }
+html[data-theme="dark"] .principles-band,
+html[data-theme="dark"] .wwd .principles-band { background: #12291f; }
+html[data-theme="dark"] .pullquote,
+html[data-theme="dark"] .newsletter-signup,
+html[data-theme="dark"] .tac-bar { background: #1c4535; }
+html[data-theme="dark"] .footer, html[data-theme="dark"] .home .footer { background: #070d0a; border-top: 1px solid #15251d; }
+html[data-theme="dark"] .skip { background: #8fbfa6; color: #0c1410; }
+
+/* ── What We Do: filled capability tags keep a green box ── */
+html[data-theme="dark"] .wwd .chips li { background: #1f4a3a; border-color: #2f6b55; color: #eef4f0; }
+html[data-theme="dark"] .wwd .btn-light { background: #eef4f0; color: #12291f; border-color: #eef4f0; }
+html[data-theme="dark"] .wwd .btn-light:hover { background: transparent; color: #eef4f0; }
+
+/* ── the green washes: same idea, tuned for dark ── */
+html[data-theme="dark"] .home .hero {
+  background-image:
+    radial-gradient(60% 70% at 12% 85%, rgba(63,130,98,.22) 0%, rgba(63,130,98,.09) 40%, rgba(63,130,98,0) 80%),
+    radial-gradient(50% 55% at 45% 20%, rgba(95,154,128,.16) 0%, rgba(95,154,128,.06) 45%, rgba(95,154,128,0) 80%);
+}
+html[data-theme="dark"] .home .expertise {
+  background-image:
+    radial-gradient(55% 65% at 85% 25%, rgba(95,154,128,.18) 0%, rgba(95,154,128,.07) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(50% 60% at 20% 70%, rgba(63,130,98,.16) 0%, rgba(63,130,98,.06) 45%, rgba(63,130,98,0) 82%),
+    radial-gradient(40% 50% at 55% 100%, rgba(95,154,128,.12) 0%, rgba(95,154,128,0) 80%);
+}
+html[data-theme="dark"] .home .explore {
+  background-image:
+    radial-gradient(55% 65% at 15% 20%, rgba(95,154,128,.18) 0%, rgba(95,154,128,.07) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(55% 65% at 80% 75%, rgba(63,130,98,.17) 0%, rgba(63,130,98,.07) 45%, rgba(63,130,98,0) 82%),
+    radial-gradient(35% 45% at 50% 50%, rgba(95,154,128,.10) 0%, rgba(95,154,128,0) 80%);
+}
+html[data-theme="dark"] .home .hero-glow,
+html[data-theme="dark"] .wwd .ph-visual::before { background: radial-gradient(circle, rgba(63,130,98,.22) 0%, transparent 68%); }
+html[data-theme="dark"] .wwd main > .page-header {
+  background-image:
+    radial-gradient(58% 80% at 10% 90%, rgba(63,130,98,.20) 0%, rgba(63,130,98,.08) 45%, rgba(63,130,98,0) 82%),
+    radial-gradient(50% 70% at 50% 15%, rgba(95,154,128,.15) 0%, rgba(95,154,128,.06) 45%, rgba(95,154,128,0) 82%);
+}
+html[data-theme="dark"] .wwd main > .what {
+  background-image:
+    radial-gradient(55% 70% at 80% 30%, rgba(95,154,128,.18) 0%, rgba(95,154,128,.07) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(48% 60% at 15% 80%, rgba(63,130,98,.14) 0%, rgba(63,130,98,.05) 45%, rgba(63,130,98,0) 82%);
+}
+html[data-theme="dark"] .wwd main > .clients {
+  background-image:
+    radial-gradient(55% 70% at 20% 25%, rgba(95,154,128,.17) 0%, rgba(95,154,128,.07) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(55% 65% at 80% 80%, rgba(63,130,98,.17) 0%, rgba(63,130,98,.07) 45%, rgba(63,130,98,0) 82%),
+    radial-gradient(35% 45% at 55% 45%, rgba(95,154,128,.10) 0%, rgba(95,154,128,0) 80%);
+}
+html[data-theme="dark"] .wwd main > .why {
+  background-image:
+    radial-gradient(50% 65% at 80% 25%, rgba(95,154,128,.13) 0%, rgba(95,154,128,.05) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(55% 70% at 20% 75%, rgba(63,130,98,.18) 0%, rgba(63,130,98,.07) 45%, rgba(63,130,98,0) 82%);
+}
+
+/* ── inner pages (styles.css): translucent / textured sections ── */
+html[data-theme="dark"] .translucent .explore, html[data-theme="dark"] .translucent .cta,
+html[data-theme="dark"] .translucent .what, html[data-theme="dark"] .translucent .services,
+html[data-theme="dark"] .translucent .working, html[data-theme="dark"] .translucent .founder,
+html[data-theme="dark"] body.bg-lattice .page-header, html[data-theme="dark"] body.bg-docs .page-header,
+html[data-theme="dark"] body.bg-evidence .page-header, html[data-theme="dark"] body.bg-newsletter .page-header { background: rgba(12,20,16,.55); }
+html[data-theme="dark"] .translucent .explore-card, html[data-theme="dark"] .translucent .exp-card { background: rgba(18,29,23,.75); }
+html[data-theme="dark"] .btn-ghost-light { color: #eef4f0; }
+
+/* ── misc surfaces ── */
+html[data-theme="dark"] ::selection { background: #2f6b55; color: #ffffff; }
+html[data-theme="dark"] input, html[data-theme="dark"] textarea, html[data-theme="dark"] select {
+  background: #101a15; color: #e8efea; border-color: #2a3a31;
+}
+html[data-theme="dark"] input::placeholder, html[data-theme="dark"] textarea::placeholder { color: #7b8b82; }
+html[data-theme="dark"] img:not([src$=".svg"]) { filter: brightness(.9) contrast(1.02); }
+html[data-theme="dark"] .explore-card:hover, html[data-theme="dark"] .client-card:hover,
+html[data-theme="dark"] .home .explore-card:hover, html[data-theme="dark"] .wwd .client-card:hover { background: #15251d; }

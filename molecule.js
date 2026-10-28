@@ -99,11 +99,15 @@
   var pm = new THREE.PointsMaterial({ size: .07, transparent: true, opacity: .55, sizeAttenuation: true });
   var dust = new THREE.Points(pg, pm); stage.add(dust);
 
-  /* colours come from the page's CSS tokens */
-  var cs = getComputedStyle(document.body);
-  ['c', 'o', 'n', 'h'].forEach(function (k) { var v = cs.getPropertyValue('--atom-' + k).trim(); if (v) mat(k).color.set(v).convertSRGBToLinear(); });
-  var bv = cs.getPropertyValue('--bond').trim(); if (bv) mat('bond').color.set(bv).convertSRGBToLinear();
-  var av = cs.getPropertyValue('--alpine').trim(); if (av) pm.color.set(av).convertSRGBToLinear();
+  /* colours come from the page's CSS tokens (re-read when the theme switches) */
+  function applyTheme() {
+    var cs = getComputedStyle(document.body);
+    ['c', 'o', 'n', 'h'].forEach(function (k) { var v = cs.getPropertyValue('--atom-' + k).trim(); if (v) mat(k).color.set(v).convertSRGBToLinear(); });
+    var bv = cs.getPropertyValue('--bond').trim(); if (bv) mat('bond').color.set(bv).convertSRGBToLinear();
+    var av = cs.getPropertyValue('--alpine').trim(); if (av) pm.color.set(av).convertSRGBToLinear();
+  }
+  applyTheme();
+  document.addEventListener('themechange', function () { applyTheme(); renderer.render(scene, camera); });
 
   var drawn = false;
   function resize() {
