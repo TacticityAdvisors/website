@@ -244,7 +244,7 @@ body.svc { --section-y: clamp(56px, 7vw, 92px); --rail-h: 54px; }
 }
 .svc .sv-models { position: relative; overflow: hidden; isolation: isolate; }
 .svc .cta { position: relative; overflow: hidden; isolation: isolate; }
-.svc .sv-models::before, .svc .cta::before {
+.svc .cta::before {
   content: ""; position: absolute; z-index: -1; pointer-events: none; width: 55%; aspect-ratio: 1; border-radius: 50%;
   right: -8%; top: -30%; filter: blur(40px);
   background: radial-gradient(circle, rgba(167,196,181,.22) 0%, rgba(167,196,181,.08) 45%, transparent 72%);
