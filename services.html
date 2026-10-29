@@ -138,18 +138,22 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
 
   <!-- ═══ STYLESHEET ═══ -->
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="services.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-docs">
+<body class="home svc">
  
+
+<div class="sv-orb sv-orb--a" aria-hidden="true"></div>
+<div class="sv-orb sv-orb--b" aria-hidden="true"></div>
+<div class="sv-orb sv-orb--c" aria-hidden="true"></div>
 
 <a href="#main" class="skip">Skip to content</a>
 
@@ -223,141 +227,298 @@
 
 <main id="main">
 
+<!-- ══ HEADER ══ -->
 <section class="page-header">
   <div class="section-inner">
     <p class="section-label reveal" aria-hidden="true">Services</p>
-    <h1 class="reveal">FDA regulatory support, from first submission to full lifecycle <em>management.</em></h1>
-  </div>
-</section>
-
-
-<!-- ══ SERVICES ══ -->
-<section class="services" id="services" aria-labelledby="svc-h">
-  <div class="section-inner">
-    <p class="section-label" aria-hidden="true">Services</p>
-    
-
-    <div class="svc-intro reveal reveal-d1">
-      <p class="svc-intro-text">Every engagement is defined by the technology, the regulatory stage, and what the program actually needs. We work across the full device development lifecycle, from early pathway strategy through post-market compliance, and across all major device categories, including implantables, IVDs, SaMD, and combination products. Whether the need is targeted and specific or end-to-end, the depth of engagement is the same.</p>
+    <div class="sv-hero-grid">
+      <div class="sv-hero-copy">
+        <h1 class="reveal">FDA regulatory support, from first submission to full lifecycle <em>management.</em></h1>
+        <p class="sv-lead reveal reveal-d1">Every engagement is defined by the technology, the regulatory stage, and what the program actually needs. We work across the full device development lifecycle and across all major device categories, including implantables, IVDs, SaMD, and combination products.</p>
+        <div class="sv-hero-btns reveal reveal-d2">
+          <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+          <button type="button" class="btn btn-outline" data-go="sv-finder" id="heroFinder" hidden>Find your starting point <span aria-hidden="true">&darr;</span></button>
+        </div>
+      </div>
+      <div class="sv-visual">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
     </div>
-
-    <!-- Service group grid -->
-    <div class="svc-groups reveal reveal-d2">
-
-      <div class="svc-group">
-        <div class="svc-group-header">
-          <span class="svc-group-num">01</span>
-          <div>
-            <h3 class="svc-group-title"><a href="regulatory-strategy.html">Regulatory Strategy &amp; Pathway</a></h3>
-            <p class="svc-group-sub">From first classification decision to submission-ready plan</p>
-          </div>
-        </div>
-        <ul class="svc-items">
-          <li>FDA pathway strategy and submission planning</li>
-          <li>Device classification, product code assessment, and 510(k) exemption analysis</li>
-          <li>Combination product determination and RFD support</li>
-          <li>Applicable consensus standards identification and Declaration of Conformity</li>
-          <li>Predicate search, intended use alignment, and substantial equivalence narrative</li>
-          <li>Breakthrough Device Designation: request preparation and FDA engagement</li>
-          <li>513(g): Request for Classification Information</li>
-        </ul>
-      </div>
-
-      <div class="svc-group">
-        <div class="svc-group-header">
-          <span class="svc-group-num">02</span>
-          <div>
-            <h3 class="svc-group-title"><a href="premarket-submissions.html">FDA Premarket Submissions</a></h3>
-            <p class="svc-group-sub">Full preparation and support for every premarket pathway</p>
-          </div>
-        </div>
-        <ul class="svc-items">
-          <li>510(k): Traditional, Abbreviated, and Special</li>
-          <li>PMA: Premarket Approval Application and supplements</li>
-          <li>De Novo: Classification request preparation</li>
-          <li>Q-Sub / Pre-Sub: written feedback and meeting requests</li>
-          <li>IDE: Investigational Device Exemption</li>
-          <li>Change assessment memos: determining whether a modification triggers a new submission</li>
-        </ul>
-      </div>
-
-      <div class="svc-group">
-        <div class="svc-group-header">
-          <span class="svc-group-num">03</span>
-          <div>
-            <h3 class="svc-group-title"><a href="biocompatibility.html">Biocompatibility &amp; Materials Evaluation</a></h3>
-            <p class="svc-group-sub">Risk-based biological safety grounded in materials science</p>
-          </div>
-        </div>
-        <ul class="svc-items">
-          <li>ISO 10993 strategy and biological evaluation planning</li>
-          <li>Biological evaluation plans (BEP) and reports (BER)</li>
-          <li>Chemical characterization: systematic identification and quantification of chemical substances released from device materials, including extractables and leachables</li>
-          <li>Toxicological risk assessment and materials justification</li>
-          <li>CRO protocol scientific review and study design alignment</li>
-          <li>Report adequacy review before submission</li>
-        </ul>
-      </div>
-
-      <div class="svc-group">
-        <div class="svc-group-header">
-          <span class="svc-group-num">04</span>
-          <div>
-            <h3 class="svc-group-title"><a href="testing-strategy.html">Testing Strategy &amp; Evidence Planning</a></h3>
-            <p class="svc-group-sub">Designing the evidence before committing the budget</p>
-          </div>
-        </div>
-        <ul class="svc-items">
-          <li>Testing matrix recommendation and gap analysis</li>
-          <li>Performance test design aligned with FDA-recognized standards</li>
-          <li>Sterilization, shelf-life, packaging, and usability testing strategy</li>
-          <li>CRO engagement support and report adequacy review</li>
-          <li>Labeling review: FDA requirements, UDI compliance (21 CFR Part 830), and IFU review</li>
-          <li>Applicable consensus standards mapping and Declaration of Conformity</li>
-        </ul>
-      </div>
-
-      <div class="svc-group">
-        <div class="svc-group-header">
-          <span class="svc-group-num">05</span>
-          <div>
-            <h3 class="svc-group-title"><a href="quality-compliance.html">Quality System &amp; Compliance</a></h3>
-            <p class="svc-group-sub">Regulatory obligations beyond the submission</p>
-          </div>
-        </div>
-        <ul class="svc-items">
-          <li>FDA QSR (21 CFR Part 820) / ISO 13485 gap assessment</li>
-          <li>Design controls review and documentation support</li>
-          <li>Establishment registration and device listing (21 CFR Part 807)</li>
-          <li>UDI system compliance review</li>
-          <li>Post-market surveillance plan development</li>
-          <li>Post-approval study (PAS) design for PMA holders</li>
-          <li>MDR (Medical Device Reporting) advisory: reportability determinations and 21 CFR Part 803 obligations</li>
-        </ul>
-      </div>
-
-      <div class="svc-group">
-        <div class="svc-group-header">
-          <span class="svc-group-num">06</span>
-          <div>
-            <h3 class="svc-group-title"><a href="enforcement-response.html">FDA Enforcement Response &amp; Remediation</a></h3>
-            <p class="svc-group-sub">Strategic and scientific support when FDA has questions</p>
-          </div>
-        </div>
-        <ul class="svc-items">
-          <li>FDA deficiency and Additional Information (AI) response strategy</li>
-          <li>Warning Letter response: root cause analysis, CAPA, and response drafting</li>
-          <li>FDA Form 483 response: observation-by-observation strategy</li>
-          <li>Recall strategy, classification planning, and FDA coordination</li>
-          <li>Field Safety Corrective Action (FSCA) planning and documentation</li>
-          <li>Consent Decree advisory and Import Alert response strategy</li>
-          <li>Lifecycle management: modifications, line extensions, and new indications</li>
-        </ul>
-      </div>
-
-    </div><!-- /svc-groups -->
   </div>
 </section>
+
+<!-- ══ SERVICE MAP ══ -->
+<section class="sv-mapband">
+  <div class="section-inner">
+      <aside class="sv-map reveal" aria-label="Service map">
+        <div class="sv-map-head">
+          <span class="sv-map-kicker">The service map</span>
+          <span class="sv-map-total"><span data-total>39</span> areas of support</span>
+        </div>
+        <ol class="sv-map-list" role="list">
+          <li><button type="button" class="sv-map-row" data-go="regulatory-strategy">
+            <span class="sv-map-num" aria-hidden="true">01</span>
+            <span class="sv-map-title">Regulatory Strategy &amp; Pathway</span>
+            <span class="sv-map-count"><span data-count-for="regulatory-strategy">7</span> areas</span>
+            <span class="sv-map-arrow" aria-hidden="true">&darr;</span>
+          </button></li>
+          <li><button type="button" class="sv-map-row" data-go="premarket-submissions">
+            <span class="sv-map-num" aria-hidden="true">02</span>
+            <span class="sv-map-title">FDA Premarket Submissions</span>
+            <span class="sv-map-count"><span data-count-for="premarket-submissions">6</span> areas</span>
+            <span class="sv-map-arrow" aria-hidden="true">&darr;</span>
+          </button></li>
+          <li><button type="button" class="sv-map-row" data-go="biocompatibility">
+            <span class="sv-map-num" aria-hidden="true">03</span>
+            <span class="sv-map-title">Biocompatibility &amp; Materials Evaluation</span>
+            <span class="sv-map-count"><span data-count-for="biocompatibility">6</span> areas</span>
+            <span class="sv-map-arrow" aria-hidden="true">&darr;</span>
+          </button></li>
+          <li><button type="button" class="sv-map-row" data-go="testing-strategy">
+            <span class="sv-map-num" aria-hidden="true">04</span>
+            <span class="sv-map-title">Testing Strategy &amp; Evidence Planning</span>
+            <span class="sv-map-count"><span data-count-for="testing-strategy">6</span> areas</span>
+            <span class="sv-map-arrow" aria-hidden="true">&darr;</span>
+          </button></li>
+          <li><button type="button" class="sv-map-row" data-go="quality-compliance">
+            <span class="sv-map-num" aria-hidden="true">05</span>
+            <span class="sv-map-title">Quality System &amp; Compliance</span>
+            <span class="sv-map-count"><span data-count-for="quality-compliance">7</span> areas</span>
+            <span class="sv-map-arrow" aria-hidden="true">&darr;</span>
+          </button></li>
+          <li><button type="button" class="sv-map-row" data-go="enforcement-response">
+            <span class="sv-map-num" aria-hidden="true">06</span>
+            <span class="sv-map-title">FDA Enforcement Response &amp; Remediation</span>
+            <span class="sv-map-count"><span data-count-for="enforcement-response">7</span> areas</span>
+            <span class="sv-map-arrow" aria-hidden="true">&darr;</span>
+          </button></li>
+        </ol>
+      </aside>
+  </div>
+</section>
+
+<div class="sv-flow">
+
+  <!-- ══ STICKY SERVICE RAIL ══ -->
+  <nav class="sv-rail" id="svRail" aria-label="Jump to a service">
+    <div class="sv-rail-inner">
+      <button type="button" class="sv-rail-btn" data-go="regulatory-strategy"><span class="sv-rail-n">01</span> Strategy</button>
+      <button type="button" class="sv-rail-btn" data-go="premarket-submissions"><span class="sv-rail-n">02</span> Submissions</button>
+      <button type="button" class="sv-rail-btn" data-go="biocompatibility"><span class="sv-rail-n">03</span> Biocompatibility</button>
+      <button type="button" class="sv-rail-btn" data-go="testing-strategy"><span class="sv-rail-n">04</span> Testing</button>
+      <button type="button" class="sv-rail-btn" data-go="quality-compliance"><span class="sv-rail-n">05</span> Quality</button>
+      <button type="button" class="sv-rail-btn" data-go="enforcement-response"><span class="sv-rail-n">06</span> Enforcement</button>
+    </div>
+  </nav>
+
+  <!-- ══ FIND YOUR STARTING POINT ══ -->
+  <section class="sv-finder" id="sv-finder" aria-labelledby="finder-h" hidden>
+    <div class="section-inner">
+      <p class="section-label reveal" aria-hidden="true">Find your starting point</p>
+      <h2 id="finder-h" class="reveal">Where is your program <em>right now?</em></h2>
+      <div class="sv-stages reveal reveal-d1" role="group" aria-label="Program stage">
+        <button type="button" class="sv-stage" data-stage="planning" aria-pressed="false">Planning the pathway</button>
+        <button type="button" class="sv-stage" data-stage="evidence" aria-pressed="false">Building the evidence</button>
+        <button type="button" class="sv-stage" data-stage="submission" aria-pressed="false">Preparing a submission</button>
+        <button type="button" class="sv-stage" data-stage="market" aria-pressed="false">Already on the market</button>
+        <button type="button" class="sv-stage" data-stage="fda" aria-pressed="false">FDA has raised concerns</button>
+      </div>
+      <div class="sv-answer" id="svAnswer" aria-live="polite" hidden></div>
+    </div>
+  </section>
+
+  <!-- ══ SEARCH ══ -->
+  <section class="sv-tools" id="svTools" aria-label="Search services" hidden>
+    <div class="section-inner">
+      <div class="sv-search">
+        <label for="svSearch" class="sv-search-label">Looking for something specific?</label>
+        <div class="sv-search-field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <input type="search" id="svSearch" placeholder="Try 510(k), CAPA, UDI, biocompatibility…" autocomplete="off" spellcheck="false">
+          <button type="button" class="sv-clear" id="svClear" hidden>Clear</button>
+        </div>
+        <p class="sv-results" id="svResults" role="status"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SERVICE GROUPS ══ -->
+
+  <section class="sv-group" id="regulatory-strategy" data-stages="planning submission" aria-labelledby="regulatory-strategy-h">
+    <div class="section-inner">
+      <div class="sv-split">
+        <header class="sv-head reveal">
+          <span class="sv-bignum" aria-hidden="true">01</span>
+          <p class="sv-flag" aria-hidden="true">Suggested for you</p>
+          <h2 id="regulatory-strategy-h" class="sv-title">Regulatory Strategy &amp; Pathway</h2>
+          <p class="sv-sub">From first classification decision to submission-ready plan</p>
+          <a href="regulatory-strategy.html" class="btn btn-outline sv-more">Explore regulatory strategy <span aria-hidden="true">&rarr;</span></a>
+        </header>
+        <div class="sv-body-col reveal reveal-d1">
+          <p class="sv-count-line"><span data-count-for="regulatory-strategy">7</span> areas of support</p>
+          <ul class="sv-items" role="list">
+            <li>FDA pathway strategy and submission planning</li>
+            <li>Device classification, product code assessment, and 510(k) exemption analysis</li>
+            <li>Combination product determination and RFD support</li>
+            <li>Applicable consensus standards identification and Declaration of Conformity</li>
+            <li>Predicate search, intended use alignment, and substantial equivalence narrative</li>
+            <li>Breakthrough Device Designation: request preparation and FDA engagement</li>
+            <li>513(g): Request for Classification Information</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sv-group" id="premarket-submissions" data-stages="submission market" aria-labelledby="premarket-submissions-h">
+    <div class="section-inner">
+      <div class="sv-split">
+        <header class="sv-head reveal">
+          <span class="sv-bignum" aria-hidden="true">02</span>
+          <p class="sv-flag" aria-hidden="true">Suggested for you</p>
+          <h2 id="premarket-submissions-h" class="sv-title">FDA Premarket Submissions</h2>
+          <p class="sv-sub">Full preparation and support for every premarket pathway</p>
+          <a href="premarket-submissions.html" class="btn btn-outline sv-more">Explore premarket submissions <span aria-hidden="true">&rarr;</span></a>
+        </header>
+        <div class="sv-body-col reveal reveal-d1">
+          <p class="sv-count-line"><span data-count-for="premarket-submissions">6</span> areas of support</p>
+          <ul class="sv-items" role="list">
+            <li>510(k): Traditional, Abbreviated, and Special</li>
+            <li>PMA: Premarket Approval Application and supplements</li>
+            <li>De Novo: Classification request preparation</li>
+            <li>Q-Sub / Pre-Sub: written feedback and meeting requests</li>
+            <li>IDE: Investigational Device Exemption</li>
+            <li>Change assessment memos: determining whether a modification triggers a new submission</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sv-group" id="biocompatibility" data-stages="evidence submission" aria-labelledby="biocompatibility-h">
+    <div class="section-inner">
+      <div class="sv-split">
+        <header class="sv-head reveal">
+          <span class="sv-bignum" aria-hidden="true">03</span>
+          <p class="sv-flag" aria-hidden="true">Suggested for you</p>
+          <h2 id="biocompatibility-h" class="sv-title">Biocompatibility &amp; Materials Evaluation</h2>
+          <p class="sv-sub">Risk-based biological safety grounded in materials science</p>
+          <a href="biocompatibility.html" class="btn btn-outline sv-more">Explore biocompatibility <span aria-hidden="true">&rarr;</span></a>
+        </header>
+        <div class="sv-body-col reveal reveal-d1">
+          <p class="sv-count-line"><span data-count-for="biocompatibility">6</span> areas of support</p>
+          <ul class="sv-items" role="list">
+            <li>ISO 10993 strategy and biological evaluation planning</li>
+            <li>Biological evaluation plans (BEP) and reports (BER)</li>
+            <li>Chemical characterization: systematic identification and quantification of chemical substances released from device materials, including extractables and leachables</li>
+            <li>Toxicological risk assessment and materials justification</li>
+            <li>CRO protocol scientific review and study design alignment</li>
+            <li>Report adequacy review before submission</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sv-group" id="testing-strategy" data-stages="planning evidence" aria-labelledby="testing-strategy-h">
+    <div class="section-inner">
+      <div class="sv-split">
+        <header class="sv-head reveal">
+          <span class="sv-bignum" aria-hidden="true">04</span>
+          <p class="sv-flag" aria-hidden="true">Suggested for you</p>
+          <h2 id="testing-strategy-h" class="sv-title">Testing Strategy &amp; Evidence Planning</h2>
+          <p class="sv-sub">Designing the evidence before committing the budget</p>
+          <a href="testing-strategy.html" class="btn btn-outline sv-more">Explore testing strategy <span aria-hidden="true">&rarr;</span></a>
+        </header>
+        <div class="sv-body-col reveal reveal-d1">
+          <p class="sv-count-line"><span data-count-for="testing-strategy">6</span> areas of support</p>
+          <ul class="sv-items" role="list">
+            <li>Testing matrix recommendation and gap analysis</li>
+            <li>Performance test design aligned with FDA-recognized standards</li>
+            <li>Sterilization, shelf-life, packaging, and usability testing strategy</li>
+            <li>CRO engagement support and report adequacy review</li>
+            <li>Labeling review: FDA requirements, UDI compliance (21 CFR Part 830), and IFU review</li>
+            <li>Applicable consensus standards mapping and Declaration of Conformity</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sv-group" id="quality-compliance" data-stages="market fda" aria-labelledby="quality-compliance-h">
+    <div class="section-inner">
+      <div class="sv-split">
+        <header class="sv-head reveal">
+          <span class="sv-bignum" aria-hidden="true">05</span>
+          <p class="sv-flag" aria-hidden="true">Suggested for you</p>
+          <h2 id="quality-compliance-h" class="sv-title">Quality System &amp; Compliance</h2>
+          <p class="sv-sub">Regulatory obligations beyond the submission</p>
+          <a href="quality-compliance.html" class="btn btn-outline sv-more">Explore quality &amp; compliance <span aria-hidden="true">&rarr;</span></a>
+        </header>
+        <div class="sv-body-col reveal reveal-d1">
+          <p class="sv-count-line"><span data-count-for="quality-compliance">7</span> areas of support</p>
+          <ul class="sv-items" role="list">
+            <li>FDA QSR (21 CFR Part 820) / ISO 13485 gap assessment</li>
+            <li>Design controls review and documentation support</li>
+            <li>Establishment registration and device listing (21 CFR Part 807)</li>
+            <li>UDI system compliance review</li>
+            <li>Post-market surveillance plan development</li>
+            <li>Post-approval study (PAS) design for PMA holders</li>
+            <li>MDR (Medical Device Reporting) advisory: reportability determinations and 21 CFR Part 803 obligations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sv-group" id="enforcement-response" data-stages="fda market" aria-labelledby="enforcement-response-h">
+    <div class="section-inner">
+      <div class="sv-split">
+        <header class="sv-head reveal">
+          <span class="sv-bignum" aria-hidden="true">06</span>
+          <p class="sv-flag" aria-hidden="true">Suggested for you</p>
+          <h2 id="enforcement-response-h" class="sv-title">FDA Enforcement Response &amp; Remediation</h2>
+          <p class="sv-sub">Strategic and scientific support when FDA has questions</p>
+          <a href="enforcement-response.html" class="btn btn-outline sv-more">Explore enforcement response <span aria-hidden="true">&rarr;</span></a>
+        </header>
+        <div class="sv-body-col reveal reveal-d1">
+          <p class="sv-count-line"><span data-count-for="enforcement-response">7</span> areas of support</p>
+          <ul class="sv-items" role="list">
+            <li>FDA deficiency and Additional Information (AI) response strategy</li>
+            <li>Warning Letter response: root cause analysis, CAPA, and response drafting</li>
+            <li>FDA Form 483 response: observation-by-observation strategy</li>
+            <li>Recall strategy, classification planning, and FDA coordination</li>
+            <li>Field Safety Corrective Action (FSCA) planning and documentation</li>
+            <li>Consent Decree advisory and Import Alert response strategy</li>
+            <li>Lifecycle management: modifications, line extensions, and new indications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <p class="sv-empty" id="svEmpty" hidden>No services match that search. Try a broader term, or <a href="contact.html">tell us what you need</a>.</p>
+
+</div><!-- /sv-flow -->
+
+<!-- ══ ENGAGEMENT MODELS ══ -->
+<section class="sv-models" aria-labelledby="models-h">
+  <div class="section-inner">
+    <p class="section-label reveal" aria-hidden="true">How you can work with us</p>
+    <h2 id="models-h" class="reveal">Targeted or end-to-end, <em>the depth is the same.</em></h2>
+    <div class="sv-model-grid">
+      <div class="sv-model reveal"><p class="sv-model-tag">Model 01</p><h3>Targeted support</h3><p>One question, one deliverable: a pathway memo, a protocol review, a deficiency response.</p></div>
+      <div class="sv-model reveal reveal-d1"><p class="sv-model-tag">Model 02</p><h3>End-to-end programs</h3><p>From classification through clearance, with one team carrying the regulatory argument across every document.</p></div>
+      <div class="sv-model reveal reveal-d2"><p class="sv-model-tag">Model 03</p><h3>Ongoing advisory</h3><p>A standing reviewer&rsquo;s-eye view as the program evolves: modifications, post-market obligations, new indications.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING ══ -->
+<section class="cta" aria-label="Closing statement">
+  <p class="section-label">Not sure which service fits?</p>
+  <blockquote class="sv-quote reveal">
+    <p>Start with the regulatory question. <em>The right scope follows from it.</em></p>
+  </blockquote>
+  <a href="contact.html" class="btn btn-light">Schedule a Consultation</a>
+</section>
+
+</main>
 
 
 <!-- ══ FOOTER ══ -->
@@ -389,5 +550,8 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="services.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>
