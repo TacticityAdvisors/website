@@ -312,7 +312,9 @@ html[data-theme="dark"] .svc .sv-group:nth-of-type(even) {
 }
 @media (max-width: 820px) {
   .svc .sv-hero-grid { grid-template-columns: minmax(0, 1fr); }
-  .svc .sv-visual { height: 300px; order: 2; }
+  .svc .sv-visual { height: 300px; order: -1; margin: -8px 0 -8px; }
+  .svc .sv-visual .hero-molecule { transform: scale(1.05); transform-origin: 50% 50%; }
+  .svc .sv-hero-grid { margin-top: 12px; gap: 12px; }
   .svc .page-header h1 { max-width: 20ch; }
 }
 @media (max-width: 860px) {
