@@ -1,0 +1,97 @@
+/* ============================================================
+   How We Work — page layer. Loaded after what-we-do.css; body is
+   "home wwd hww", so header, molecule, split layout, closing band
+   and dark mode all come from the What We Do layer. Only the
+   expectation cards and stage columns live here.
+   ============================================================ */
+
+.hww .working, .hww .stages { padding: var(--section-y) 0; border-bottom: 1px solid var(--border); }
+.hww .stages h2 { margin-bottom: clamp(40px, 5.5vw, 64px); }
+.hww .stages { background-color: transparent; }
+
+/* ── what to expect: four hairline rows beside the sticky heading ── */
+.hww .working-cards {
+  display: flex; flex-direction: column; gap: 0; margin: 0; border: 0; border-top: 1px solid var(--border);
+}
+.hww .working-card {
+  position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 20px; row-gap: 12px;
+  padding: 36px 0 34px; border: 0; border-bottom: 1px solid var(--border); background: none; overflow: visible;
+  transition: background .4s var(--ease);
+}
+.hww .working-card:nth-child(n) { border-right: 0; border-bottom: 1px solid var(--border); }
+.hww .working-card:last-child { border-bottom: 0; }
+.hww .working-card::after {
+  content: ""; position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: var(--alpine);
+  transform: none; transition: width .5s var(--ease);
+}
+.hww .working-card:hover { background: var(--mist); }
+.hww .working-card:hover::after { width: 100%; }
+.hww .wc-num {
+  grid-row: 1 / span 2; margin: 0; padding: 0; border: 0; display: block;
+  font-family: var(--font-serif); font-size: 1.5rem; font-weight: 300; font-style: italic; letter-spacing: 0;
+  color: var(--alpine); opacity: .75; line-height: 1;
+}
+.hww .wc-title {
+  grid-column: 2; margin: 0; font-family: var(--font-serif); font-weight: 400;
+  font-size: clamp(24px, 2.1vw, 30px); line-height: 1.18; color: var(--ink);
+}
+.hww .wc-body { grid-column: 2; margin: 0; font-size: var(--fs-small); font-weight: 300; line-height: 1.75; color: var(--ink-65); }
+
+/* ── stages: four hairline columns, like the What We Do client grid ── */
+.hww .stage-list {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0; border: 0; border-top: 1px solid var(--border);
+}
+.hww .stage {
+  position: relative; display: flex; flex-direction: column; gap: 14px;
+  padding: 40px 28px 36px; border: 0; background: none; transition: background .4s var(--ease);
+}
+.hww .stage:last-child { border-bottom: 0; }
+.hww .stage + .stage { border-left: 1px solid var(--border); }
+.hww .stage::before {
+  content: ""; position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: var(--alpine);
+  transition: width .5s var(--ease);
+}
+.hww .stage:hover { background: var(--mist); }
+.hww .stage:hover::before { width: 100%; }
+.hww .st-tag { margin: 0; font-family: var(--font-sans); font-size: var(--fs-label); letter-spacing: .24em; text-transform: uppercase; color: var(--alpine); }
+.hww .st-title { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: clamp(26px, 2.2vw, 32px); line-height: 1.15; color: var(--ink); }
+.hww .st-body { margin: 0; font-size: var(--fs-small); font-weight: 300; line-height: 1.7; color: var(--ink-65); }
+
+/* ── atmosphere washes (same recipe as What We Do) ── */
+.hww main > .working {
+  background-image:
+    radial-gradient(55% 70% at 80% 30%, rgba(167,196,181,.792) 0%, rgba(167,196,181,.306) 45%, rgba(167,196,181,0) 82%),
+    radial-gradient(48% 60% at 15% 80%, rgba(44,90,71,.198) 0%, rgba(44,90,71,.081) 45%, rgba(44,90,71,0) 82%);
+}
+.hww main > .stages {
+  background-image:
+    radial-gradient(55% 70% at 20% 25%, rgba(167,196,181,.756) 0%, rgba(167,196,181,.288) 45%, rgba(167,196,181,0) 82%),
+    radial-gradient(55% 65% at 80% 80%, rgba(44,90,71,.234) 0%, rgba(44,90,71,.090) 45%, rgba(44,90,71,0) 82%);
+}
+html[data-theme="dark"] .hww main > .working {
+  background-image:
+    radial-gradient(55% 70% at 80% 30%, rgba(95,154,128,.18) 0%, rgba(95,154,128,.07) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(48% 60% at 15% 80%, rgba(63,130,98,.14) 0%, rgba(63,130,98,.05) 45%, rgba(63,130,98,0) 82%);
+}
+html[data-theme="dark"] .hww main > .stages {
+  background-image:
+    radial-gradient(55% 70% at 20% 25%, rgba(95,154,128,.17) 0%, rgba(95,154,128,.07) 45%, rgba(95,154,128,0) 82%),
+    radial-gradient(55% 65% at 80% 80%, rgba(63,130,98,.17) 0%, rgba(63,130,98,.07) 45%, rgba(63,130,98,0) 82%);
+}
+html[data-theme="dark"] .hww .working-card:hover, html[data-theme="dark"] .hww .stage:hover { background: #15251d; }
+
+/* ── responsive ── */
+@media (max-width: 820px) {
+  .hww .ph-visual { order: -1; }   /* molecule leads on mobile */
+}
+@media (max-width: 1100px) {
+  .hww .stage-list { grid-template-columns: repeat(2, 1fr); }
+  .hww .stage:nth-child(3) { border-left: 0; }
+  .hww .stage:nth-child(n+3) { border-top: 1px solid var(--border); }
+}
+@media (max-width: 560px) {
+  .hww .stage-list { grid-template-columns: minmax(0, 1fr); }
+  .hww .stage + .stage { border-left: 0; border-top: 1px solid var(--border); }
+  .hww .stage { padding: 32px 0; }
+  .hww .working-card { grid-template-columns: 40px minmax(0, 1fr); column-gap: 14px; }
+}

@@ -138,17 +138,18 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
 
   <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="how-we-work.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-evidence">
+<body class="home wwd hww">
 
 <a href="#main" class="skip">Skip to content</a>
 
@@ -225,44 +226,53 @@
 <section class="page-header">
   <div class="section-inner">
     <p class="section-label reveal" aria-hidden="true">How We Work</p>
-    <h1 class="reveal">We explain the science, not just <em>the requirement.</em></h1>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">We explain the science, not just <em>the requirement.</em></h1>
+        <p class="ph-lead reveal reveal-d1">Most regulatory consultants tell you what FDA needs. We tell you why, and what it means for your specific device, your data, and your timeline.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
   </div>
 </section>
-
 
 <!-- ══ WORKING WITH TACTICITY ══ -->
 <section class="working" id="working" aria-labelledby="working-h">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">What to Expect</p>
-    
-    <p class="body-copy reveal reveal-d1">Most regulatory consultants tell you what FDA needs. We tell you why, and what it means for your specific device, your data, and your timeline.</p>
-
-    <div class="working-cards reveal reveal-d2">
-
-      <div class="working-card">
-        <p class="wc-num">01</p>
-        <h3 class="wc-title">You will always know how your file will be read</h3>
-        <p class="wc-body">We have reviewed submissions like yours from inside FDA. We know what a reviewer looks for first, where arguments typically break down, and how scientific gaps become deficiency letters. That knowledge is applied to your program from day one, so there are no surprises after you submit.</p>
+    <div class="split">
+      <div class="split-head">
+        <p class="section-label reveal" aria-hidden="true">What to Expect</p>
+        <h2 id="working-h" class="reveal">Four commitments <em>to every client.</em></h2>
       </div>
+      <div class="working-cards reveal reveal-d1">
 
-      <div class="working-card">
-        <p class="wc-num">02</p>
-        <h3 class="wc-title">Every requirement comes with a rationale</h3>
-        <p class="wc-body">We do not ask you to run a test or produce a document without explaining what scientific question it answers and why FDA expects it. You will understand the logic behind each element of your regulatory strategy, which means better decisions, fewer unnecessary studies, and a team that is genuinely prepared for the questions that follow.</p>
+        <div class="working-card">
+          <p class="wc-num">01</p>
+          <h3 class="wc-title">You will always know how your file will be read</h3>
+          <p class="wc-body">We have reviewed submissions like yours from inside FDA. We know what a reviewer looks for first, where arguments typically break down, and how scientific gaps become deficiency letters. That knowledge is applied to your program from day one, so there are no surprises after you submit.</p>
+        </div>
+
+        <div class="working-card">
+          <p class="wc-num">02</p>
+          <h3 class="wc-title">Every requirement comes with a rationale</h3>
+          <p class="wc-body">We do not ask you to run a test or produce a document without explaining what scientific question it answers and why FDA expects it. You will understand the logic behind each element of your regulatory strategy, which means better decisions, fewer unnecessary studies, and a team that is genuinely prepared for the questions that follow.</p>
+        </div>
+
+        <div class="working-card">
+          <p class="wc-num">03</p>
+          <h3 class="wc-title">Science-led, not process-led</h3>
+          <p class="wc-body">Strong scientific rationale is not just good practice: it is the most practical tool a device company has. When the underlying science is sound and clearly reasoned, regulators ask fewer questions, additional information requests are avoided, and testing can be scoped to exactly what the submission requires. We help you identify which studies are genuinely necessary and build the scientific case that makes each one count.</p>
+        </div>
+
+        <div class="working-card">
+          <p class="wc-num">04</p>
+          <h3 class="wc-title">Honest assessment at every stage</h3>
+          <p class="wc-body">If your evidence has gaps, we identify them early and explain precisely what it would take to address them. Our value is in the accuracy of the assessment, not in telling you what you want to hear.</p>
+        </div>
+
       </div>
-
-      <div class="working-card">
-        <p class="wc-num">03</p>
-        <h3 class="wc-title">Science-led, not process-led</h3>
-        <p class="wc-body">Strong scientific rationale is not just good practice: it is the most practical tool a device company has. When the underlying science is sound and clearly reasoned, regulators ask fewer questions, additional information requests are avoided, and testing can be scoped to exactly what the submission requires. We help you identify which studies are genuinely necessary and build the scientific case that makes each one count.</p>
-      </div>
-
-      <div class="working-card">
-        <p class="wc-num">04</p>
-        <h3 class="wc-title">Honest assessment at every stage</h3>
-        <p class="wc-body">If your evidence has gaps, we identify them early and explain precisely what it would take to address them. Our value is in the accuracy of the assessment, not in telling you what you want to hear.</p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -270,16 +280,27 @@
 <!-- ══ STAGES ══ -->
 <section class="stages" id="stages" aria-labelledby="stages-h">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">Where We Engage</p>
+    <p class="section-label reveal" aria-hidden="true">Where We Engage</p>
     <h2 id="stages-h" class="reveal">From early development <em>to FDA response.</em></h2>
-    <div class="stage-list reveal reveal-d1">
-      <div class="stage"><p class="st-tag">Stage 01</p><h3 class="st-title">Early Strategy</h3><p class="st-body">Pathway, intended use, claims, classification, predicate landscape, and early evidence planning. Decisions made here shape everything downstream, so getting the pathway right early prevents costly rework later.</p></div>
-      <div class="stage"><p class="st-tag">Stage 02</p><h3 class="st-title">Pre-Testing</h3><p class="st-body">Protocol design, test selection, sample justification, CRO review, and standards alignment. This is where most budget gets wasted on the wrong tests, or the right tests at the wrong time, so getting the protocol right here protects your timeline and spend.</p></div>
-      <div class="stage"><p class="st-tag">Stage 03</p><h3 class="st-title">Submission</h3><p class="st-body">510(k), De Novo, PMA, Q-Sub, eSTAR, technical documentation, and scientific narrative. A submission is a technical argument, not a data dump, so how it is written determines whether a reviewer follows your reasoning the way you intend.</p></div>
-      <div class="stage"><p class="st-tag">Stage 04</p><h3 class="st-title">Post-Submission</h3><p class="st-body">Additional Information responses, deficiency remediation, FDA communication, and evidence gap closure. How you respond here determines whether the review closes out or drags into further cycles.</p></div>
+    <div class="stage-list">
+      <div class="stage reveal"><p class="st-tag">Stage 01</p><h3 class="st-title">Early Strategy</h3><p class="st-body">Pathway, intended use, claims, classification, predicate landscape, and early evidence planning. Decisions made here shape everything downstream, so getting the pathway right early prevents costly rework later.</p></div>
+      <div class="stage reveal reveal-d1"><p class="st-tag">Stage 02</p><h3 class="st-title">Pre-Testing</h3><p class="st-body">Protocol design, test selection, sample justification, CRO review, and standards alignment. This is where most budget gets wasted on the wrong tests, or the right tests at the wrong time, so getting the protocol right here protects your timeline and spend.</p></div>
+      <div class="stage reveal reveal-d2"><p class="st-tag">Stage 03</p><h3 class="st-title">Submission</h3><p class="st-body">510(k), De Novo, PMA, Q-Sub, eSTAR, technical documentation, and scientific narrative. A submission is a technical argument, not a data dump, so how it is written determines whether a reviewer follows your reasoning the way you intend.</p></div>
+      <div class="stage reveal reveal-d3"><p class="st-tag">Stage 04</p><h3 class="st-title">Post-Submission</h3><p class="st-body">Additional Information responses, deficiency remediation, FDA communication, and evidence gap closure. How you respond here determines whether the review closes out or drags into further cycles.</p></div>
     </div>
   </div>
 </section>
+
+<!-- ══ CLOSING ══ -->
+<section class="cta" aria-label="Closing statement">
+  <p class="section-label">In Short</p>
+  <blockquote class="pullquote reveal">
+    <p>A team that understands the reasoning behind every requirement makes <em>better decisions, earlier.</em></p>
+  </blockquote>
+  <a href="contact.html" class="btn btn-light">Schedule a Consultation</a>
+</section>
+
+</main>
 
 
 <!-- ══ FOOTER ══ -->
@@ -311,5 +332,7 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>
