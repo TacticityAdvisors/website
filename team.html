@@ -58,19 +58,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="preload" href="assets/images/tanmay-jain.jpg" as="image" fetchpriority="low">
   <link rel="preload" href="styles.css" as="style">
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Figtree:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Figtree:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
 
   <!-- ═══ STYLESHEET ═══ -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="team.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-lattice">
+<body class="home wwd tm">
   <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZ4LHHW4"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -150,96 +150,91 @@
 <section class="page-header">
   <div class="section-inner">
     <p class="section-label reveal" aria-hidden="true">Our Team</p>
-    <h1 class="reveal h1--team">Regulatory strategy built by former FDA reviewers.<br>Capital deployed by people who understand what they&rsquo;re funding.</h1>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">Regulatory strategy built by <em>former FDA reviewers.</em></h1>
+        <p class="ph-lead reveal reveal-d1">Capital deployed by people who understand what they&rsquo;re funding.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
   </div>
 </section>
 
-
-<!-- ══ TEAM ══ -->
-<section class="team" id="team" aria-labelledby="team-h">
+<!-- ══ LEADERSHIP ══ -->
+<section class="leadership" id="team" aria-labelledby="leadership-h">
   <div class="section-inner">
-
-    <p class="team-label reveal">Leadership</p>
-
-    <!-- Leadership: Tanmay Jain -->
-    <div class="leader-card reveal reveal-d1">
-      <div class="leader-hero leader-hero--tall">
-        <img src="assets/images/tanmay-jain-wide.jpg" alt="Tanmay Jain, PhD, Founder and Chief Scientist of Tacticity Advisors" width="860" height="680" loading="lazy" decoding="async">
-        <div class="leader-hero-overlay">
-          <p class="leader-name">Tanmay Jain, PhD</p>
-          <p class="leader-role">Founder &amp; Chief Scientist</p>
-        </div>
+    <p class="section-label reveal" aria-hidden="true">Leadership</p>
+    <h2 id="leadership-h" class="reveal">The people <em>behind the practice.</em></h2>
+    <article class="lead reveal reveal-d1">
+      <div class="lead-photo"><img src="assets/images/tanmay-jain.jpg" alt="Tanmay Jain, PhD, Founder and Chief Scientist of Tacticity Advisors" width="480" height="640" loading="lazy" decoding="async"></div>
+      <div class="lead-body">
+        <p class="lead-role">Founder &amp; Chief Scientist</p>
+        <h3 class="lead-name">Tanmay Jain, PhD</h3>
+        <p class="lead-bio">Tanmay is a polymer scientist and former U.S. FDA CDRH scientist and lead reviewer, now based in Pune, India. His work at FDA's Center for Devices and Radiological Health included scientific review of premarket submissions, materials evaluation, biocompatibility, chemical characterization, and standards development, including ASTM F3718. He founded Tacticity to bring the scientific rigor of the U.S. FDA review process directly to the Indian medtech ecosystem. For Tanmay, regulatory strategy is a structured technical argument that must withstand expert review, not paperwork.</p>
       </div>
-      <p class="leader-summary">Tanmay is a polymer scientist and former U.S. FDA CDRH scientist and lead reviewer, now based in Pune, India. His work at FDA's Center for Devices and Radiological Health included scientific review of premarket submissions, materials evaluation, biocompatibility, chemical characterization, and standards development, including ASTM F3718. He founded Tacticity to bring the scientific rigor of the U.S. FDA review process directly to the Indian medtech ecosystem. For Tanmay, regulatory strategy is a structured technical argument that must withstand expert review, not paperwork.</p>
-    </div>
-
-    <!-- Leadership: Utkarsh Jain -->
-    <div class="leader-card reveal reveal-d2">
-      <div class="leader-hero leader-hero--utkarsh">
-        <img src="assets/images/utkarsh-jain-hero.jpg" alt="Utkarsh Jain, Chief Financial Officer of Tacticity Advisors" width="686" height="574" loading="lazy" decoding="async">
-        <div class="leader-hero-overlay">
-          <p class="leader-name">Utkarsh Jain</p>
-          <p class="leader-role">Chief Financial Officer</p>
-        </div>
+    </article>
+    <article class="lead reveal">
+      <div class="lead-photo"><img src="assets/images/utkarsh-jain.jpg" alt="Utkarsh Jain, Chief Financial Officer of Tacticity Advisors" width="480" height="622" loading="lazy" decoding="async"></div>
+      <div class="lead-body">
+        <p class="lead-role">Chief Financial Officer</p>
+        <h3 class="lead-name">Utkarsh Jain</h3>
+        <p class="lead-bio">Utkarsh Jain is an ace investor with nearly two decades of experience navigating the Indian markets. He is the Founder and CEO of Fintree, where he also serves as lead instructor, and works as a portfolio advisor and consultant to family offices, UHNIs, and HNIs, including A-list celebrities. He is visiting faculty at several top-tier business schools in India and has trained professionals across leading finance sector companies, including a number of NIFTY 50 firms. He holds qualifications as a Chartered Accountant, CFA Charterholder, FRM Charterholder, CFP Charterholder, and LLB.</p>
       </div>
-      <p class="leader-summary">Utkarsh Jain is an ace investor with nearly two decades of experience navigating the Indian markets. He is the Founder and CEO of Fintree, where he also serves as lead instructor, and works as a portfolio advisor and consultant to family offices, UHNIs, and HNIs, including A-list celebrities. He is visiting faculty at several top-tier business schools in India and has trained professionals across leading finance sector companies, including a number of NIFTY 50 firms. He holds qualifications as a Chartered Accountant, CFA Charterholder, FRM Charterholder, CFP Charterholder, and LLB.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ══ SCIENTIFIC ADVISORS ══ -->
+<section class="advisors" id="advisors" aria-labelledby="advisors-h">
+  <div class="section-inner">
+    <p class="section-label reveal" aria-hidden="true">Scientific Advisors</p>
+    <h2 id="advisors-h" class="reveal">Decades inside <em>the agencies and labs</em> that set the standard.</h2>
+    <div class="adv-grid">
+      <article class="adv reveal">
+        <div class="adv-photo adv-photo--mamta"><img src="assets/images/mamta-gautam-basak.jpg" alt="Dr. Mamta Gautam-Basak, PhD, Scientific Advisor to Tacticity Advisors" width="803" height="850" loading="lazy" decoding="async"></div>
+        <div class="adv-body">
+          <p class="adv-role">Scientific Advisor</p>
+          <h3 class="adv-name">Dr. Mamta Gautam-Basak, PhD</h3>
+          <p class="adv-bio">Dr. Gautam-Basak brings over 24 years of experience at the U.S. FDA, including senior CMC leadership roles at CDER such as Lead Chemist for Quality Policy in the Office of Pharmaceutical Quality. She has led global CMC regulatory strategy for INDs, NDAs, BLAs, and MAAs at organizations including BridgeBio and Celldex Therapeutics, and holds a PhD in Analytical Chemistry from IIT Delhi, followed by postdoctoral research in Japan and Switzerland. While at FDA, she also conducted foreign inspections, including PAI and GMP surveillance, and has extensive experience reviewing inspectional observations and 483s and developing solutions in response.</p>
+        </div>
+      </article>
+      <article class="adv reveal reveal-d1">
+        <div class="adv-photo"><img src="assets/images/anne-lucas.jpg" alt="Anne Lucas, Scientific Advisor to Tacticity Advisors" width="640" height="480" loading="lazy" decoding="async"></div>
+        <div class="adv-body">
+          <p class="adv-role">Scientific Advisor</p>
+          <h3 class="adv-name">Anne Lucas</h3>
+          <p class="adv-bio">Anne Lucas is a retired research chemist with the U.S. FDA and author of more than 70 published journal articles and book chapters. She also worked with organizations such as ASTM and AAMI to establish consensus standards for the testing and labeling of medical device products, and performed extensive reviews of premarket submissions from sponsors, including IDEs, PMAs, and 510(k)s, for sterility, biocompatibility, toxicology, and analytical methods. In addition, she was involved in federal register notices and guidance documents, responded to citizens&rsquo; petitions, and served as a field investigator. In March 2020, she reviewed emergency use authorizations for the decontamination of medical devices, investigated COVID-19-related compliance allegations, and performed analysis of medical device reporting (MDR) events.</p>
+        </div>
+      </article>
+      <article class="adv reveal">
+        <div class="adv-photo adv-photo--abraham"><img src="assets/images/abraham-joy.jpg" alt="Dr. Abraham Joy, PhD, Scientific Advisor to Tacticity Advisors" width="480" height="640" loading="lazy" decoding="async"></div>
+        <div class="adv-body">
+          <p class="adv-role">Scientific Advisor</p>
+          <h3 class="adv-name">Dr. Abraham Joy, PhD</h3>
+          <p class="adv-bio">Abraham Joy is Professor and Chair of the Department of Bioengineering at Northeastern University, where his research focuses on biomaterials for wound healing, antimicrobial and antibiofilm strategies, soft-tissue replacement, and sustained drug delivery. He earned his PhD in Chemistry from Tulane University, followed by postdoctoral research at the Georgia Institute of Technology and an NIH Ruth Kirschstein postdoctoral fellowship at Rutgers University. Prior to Northeastern, he spent over a decade at the University of Akron, rising from assistant to full professor of polymer science, and served as an NSF program director for the Biomaterials program from 2021 to 2023. He is a recipient of the Burroughs Wellcome Award, the 3M Non-tenured Faculty Award, and an NSF CAREER Award, and was inducted into the 2025 class of AIMBE Fellows.</p>
+        </div>
+      </article>
+      <article class="adv reveal reveal-d1">
+        <div class="adv-photo adv-photo--goering"><img src="assets/images/peter-goering.jpg" alt="Dr. Peter L. Goering, PhD, DABT, ATS, Scientific Advisor to Tacticity Advisors" width="750" height="537" loading="lazy" decoding="async"></div>
+        <div class="adv-body">
+          <p class="adv-role">Scientific Advisor</p>
+          <h3 class="adv-name">Dr. Peter L. Goering, PhD, DABT, ATS</h3>
+          <p class="adv-bio">Dr. Goering is a toxicologist who spent nearly four decades at the U.S. FDA&rsquo;s Center for Devices and Radiological Health, most recently as Deputy Director of the Division of Biology, Chemistry, and Materials Science. He led a multidisciplinary team of toxicologists, cell biologists, and biomedical engineers conducting regulatory science research to assess the potential adverse health effects of medical device materials and the compounds released from them, to transform in vitro, in vivo, and in silico approaches to device toxicology and biocompatibility assessment, and to provide the scientific foundation for international consensus standards and regulatory guidance documents. He has co-authored more than 100 peer-reviewed publications, is a Past President of the Society of Toxicology, and received the FDA Scientific Achievement Award (Lifetime Achievement) in 2017.</p>
+        </div>
+      </article>
     </div>
   </div>
+</section>
 
-  <div class="section-inner--wide">
-    <!-- Divider -->
-    <div class="team-divider reveal" aria-hidden="true">
-      <span>Our Scientific Advisors</span>
-    </div>
-
-    <!-- Scientific Advisors -->
-    <div class="advisors-grid">
-      <div class="advisor-card reveal">
-        <div class="advisor-photo advisor-photo--mamta">
-          <img src="assets/images/mamta-gautam-basak.jpg" alt="Dr. Mamta Gautam-Basak, PhD, Scientific Advisor to Tacticity Advisors" width="480" height="640" loading="lazy" decoding="async">
-        </div>
-        <div class="advisor-info">
-          <p class="advisor-name">Dr. Mamta Gautam-Basak, PhD</p>
-          <p class="advisor-role">Scientific Advisor</p>
-          <p class="advisor-summary">Dr. Gautam-Basak brings over 24 years of experience at the U.S. FDA, including senior CMC leadership roles at CDER such as Lead Chemist for Quality Policy in the Office of Pharmaceutical Quality. She has led global CMC regulatory strategy for INDs, NDAs, BLAs, and MAAs at organizations including BridgeBio and Celldex Therapeutics, and holds a PhD in Analytical Chemistry from IIT Delhi, followed by postdoctoral research in Japan and Switzerland. While at FDA, she also conducted foreign inspections, including PAI and GMP surveillance, and has extensive experience reviewing inspectional observations and 483s and developing solutions in response.</p>
-        </div>
-      </div>
-
-      <div class="advisor-card reveal">
-        <div class="advisor-photo">
-          <img src="assets/images/anne-lucas.jpg" alt="Anne Lucas, Scientific Advisor to Tacticity Advisors" width="480" height="640" loading="lazy" decoding="async">
-        </div>
-        <div class="advisor-info">
-          <p class="advisor-name">Anne Lucas</p>
-          <p class="advisor-role">Scientific Advisor</p>
-          <p class="advisor-summary">Anne Lucas is a retired research chemist with the U.S. FDA and author of more than 70 published journal articles and book chapters. She also worked with organizations such as ASTM and AAMI to establish consensus standards for the testing and labeling of medical device products, and performed extensive reviews of premarket submissions from sponsors, including IDEs, PMAs, and 510(k)s, for sterility, biocompatibility, toxicology, and analytical methods. In addition, she was involved in federal register notices and guidance documents, responded to citizens&rsquo; petitions, and served as a field investigator. In March 2020, she reviewed emergency use authorizations for the decontamination of medical devices, investigated COVID-19-related compliance allegations, and performed analysis of medical device reporting (MDR) events.</p>
-        </div>
-      </div>
-
-      <div class="advisor-card reveal">
-        <div class="advisor-photo advisor-photo--abraham">
-          <img src="assets/images/abraham-joy.jpg" alt="Dr. Abraham Joy, PhD, Scientific Advisor to Tacticity Advisors" width="480" height="640" loading="lazy" decoding="async">
-        </div>
-        <div class="advisor-info">
-          <p class="advisor-name">Dr. Abraham Joy, PhD</p>
-          <p class="advisor-role">Scientific Advisor</p>
-          <p class="advisor-summary">Abraham Joy is Professor and Chair of the Department of Bioengineering at Northeastern University, where his research focuses on biomaterials for wound healing, antimicrobial and antibiofilm strategies, soft-tissue replacement, and sustained drug delivery. He earned his PhD in Chemistry from Tulane University, followed by postdoctoral research at the Georgia Institute of Technology and an NIH Ruth Kirschstein postdoctoral fellowship at Rutgers University. Prior to Northeastern, he spent over a decade at the University of Akron, rising from assistant to full professor of polymer science, and served as an NSF program director for the Biomaterials program from 2021 to 2023. He is a recipient of the Burroughs Wellcome Award, the 3M Non-tenured Faculty Award, and an NSF CAREER Award, and was inducted into the 2025 class of AIMBE Fellows.</p>
-        </div>
-      </div>
-
-      <div class="advisor-card reveal">
-        <div class="advisor-photo advisor-photo--goering">
-          <img src="assets/images/peter-goering.jpg" alt="Dr. Peter L. Goering, PhD, DABT, ATS, Scientific Advisor to Tacticity Advisors" width="750" height="537" loading="lazy" decoding="async">
-        </div>
-        <div class="advisor-info">
-          <p class="advisor-name">Dr. Peter L. Goering, PhD, DABT, ATS</p>
-          <p class="advisor-role">Scientific Advisor</p>
-          <p class="advisor-summary">Dr. Goering is a toxicologist who spent nearly four decades at the U.S. FDA&rsquo;s Center for Devices and Radiological Health, most recently as Deputy Director of the Division of Biology, Chemistry, and Materials Science. He led a multidisciplinary team of toxicologists, cell biologists, and biomedical engineers conducting regulatory science research to assess the potential adverse health effects of medical device materials and the compounds released from them, to transform in vitro, in vivo, and in silico approaches to device toxicology and biocompatibility assessment, and to provide the scientific foundation for international consensus standards and regulatory guidance documents. He has co-authored more than 100 peer-reviewed publications, is a Past President of the Society of Toxicology, and received the FDA Scientific Achievement Award (Lifetime Achievement) in 2017.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<!-- ══ CLOSING ══ -->
+<section class="cta" aria-label="Closing statement">
+  <p class="section-label">Work With Us</p>
+  <blockquote class="pullquote reveal">
+    <p>Experience from both sides of the review table, <em>applied to your program.</em></p>
+  </blockquote>
+  <a href="contact.html" class="btn btn-light">Schedule a Consultation</a>
 </section>
 
 </main>
@@ -273,5 +268,7 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>
