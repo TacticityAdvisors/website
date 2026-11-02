@@ -138,8 +138,8 @@ html[data-theme="dark"] .nl .nl-container { background: #1c4535; }
 .nl .nl-container #EMAIL { height: 44px; background: rgba(243,246,242,.96); color: #14231c; border-color: transparent; }
 .nl .nl-container #EMAIL::placeholder { color: rgba(20,35,28,.55); }
 .nl .nl-container #EMAIL:focus { outline-color: var(--sage); }
-.nl .nl-container .sib-form-block__button { height: 44px; padding: 0 20px; font-size: 11px; letter-spacing: .14em; background: var(--on-alpine); color: var(--alpine-deep); border-color: var(--on-alpine); }
-.nl .nl-container .sib-form-block__button:hover { background: transparent; color: var(--on-alpine); }
+.nl .nl-container .sib-form-block__button { height: 44px; padding: 0 20px; font-size: 11px; letter-spacing: .14em; background: var(--alpine); color: var(--on-alpine); border-color: var(--sage); }
+.nl .nl-container .sib-form-block__button:hover { background: transparent; color: var(--on-alpine); border-color: var(--on-alpine); }
 .nl .nl-container .entry__error { color: #ffb4ab; }
 @media (max-width: 560px) {
   .nl .nl-container .nl-row { flex-wrap: wrap; }
