@@ -119,6 +119,32 @@ html[data-theme="dark"] .nl-art .article-body h2,
 html[data-theme="dark"] .nl-art .article-body h3 { color: var(--alpine); }
 html[data-theme="dark"] .nl .page-header h1 em, html[data-theme="dark"] .nl .nl-sub-title h2 em { color: var(--sage); }
 
+/* ═══ Subscribe: full-width alpine box, everything stacked and centred ═══ */
+.nl .nl-subscribe { padding: 0; }
+.nl .nl-subscribe > .section-inner { max-width: none; padding-inline: 0; }
+.nl .nl-container {
+  max-width: none; margin: 0; padding: clamp(40px, 5vw, 72px) var(--gutter);
+  background: var(--alpine-deep); border-top: 2px solid var(--sage); text-align: center;
+}
+html[data-theme="dark"] .nl .nl-container { background: #1c4535; }
+.nl .nl-container form { max-width: 760px; margin-inline: auto; display: flex; flex-direction: column; align-items: center; }
+.nl .nl-container .nl-sub-title h2 { margin: 0 0 14px; color: var(--on-alpine); }
+.nl .nl-container .nl-sub-title h2 em { color: var(--sage); }
+.nl .nl-container .nl-sub-text p { margin: 0 auto 28px; max-width: 46ch; color: rgba(243,246,242,.86); }
+.nl .nl-container .nl-row { width: 100%; flex-wrap: nowrap; gap: 6px; align-items: flex-start; justify-content: center; }
+.nl .nl-container .nl-row .sib-form-block { margin: 0; padding: 0; }
+.nl .nl-container .nl-field { flex: 1 1 0; min-width: 0; }
+.nl .nl-container .nl-row > .sib-form-block { flex: 0 0 auto; }
+.nl .nl-container #EMAIL { height: 44px; background: rgba(243,246,242,.96); color: #14231c; border-color: transparent; }
+.nl .nl-container #EMAIL::placeholder { color: rgba(20,35,28,.55); }
+.nl .nl-container #EMAIL:focus { outline-color: var(--sage); }
+.nl .nl-container .sib-form-block__button { height: 44px; padding: 0 20px; font-size: 11px; letter-spacing: .14em; background: var(--on-alpine); color: var(--alpine-deep); border-color: var(--on-alpine); }
+.nl .nl-container .sib-form-block__button:hover { background: transparent; color: var(--on-alpine); }
+.nl .nl-container .entry__error { color: #ffb4ab; }
+@media (max-width: 560px) {
+  .nl .nl-container .nl-row { flex-wrap: wrap; }
+}
+
 /* ═══ Alpine green boxes: callouts and tables inside articles ═══ */
 .nl-art { --nl-box: var(--alpine-deep); }
 html[data-theme="dark"] .nl-art { --nl-box: #1c4535; }
