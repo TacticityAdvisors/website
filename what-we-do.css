@@ -159,7 +159,7 @@ body.wwd { --section-y: clamp(64px, 8vw, 104px); }
 }
 @media (max-width: 820px) {
   .wwd .ph-grid, .wwd .split { grid-template-columns: minmax(0, 1fr); }
-  .wwd .ph-visual { height: 280px; order: 2; }
+  .wwd .ph-visual { height: 280px; order: -1; }
   .wwd .split-head { position: static; }
 }
 @media (max-width: 560px) {
