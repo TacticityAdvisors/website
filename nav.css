@@ -49,9 +49,10 @@
 /* footer email shown as an icon in a box, same style as the social buttons */
 .footer-copy .footer-mail {
   display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
-  width: 40px; height: 40px; margin-left: .5rem; text-decoration: none; opacity: 1;
+  width: 46px; height: 46px; margin-left: .6rem; text-decoration: none; opacity: 1;
   color: rgba(255,255,255,.85); border: 1px solid rgba(255,255,255,.4); border-radius: 0;
   transition: background .2s, color .2s, border-color .2s;
 }
 .footer-copy .footer-mail:hover { background: #fff; border-color: #fff; color: #173a2c; }
-.footer-copy .footer-mail svg { display: block; width: 22px; height: 22px; }
+.footer-copy .footer-mail svg { display: block; width: 27px; height: 27px; }
+.footer-copy .footer-social svg { width: 22px; height: 22px; }
