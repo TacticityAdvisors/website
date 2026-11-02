@@ -142,7 +142,10 @@ html[data-theme="dark"] .nl .nl-container { background: #1c4535; }
 .nl .nl-container .sib-form-block__button:hover { background: transparent; color: var(--on-alpine); border-color: var(--on-alpine); }
 .nl .nl-container .entry__error { color: #ffb4ab; }
 @media (max-width: 560px) {
-  .nl .nl-container .nl-row { flex-wrap: wrap; }
+  .nl .nl-container .nl-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .nl .nl-container .nl-field { flex: 0 0 auto; }
+  .nl .nl-container .nl-row > .sib-form-block { width: 100%; }
+  .nl .nl-container .sib-form-block__button { width: 100%; }
 }
 
 /* ═══ Alpine green boxes: callouts and tables inside articles ═══ */
