@@ -38,11 +38,14 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="investments.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-docs page-investments">
+<body class="home wwd inv page-investments">
 
 <a href="#main" class="skip">Skip to content</a>
 
@@ -115,10 +118,16 @@
 
 <section class="page-header">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">Investments</p>
-    <h1>Capital and diligence, built on regulatory judgment most investors <em>do not have in-house.</em></h1>
-    <p class="svc-intro-text">Tacticity Capital is backed by our own family office and invests in healthcare, medtech, IVD, and SaMD companies at the angel and early stages. Every investment and diligence decision is informed directly by former U.S. FDA reviewer judgment, the same expertise that underpins Tacticity Advisors' regulatory practice. This is not capital with regulatory consulting attached. It is capital that starts from a regulatory read of the opportunity.</p>
-
+    <p class="section-label reveal" aria-hidden="true">Investments</p>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">Capital and diligence, built on regulatory judgment most investors <em>do not have in-house.</em></h1>
+        <p class="ph-lead reveal reveal-d1">Tacticity Capital is backed by our own family office and invests in healthcare, medtech, IVD, and SaMD companies at the angel and early stages. Every investment and diligence decision is informed directly by former U.S. FDA reviewer judgment, the same expertise that underpins Tacticity Advisors' regulatory practice. This is not capital with regulatory consulting attached. It is capital that starts from a regulatory read of the opportunity.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
     <div class="inv-glance" role="list" aria-label="Tacticity Capital at a glance">
       <div class="inv-glance-item" role="listitem">
         <div class="inv-glance-label">Ticket size</div>
@@ -259,16 +268,16 @@
           <p class="inv-path-desc">Capital with a regulatory read before the term sheet, and a regulatory team behind you through every FDA milestone.</p>
           <span class="btn btn-primary inv-path-btn">Read more</span>
         </a>
-        <a class="inv-path" href="investments-diligence.html">
-          <div class="inv-path-kicker">For funds and family offices evaluating deals</div>
-          <div class="inv-path-title">Regulatory and scientific diligence</div>
-          <p class="inv-path-desc">A reviewer-side assessment of a healthcare or medtech target, for a single deal or as a standing resource across your pipeline.</p>
-          <span class="btn btn-primary inv-path-btn">Read more</span>
-        </a>
         <a class="inv-path" href="investments-portfolio-support.html">
           <div class="inv-path-kicker">For funds and family offices with healthcare holdings</div>
           <div class="inv-path-title">FDA support for your portfolio companies</div>
           <p class="inv-path-desc">We help the healthcare companies you already back plan, prepare, and defend their FDA submissions. No investment from us required.</p>
+          <span class="btn btn-primary inv-path-btn">Read more</span>
+        </a>
+        <a class="inv-path" href="investments-diligence.html">
+          <div class="inv-path-kicker">For funds and family offices evaluating deals</div>
+          <div class="inv-path-title">Regulatory and scientific diligence</div>
+          <p class="inv-path-desc">A reviewer-side assessment of a healthcare or medtech target, for a single deal or as a standing resource across your pipeline.</p>
           <span class="btn btn-primary inv-path-btn">Read more</span>
         </a>
       </div>
@@ -344,5 +353,7 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>

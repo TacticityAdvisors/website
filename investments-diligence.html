@@ -38,11 +38,14 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="investments.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-docs page-investments">
+<body class="home wwd inv page-investments">
 
 <a href="#main" class="skip">Skip to content</a>
 
@@ -115,9 +118,16 @@
 
 <section class="page-header">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">For Funds and Family Offices &middot; Diligence</p>
-    <h1 class="h1--inv">Regulatory diligence for funds and family offices, <em>not just for ourselves.</em></h1>
-    <p class="svc-intro-text">VC, PE, and family office investors evaluating a healthcare or medtech target rarely have in-house reviewer-side expertise. We provide that assessment directly, either for a single deal or on a standing basis across a fund's pipeline.</p>
+    <p class="section-label reveal" aria-hidden="true">For Funds and Family Offices &middot; Diligence</p>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">Regulatory diligence for funds and family offices, <em>not just for ourselves.</em></h1>
+        <p class="ph-lead reveal reveal-d1">VC, PE, and family office investors evaluating a healthcare or medtech target rarely have in-house reviewer-side expertise. We provide that assessment directly, either for a single deal or on a standing basis across a fund's pipeline.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
     <div class="inv-glance" role="list" aria-label="Diligence at a glance">
       <div class="inv-glance-item" role="listitem">
         <div class="inv-glance-label">Regulator</div>
@@ -241,24 +251,12 @@
         <div class="inv-kicker">04 &middot; How Funds Work With Us</div>
         <div class="inv-section-title">Match the engagement to the stage of the deal.</div>
       </div>
-      <div class="inv-diff-grid inv-diff-grid--2">
-        <div class="inv-diff-card">
-          <div class="inv-diff-title">Before a term sheet</div>
-          <div class="inv-diff-body">A regulatory and scientific read on a target, to decide whether it earns full diligence.</div>
-        </div>
-        <div class="inv-diff-card">
-          <div class="inv-diff-title">Before closing</div>
-          <div class="inv-diff-body">A full assessment of pathway, evidence, compliance history, and submission readiness, to sit alongside commercial and financial diligence.</div>
-        </div>
-        <div class="inv-diff-card">
-          <div class="inv-diff-title">Across a pipeline</div>
-          <div class="inv-diff-body">A standing, empanelled resource for funds with recurring healthcare deal flow.</div>
-        </div>
-        <div class="inv-diff-card">
-          <div class="inv-diff-title">With us in the round</div>
-          <div class="inv-diff-body">Where you want a co-investor with regulatory depth, Tacticity Capital can invest alongside you, within our usual range.</div>
-        </div>
-      </div>
+      <ul class="svc-items inv-journey inv-journey--4">
+        <li><span class="svc-item-content"><span class="svc-item-title">Before a term sheet</span><p class="svc-item-desc">A regulatory and scientific read on a target, to decide whether it earns full diligence.</p></span></li>
+        <li><span class="svc-item-content"><span class="svc-item-title">Before closing</span><p class="svc-item-desc">A full assessment of pathway, evidence, compliance history, and submission readiness, to sit alongside commercial and financial diligence.</p></span></li>
+        <li><span class="svc-item-content"><span class="svc-item-title">Across a pipeline</span><p class="svc-item-desc">A standing, empanelled resource for funds with recurring healthcare deal flow.</p></span></li>
+        <li><span class="svc-item-content"><span class="svc-item-title">With us in the round</span><p class="svc-item-desc">Where you want a co-investor with regulatory depth, Tacticity Capital can invest alongside you, within our usual range.</p></span></li>
+      </ul>
     </div>
     <div class="inv-section inv-section--last">
       <div class="inv-section-head">
@@ -327,5 +325,8 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="investments.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>

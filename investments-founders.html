@@ -38,11 +38,14 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="investments.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-docs page-investments">
+<body class="home wwd inv page-investments">
 
 <a href="#main" class="skip">Skip to content</a>
 
@@ -115,9 +118,16 @@
 
 <section class="page-header">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">For Founders</p>
-    <h1 class="h1--inv">Early-stage and seed-stage funding for healthcare founders, <em>with regulatory depth behind it.</em></h1>
-    <p class="svc-intro-text">We back healthcare founders from pre-seed through Series A, and join later rounds alongside co-investors. That includes medtech and diagnostics, drugs and biologics, hospitals and care delivery, and other healthcare businesses. Where a product is regulated, our regulatory read comes before capital moves, not after.</p>
+    <p class="section-label reveal" aria-hidden="true">For Founders</p>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">Early-stage and seed-stage funding for healthcare founders, <em>with regulatory depth behind it.</em></h1>
+        <p class="ph-lead reveal reveal-d1">We back healthcare founders from pre-seed through Series A, and join later rounds alongside co-investors. That includes medtech and diagnostics, drugs and biologics, hospitals and care delivery, and other healthcare businesses. Where a product is regulated, our regulatory read comes before capital moves, not after.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
     <div class="inv-glance" role="list" aria-label="Tacticity Capital at a glance">
       <div class="inv-glance-item" role="listitem">
         <div class="inv-glance-label">Ticket size</div>
@@ -310,5 +320,8 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="investments.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>

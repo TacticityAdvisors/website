@@ -38,11 +38,14 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="what-we-do.css">
+  <link rel="stylesheet" href="investments.css">
   <link rel="stylesheet" href="nav.css">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
 </head>
-<body class="bg-docs page-investments">
+<body class="home wwd inv page-investments">
 
 <a href="#main" class="skip">Skip to content</a>
 
@@ -115,9 +118,16 @@
 
 <section class="page-header">
   <div class="section-inner">
-    <p class="section-label" aria-hidden="true">For Funds and Family Offices &middot; Portfolio Support</p>
-    <h1 class="h1--inv">We can help the healthcare companies in your portfolio <em>reach FDA clearance or approval.</em></h1>
-    <p class="svc-intro-text">For many healthcare portfolio companies, the FDA is the largest gating risk, and few founding teams have reviewer-side experience in-house. We work directly with these companies to plan, prepare, and defend their submissions. You do not need to have used us for diligence, and we do not need to be an investor.</p>
+    <p class="section-label reveal" aria-hidden="true">For Funds and Family Offices &middot; Portfolio Support</p>
+    <div class="ph-grid">
+      <div class="ph-copy">
+        <h1 class="reveal">We can help the healthcare companies in your portfolio <em>reach FDA clearance or approval.</em></h1>
+        <p class="ph-lead reveal reveal-d1">For many healthcare portfolio companies, the FDA is the largest gating risk, and few founding teams have reviewer-side experience in-house. We work directly with these companies to plan, prepare, and defend their submissions. You do not need to have used us for diligence, and we do not need to be an investor.</p>
+      </div>
+      <div class="ph-visual" aria-hidden="false">
+        <canvas class="hero-molecule" id="heroMolecule" data-minimal role="img" aria-label="Interactive 3D model of a polymer segment. Drag to rotate."></canvas>
+      </div>
+    </div>
     <div class="inv-glance" role="list" aria-label="Portfolio support at a glance">
       <div class="inv-glance-item" role="listitem">
         <div class="inv-glance-label">Regulator</div>
@@ -291,5 +301,8 @@
 </footer>
 
   <script src="script.js" defer></script>
+  <script src="investments.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="molecule.js" defer></script>
 </body>
 </html>
