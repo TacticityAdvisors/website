@@ -1,0 +1,80 @@
+/* ============================================================
+   Newsletter — page layer. Loaded after what-we-do.css; body is
+   "home wwd nl", so header, molecule, buttons, footer and dark
+   mode come from the What We Do layer. Only newsletter layout
+   lives here. Articles are always centred.
+   ============================================================ */
+
+.nl .page-header h1 { max-width: 16ch; }
+.nl .ph-lead { max-width: 44ch; }
+
+/* ── articles: centred hairline cards ── */
+.nl .nl-articles { padding: var(--section-y) 0; border-bottom: 1px solid var(--border); }
+.nl .nl-articles .section-label { text-align: center; margin-bottom: clamp(36px, 5vw, 56px); }
+.nl .newsletter-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 360px)); justify-content: center;
+  gap: clamp(20px, 2.4vw, 32px); margin: 0 auto;
+}
+.nl .newsletter-card {
+  position: relative; display: flex; flex-direction: column; text-align: center; overflow: hidden;
+  background: var(--white); border: 1px solid var(--border); border-radius: 0; box-shadow: none;
+  color: inherit; text-decoration: none; transition: background .4s var(--ease);
+}
+.nl .newsletter-card:hover { transform: none; box-shadow: none; background: var(--mist); }
+.nl .newsletter-card::before {
+  content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 0; z-index: 1;
+  background: var(--alpine); transition: width .5s var(--ease);
+}
+.nl .newsletter-card:hover::before { width: 100%; }
+.nl .newsletter-card-image { width: 100%; aspect-ratio: 16 / 10; display: block; background: var(--mist); }
+.nl .newsletter-card-body { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 32px 28px 36px; }
+.nl .newsletter-card-date {
+  margin: 0 0 14px; font-family: var(--font-sans); font-size: var(--fs-label);
+  letter-spacing: .24em; text-transform: uppercase; color: var(--alpine);
+}
+.nl .newsletter-card-title {
+  margin: 0 0 14px; font-family: var(--font-serif); font-weight: 400;
+  font-size: clamp(22px, 1.9vw, 27px); line-height: 1.2; color: var(--ink);
+}
+.nl .newsletter-card-summary { margin: 0 0 28px; flex: 1; font-size: var(--fs-small); font-weight: 300; line-height: 1.75; color: var(--ink-65); }
+.nl .newsletter-card-btn { align-self: center; justify-content: center; margin-top: auto; }
+.nl .newsletter-empty { grid-column: 1 / -1; text-align: center; color: var(--ink-65); font-size: var(--fs-body); padding: 24px 0; }
+
+/* ── subscribe band: deep alpine, centred ── */
+.nl .nl-subscribe { padding: var(--section-y) 0; background: var(--alpine-deep); color: var(--on-alpine); text-align: center; }
+.nl .nl-container { background: transparent; border: 0; max-width: 640px; margin: 0 auto; }
+.nl .nl-sub-title h2 { margin: 0 0 18px; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.1; font-weight: 300; color: var(--on-alpine); }
+.nl .nl-sub-title h2 em { color: var(--sage); }
+.nl .nl-sub-text p { margin: 0 auto clamp(28px, 4vw, 40px); max-width: 46ch; font-size: var(--fs-body); font-weight: 300; line-height: 1.8; color: rgba(243,246,242,.74); }
+.nl .nl-row { display: flex; justify-content: center; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.nl .nl-field { flex: 1 1 300px; text-align: left; }
+.nl .nl-field .form__label-row, .nl .nl-field .entry__field { width: 100%; }
+.nl #EMAIL {
+  width: 100%; height: 50px; padding: 0 18px; border-radius: 0; border: 1px solid rgba(243,246,242,.35);
+  background: rgba(243,246,242,.08); color: var(--on-alpine); font-family: var(--font-sans); font-size: var(--fs-small);
+}
+.nl #EMAIL::placeholder { color: rgba(243,246,242,.6); }
+.nl #EMAIL:focus { outline: 2px solid var(--sage); outline-offset: 2px; }
+.nl .sib-form-block__button {
+  height: 50px; padding: 0 32px; border: 1px solid var(--on-alpine); border-radius: 0; cursor: pointer;
+  background: var(--on-alpine); color: var(--alpine-deep); white-space: nowrap;
+  font-family: var(--font-sans); font-size: var(--fs-label); letter-spacing: .16em; text-transform: uppercase;
+  transition: background .2s, color .2s;
+}
+.nl .sib-form-block__button:hover { background: transparent; color: var(--on-alpine); }
+.nl .entry__error { display: block; margin-top: 8px; font-size: 13px; color: #ffd9d4; }
+.nl .nl-msg {
+  max-width: 640px; margin: 0 auto 24px; padding: 12px 16px; text-align: center;
+  background: rgba(243,246,242,.1); border: 1px solid rgba(243,246,242,.3); color: var(--on-alpine); font-size: var(--fs-small);
+}
+
+@media (max-width: 960px) {
+  .nl .newsletter-grid { grid-template-columns: repeat(2, minmax(0, 360px)); }
+}
+@media (max-width: 640px) {
+  .nl .newsletter-grid { grid-template-columns: minmax(0, 420px); }
+}
+@media (max-width: 560px) {
+  .nl .nl-row { flex-direction: column; align-items: stretch; }
+  .nl .sib-form-block__button { width: 100%; }
+}
