@@ -44,6 +44,7 @@
     imageEl.src = article.image;
     imageEl.alt = article.title;
     imageEl.style.objectFit = article.imageFit || 'cover';
+    if (article.imagePosition) imageEl.style.objectPosition = article.imagePosition;
     imageEl.style.display = 'block';
   }
 
