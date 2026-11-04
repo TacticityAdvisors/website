@@ -10,13 +10,22 @@
 
 /* ── articles: centred hairline cards ── */
 .nl .nl-articles { padding: var(--section-y) 0; border-bottom: 1px solid var(--border); }
-.nl .nl-articles .section-label { text-align: center; margin-bottom: clamp(36px, 5vw, 56px); }
+.nl .nl-articles { padding-top: clamp(40px, 5vw, 72px); }
+.nl .nl-articles .section-label {
+  display: block; margin: 0 0 clamp(36px, 4.5vw, 64px);
+  font-family: var(--font-serif); font-size: clamp(44px, 6.4vw, 96px); font-weight: 300;
+  letter-spacing: -.02em; line-height: 1; text-transform: none; text-align: left;
+  color: var(--ink);
+}
+.nl .nl-articles .section-label::before,
+.nl .nl-articles .section-label::after { content: none; display: none; }
+.nl .nl-articles .section-label em { font-style: italic; font-weight: 400; color: var(--alpine); }
 .nl .newsletter-grid {
-  display: grid; grid-template-columns: repeat(3, minmax(0, 360px)); justify-content: center;
-  gap: clamp(20px, 2.4vw, 32px); margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-content: center;
+  gap: clamp(20px, 2.4vw, 40px); margin: 0 auto;
 }
 .nl .newsletter-card {
-  position: relative; display: flex; flex-direction: column; text-align: center;
+  position: relative; display: flex; flex-direction: column; text-align: left;
   background: none; border: 0; border-top: 1px solid var(--alpine-deep); border-radius: 0; box-shadow: none;
   color: inherit; text-decoration: none;
 }
@@ -27,14 +36,14 @@
 }
 .nl .newsletter-card:hover::before { width: 100%; }
 .nl .newsletter-card:focus-visible { outline: 2px solid var(--alpine); outline-offset: 4px; }
-.nl .newsletter-card-body { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 28px 8px 40px; }
+.nl .newsletter-card-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 28px 0 40px; }
 .nl .newsletter-card-date {
   margin: 0 0 18px; font-family: var(--font-sans); font-size: var(--fs-label); font-weight: 500;
   letter-spacing: .24em; text-transform: uppercase; color: var(--alpine);
 }
 .nl .newsletter-card-title {
   margin: 0; font-family: var(--font-serif); font-weight: 600;
-  font-size: clamp(22px, 2vw, 28px); line-height: 1.2; color: var(--ink);
+  font-size: clamp(26px, 2.7vw, 40px); line-height: 1.12; letter-spacing: -.01em; color: var(--ink);
   transition: color .3s var(--ease), transform .4s var(--ease);
 }
 .nl .newsletter-card:hover .newsletter-card-title { transform: translateY(-3px); }
@@ -68,10 +77,10 @@
 }
 
 @media (max-width: 960px) {
-  .nl .newsletter-grid { grid-template-columns: repeat(2, minmax(0, 360px)); }
+  .nl .newsletter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
-  .nl .newsletter-grid { grid-template-columns: minmax(0, 420px); }
+  .nl .newsletter-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 560px) {
   .nl .nl-row { flex-direction: column; align-items: stretch; }
