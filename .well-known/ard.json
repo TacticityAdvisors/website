@@ -1,0 +1,30 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Tacticity Advisors",
+    "identifier": "tacticityadvisors.com",
+    "documentationUrl": "https://tacticityadvisors.com/llms.txt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:tacticityadvisors.com:knowledge:llms-txt",
+      "displayName": "Tacticity Advisors site guide (llms.txt)",
+      "description": "Plain-text overview of Tacticity Advisors, a U.S. FDA regulatory strategy consultancy for medical device, IVD and SaMD companies: services, key pages, articles and how to request a consultation.",
+      "type": "text/plain",
+      "url": "https://tacticityadvisors.com/llms.txt",
+      "representativeQueries": [
+        "FDA regulatory consultant for medical devices in India",
+        "ISO 10993 biocompatibility support for an FDA 510(k)",
+        "How to respond to an FDA deficiency letter or Form 483",
+        "Which FDA pathway should my device use: 510(k), De Novo or PMA"
+      ]
+    },
+    {
+      "identifier": "urn:air:tacticityadvisors.com:knowledge:sitemap",
+      "displayName": "Tacticity Advisors sitemap",
+      "description": "XML sitemap listing every public page and newsletter article.",
+      "type": "application/xml",
+      "url": "https://tacticityadvisors.com/sitemap.xml"
+    }
+  ]
+}
