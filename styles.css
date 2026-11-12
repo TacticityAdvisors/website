@@ -3,7 +3,7 @@
    Aesthetic: Scientific editorial. Restrained luxury.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Figtree:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap');
+/* Fonts are loaded non-blocking from each page's <head> (Cormorant Garamond + Jost). */
 
 /* ── TOKENS ── */
 :root {
