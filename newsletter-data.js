@@ -2,10 +2,13 @@
    Tacticity Advisors — Newsletter Data
    ============================================================
    HOW TO ADD A NEW ARTICLE:
-   Add one new object to the top of the "newsletterArticles" array
-   below. That's it — both newsletter.html (the listing) and
-   newsletter-article.html (the full article view) read from this
-   same array automatically. No other file needs to change.
+   1. Add one new object to the top of the "newsletterArticles"
+      array below.
+   2. Run:  python tools/build-articles.py
+      This writes the static SEO page newsletter/<id>.html and
+      refreshes the article links on newsletter.html.
+   3. Add the new URL to sitemap.xml and commit the generated files.
+   (newsletter.html's card grid also reads from this array.)
 
    FIELDS:
    - id:      a unique, URL-safe slug (lowercase, hyphens only)
@@ -15,6 +18,11 @@
    - date:    "YYYY-MM-DD" — used for display and sort order
    - summary: 1–3 sentence summary shown on the listing page
    - content: the full article body, written as HTML
+   OPTIONAL SEO FIELDS:
+   - seoTitle:        text for the <title> tag, ~50-60 characters, lead
+                      with the search keyword (site name is appended)
+   - metaDescription: ~150-160 characters shown in Google results
+   - modified:        "YYYY-MM-DD" when the article was last updated
    ============================================================ */
 
 const newsletterArticles = [

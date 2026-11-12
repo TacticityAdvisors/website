@@ -23,7 +23,7 @@
   };
 
   grid.innerHTML = sorted.map(article => `
-    <a href="newsletter-article.html?id=${encodeURIComponent(article.id)}" class="newsletter-card">
+    <a href="newsletter/${encodeURIComponent(article.id)}.html" class="newsletter-card">
       <div class="newsletter-card-body">
         <p class="newsletter-card-date">${formatDate(article.date)}</p>
         <h3 class="newsletter-card-title">${article.title}</h3>
