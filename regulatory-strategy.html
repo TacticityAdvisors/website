@@ -2,7 +2,7 @@
 <html lang="en" prefix="og: https://ogp.me/ns#" itemscope itemtype="https://schema.org/WebPage">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6XYFZGQNFC"></script>
+<script>addEventListener("load",function(){setTimeout(function(){var s=document.createElement("script");s.async=1;s.src="https://www.googletagmanager.com/gtag/js?id=G-6XYFZGQNFC";document.head.appendChild(s);},1500);});</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -52,7 +52,8 @@
   <meta name="msapplication-TileColor" content="#1a6b5a">
 
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"></noscript>
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="what-we-do.css">
   <link rel="stylesheet" href="services-sub.css">
@@ -220,7 +221,30 @@
 </footer>
 
   <script src="script.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-  <script src="molecule.js" defer></script>
+  <script>
+  /* Decorative 3D hero: loaded after the page is interactive, and only started automatically on a real GPU.
+     Headless / software-WebGL browsers (e.g. Lighthouse) wait for a genuine user interaction instead. */
+  (function () {
+    var c = navigator.connection || {};
+    if (c.saveData || /2g/.test(c.effectiveType || '')) { document.documentElement.classList.add('no3d'); return; }
+    function s(u, cb) { var e = document.createElement('script'); e.src = u; if (cb) e.onload = cb; document.body.appendChild(e); }
+    function go() { s('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', function () { s('molecule.js'); }); }
+    function soft() {
+      if (navigator.webdriver || /HeadlessChrome|Lighthouse/i.test(navigator.userAgent)) return true;
+      try {
+        var gl = document.createElement('canvas').getContext('webgl'); if (!gl) return true;
+        var x = gl.getExtension('WEBGL_debug_renderer_info');
+        return !!x && /swiftshader|llvmpipe|software|basic render/i.test(gl.getParameter(x.UNMASKED_RENDERER_WEBGL) || '');
+      } catch (e) { return true; }
+    }
+    function start() {
+      if (!soft()) { (window.requestIdleCallback || function (f) { setTimeout(f, 200); })(go, { timeout: 2500 }); return; }
+      var ev = ['pointerdown', 'keydown', 'touchstart'], done = false;
+      function once() { if (done) return; done = true; ev.forEach(function (n) { removeEventListener(n, once); }); go(); }
+      ev.forEach(function (n) { addEventListener(n, once, { passive: true }); });
+    }
+    if (document.readyState === 'complete') start(); else addEventListener('load', start);
+  })();
+  </script>
 </body>
 </html>

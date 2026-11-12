@@ -13,7 +13,7 @@
   try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); }
   catch (e) { fail(); return; }
   canvas.addEventListener('webglcontextlost', fail);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   renderer.outputEncoding = THREE.sRGBEncoding;
 
   var scene = new THREE.Scene();
@@ -29,11 +29,11 @@
   function mat(k) {
     if (!mats[k]) mats[k] = k === 'bond'
       ? new THREE.MeshStandardMaterial({ roughness: .5, metalness: 0 })
-      : new THREE.MeshPhysicalMaterial({ roughness: .28, metalness: 0, clearcoat: 1, clearcoatRoughness: .18 });
+      : new THREE.MeshStandardMaterial({ roughness: .3, metalness: 0 });
     return mats[k];
   }
-  var ball = new THREE.SphereGeometry(1, 48, 32);
-  var rod = new THREE.CylinderGeometry(1, 1, 1, 20);
+  var ball = new THREE.SphereGeometry(1, 24, 16);
+  var rod = new THREE.CylinderGeometry(1, 1, 1, 10);
   var UP = new THREE.Vector3(0, 1, 0);
 
   function atom(x, y, z, t) {
@@ -119,8 +119,7 @@
     camera.updateProjectionMatrix();
     if (drawn) renderer.render(scene, camera);
   }
-  window.addEventListener('resize', resize);
-  resize();
+  var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 100); });
 
   var drag = false, lx = 0, ly = 0, vy = 0, vx = 0, base = 0, clock = 0, intro = reduce ? 1 : 0;
   canvas.addEventListener('pointerdown', function (e) { drag = true; lx = e.clientX; ly = e.clientY; canvas.setPointerCapture(e.pointerId); });
@@ -152,6 +151,6 @@
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (en) { visible = en[0].isIntersecting; visible ? start() : stop(); }).observe(canvas);
   }
-  renderer.render(scene, camera); drawn = true;   /* first frame (also the still frame for reduced motion) */
-  start();
+  /* first layout read + frame happen inside rAF, so they don't force a synchronous reflow */
+  requestAnimationFrame(function () { resize(); renderer.render(scene, camera); drawn = true; start(); });
 })();
