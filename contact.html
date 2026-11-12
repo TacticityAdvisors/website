@@ -308,43 +308,43 @@
       - Send one real test submission through the live form and confirm
         it actually arrives in the inbox(es) before considering this done.
     -->
-    <form action="https://formspree.io/f/xqervepq" method="POST" class="contact-form" id="inquiryForm">
+    <form action="https://formspree.io/f/xqervepq" method="POST" class="contact-form" id="inquiryForm" toolname="request_fda_consultation" tooldescription="Send an inquiry to Tacticity Advisors to request a U.S. FDA regulatory consultation for a medical device, IVD or SaMD. Requires name, email, company and country." toolautosubmit="false">
 
       <div class="form-row">
         <div class="form-field">
           <label for="firstName">First Name <span class="required">*</span></label>
-          <input type="text" id="firstName" name="firstName" required>
+          <input type="text" id="firstName" name="firstName" autocomplete="given-name" toolparamdescription="Contact first name" required>
         </div>
         <div class="form-field">
           <label for="lastName">Last Name <span class="required">*</span></label>
-          <input type="text" id="lastName" name="lastName" required>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" toolparamdescription="Contact last name" required>
         </div>
       </div>
 
       <div class="form-field">
         <label for="email">Email Address <span class="required">*</span></label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" autocomplete="email" toolparamdescription="Contact email address" required>
       </div>
 
       <div class="form-row">
         <div class="form-field">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone">
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
         </div>
         <div class="form-field">
           <label for="jobTitle">Job Title</label>
-          <input type="text" id="jobTitle" name="jobTitle">
+          <input type="text" id="jobTitle" name="jobTitle" autocomplete="organization-title">
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-field">
           <label for="company">Company <span class="required">*</span></label>
-          <input type="text" id="company" name="company" required>
+          <input type="text" id="company" name="company" autocomplete="organization" toolparamdescription="Company name" required>
         </div>
         <div class="form-field">
           <label for="country">Country <span class="required">*</span></label>
-          <select id="country" name="country" required>
+          <select id="country" name="country" autocomplete="country-name" toolparamdescription="Company country" required>
             <option value="" selected disabled>-- Select Country --</option>
             <option value="India">India</option>
             <option value="United States">United States</option>
@@ -381,7 +381,7 @@
 
       <div class="form-field">
         <label for="details">Please provide us with more detail of your need.</label>
-        <textarea id="details" name="details" rows="5"></textarea>
+        <textarea id="details" name="details" toolparamdescription="Describe the device, regulatory question and timeline" rows="5"></textarea>
       </div>
 
       <input type="hidden" name="_subject" value="New inquiry - Tacticity Advisors website">

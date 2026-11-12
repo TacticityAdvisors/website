@@ -1,0 +1,31 @@
+# Tacticity Advisors
+
+> U.S. FDA regulatory strategy consultancy for medical device, IVD and SaMD companies, based in Pune, India. Founded by Tanmay Jain, PhD, a former U.S. FDA CDRH scientist and lead reviewer. Services cover FDA pathway strategy, 510(k)/De Novo/PMA/Q-Submissions, ISO 10993 biocompatibility, chemical characterization (E&L), testing strategy, quality system compliance, and FDA deficiency and enforcement response. Tacticity Capital, the investment arm, invests in healthcare and medtech companies.
+
+Contact: contact@tacticityadvisors.com. To request a consultation, use the inquiry form at https://tacticityadvisors.com/contact.html (required: first name, last name, email, company, country; optional: phone, job title, area of inquiry, details).
+
+## Services
+- [Regulatory Strategy](https://tacticityadvisors.com/regulatory-strategy.html): Device classification, choosing between 510(k), De Novo and PMA, and a submission-ready plan.
+- [Premarket Submissions](https://tacticityadvisors.com/premarket-submissions.html): Preparation and support for 510(k), De Novo, PMA and Q-Submissions.
+- [Biocompatibility](https://tacticityadvisors.com/biocompatibility.html): Risk-based ISO 10993 biological safety evaluation and chemical characterization for FDA submissions.
+- [Testing Strategy](https://tacticityadvisors.com/testing-strategy.html): Evidence planning and CRO protocol and report review before committing test budget.
+- [Quality and Compliance](https://tacticityadvisors.com/quality-compliance.html): Quality system and QMSR compliance support for manufacturers.
+- [Enforcement Response](https://tacticityadvisors.com/enforcement-response.html): Form 483, warning letter and FDA deficiency response and remediation.
+- [Services overview](https://tacticityadvisors.com/services.html): All FDA regulatory services from first submission to lifecycle management.
+
+## Company
+- [What we do](https://tacticityadvisors.com/what-we-do.html): Approach to science-led regulatory strategy.
+- [How we work](https://tacticityadvisors.com/how-we-work.html): Engagement model from early development to FDA response.
+- [Team](https://tacticityadvisors.com/team.html): Leadership and scientific advisors.
+- [Investments](https://tacticityadvisors.com/investments.html): Tacticity Capital, regulatory diligence for funds and support for portfolio companies.
+- [Contact](https://tacticityadvisors.com/contact.html): Schedule an FDA regulatory consultation.
+
+## Newsletter (articles)
+- [FDA to Australia market entry strategy](https://tacticityadvisors.com/newsletter/fda-to-australia-market-entry-strategy.html): How existing FDA evidence may support a TGA application in Australia.
+- [Your first market: FDA vs EU MDR](https://tacticityadvisors.com/newsletter/your-first-market-fda-vs-eu-mdr.html): Comparing FDA and EU MDR as a first regulatory market.
+- [FDA 2026 human factors guidance update](https://tacticityadvisors.com/newsletter/fda-2026-human-factors-guidance-update.html): What changed in FDA's August 2026 Human Factors and Usability Engineering guidance.
+- [FDA Small Business Determination guide](https://tacticityadvisors.com/newsletter/fda-small-business-determination-guide.html): Qualifying for reduced 510(k) user fees as a first-time applicant.
+- [All articles](https://tacticityadvisors.com/newsletter.html)
+
+## Optional
+- [Sitemap](https://tacticityadvisors.com/sitemap.xml)
