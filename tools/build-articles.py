@@ -14,6 +14,7 @@ Optional per-article fields in newsletter-data.js (fall back to title/summary):
     seoTitle:        <title> tag text (without the site suffix)
     metaDescription: meta description, ~150-160 characters
     modified:        "YYYY-MM-DD" last-updated date (defaults to date)
+    imageFit:        "full" to show the header image uncropped
 """
 import html
 import json
@@ -42,7 +43,7 @@ def parse_articles(js: str):
         content = rest[:end]
         art = {"content": content.strip()}
         for key in ("id", "title", "image", "imagePosition", "date", "summary",
-                    "seoTitle", "metaDescription", "modified"):
+                    "seoTitle", "metaDescription", "modified", "imageFit"):
             fm = re.search(r'\b%s:\s*"((?:[^"\\]|\\.)*)"' % key, head)
             if fm:
                 art[key] = json.loads('"%s"' % fm.group(1))
@@ -122,9 +123,12 @@ def build():
             size, local_src = None, image_url
         dims = f' width="{size[0]}" height="{size[1]}"' if size else ""
         pos = f' object-position:{a["imagePosition"]};' if a.get("imagePosition") else ""
+        # imageFit: "full" shows the whole image at its natural aspect ratio (no cropping)
+        fit = ("aspect-ratio:auto; height:auto;" if a.get("imageFit") == "full"
+               else f"object-fit:cover;{pos}")
         image_block = (
             f'    <img id="article-image" class="article-header-image" src="{html.escape(local_src)}" '
-            f'alt="{html.escape(a["title"])}"{dims} fetchpriority="high" style="object-fit:cover;{pos}">'
+            f'alt="{html.escape(a["title"])}"{dims} fetchpriority="high" style="{fit}">'
             if image else ""
         )
 
@@ -145,6 +149,8 @@ def build():
                 "inLanguage": "en",
                 "mainEntityOfPage": {"@type": "WebPage", "@id": url},
                 "author": {"@type": "Person", "name": "Tanmay Jain, PhD",
+                           "jobTitle": "Founder and Principal, former U.S. FDA CDRH scientist and lead reviewer",
+                           "sameAs": ["https://www.linkedin.com/in/tanmay-jain8491/"],
                            "url": ORIGIN + "team.html"},
                 "publisher": {"@type": "Organization", "name": SITE,
                               "logo": {"@type": "ImageObject", "url": ORIGIN + "assets/logo.svg"}},

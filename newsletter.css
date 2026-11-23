@@ -170,6 +170,7 @@ html[data-theme="dark"] .nl-art { --nl-box: #1c4535; }
   letter-spacing: .24em; text-transform: uppercase; color: var(--sage);
 }
 .nl-art .article-callout p { margin: 0; font-size: var(--fs-body); font-weight: 300; line-height: 1.8; color: rgba(243,246,242,.86); }
+.nl-art .article-callout p + p { margin-top: .75rem; }
 
 .nl-art .article-table-wrap { margin: 2rem 0; background: var(--nl-box); border-top: 2px solid var(--sage); }
 .nl-art .article-body table { border: 0; background: transparent; font-size: var(--fs-small); }

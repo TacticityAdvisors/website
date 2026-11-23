@@ -1489,6 +1489,7 @@ body.bg-pathway, body.bg-lattice, body.bg-docs, body.bg-evidence, body.bg-newsle
   display: block;
 }
 .article-callout p { margin: 0; font-size: .98rem; }
+.article-callout p + p { margin-top: .6rem; }
 
 .article-table-wrap { overflow-x: auto; margin: 1.6rem 0; }
 .article-body table {
