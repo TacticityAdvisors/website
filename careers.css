@@ -10,6 +10,8 @@
 .cr .cr-dialog-intro { margin: -16px 0 28px; font-size: var(--fs-small); font-weight: 300; color: var(--ink-65); }
 
 /* ── hiring process: six steps in the alpine band, 3 × 2 ── */
+/* the site styles give forms/boxes a display value that would override the hidden attribute */
+.cr [hidden] { display: none !important; }
 .cr .cr-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .cr .cr-steps {
   list-style: none; padding: 0; margin: 0;

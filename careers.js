@@ -145,9 +145,19 @@
     submitBtn.textContent = 'Submit application';
   }
 
+  // If the candidate comes back with the browser's Back button, re-enable the form
+  window.addEventListener('pageshow', function () {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit application';
+  });
+
   function openForm(job, trigger) {
     lastTrigger = trigger || null;
     resetForm();
+    var label = document.getElementById('crDialogLabel');
+    var intro = dialog.querySelector('.cr-dialog-intro');
+    if (label) label.textContent = 'Apply for';
+    if (intro) intro.hidden = false;
     titleEl.textContent = job.title;
     positionInput.value = job.title;
     subjectInput.value = 'Job application: ' + job.title;
@@ -225,38 +235,48 @@
     submitBtn.textContent = 'Submit application';
   }
 
+  /* FormSubmit only accepts file attachments through a normal form post
+     (not a background fetch), so once the form is valid we let the
+     browser submit it. FormSubmit emails the application, resume
+     attached, to the careers inbox, then sends the candidate back here
+     to careers.html?applied=1, where the confirmation is shown. */
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
     errorBox.hidden = true;
-    if (!validate()) return;
+    if (!validate()) { e.preventDefault(); return; }
 
-    if (!endpoint || /YOUR_CAREERS_FORM_ID/.test(endpoint)) {
+    if (!endpoint) {
+      e.preventDefault();
       showError('Applications are not switched on yet.');
       return;
     }
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-    // Formspree uses the "email" field as the reply-to address automatically
-    var data = new FormData(form);
+    form.action = endpoint;
+    document.getElementById('crNext').value =
+      location.origin + location.pathname + '?applied=1';
+    if (typeof gtag === 'function') gtag('event', 'job_application', { position: positionInput.value });
 
-    fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
-      .then(function (res) {
-        if (res.ok) {
-          form.hidden = true;
-          successBox.hidden = false;
-          if (typeof gtag === 'function') gtag('event', 'job_application', { position: positionInput.value });
-          return;
-        }
-        return res.json().catch(function () { return {}; }).then(function (body) {
-          var msg = body && body.errors && body.errors.length
-            ? body.errors.map(function (x) { return x.message; }).join(' ')
-            : 'Something went wrong sending your application. Please try again.';
-          showError(msg);
-        });
-      })
-      .catch(function () { showError('Something went wrong sending your application. Please check your connection and try again.'); });
+    // stop double clicks, without disabling the button before the browser submits
+    setTimeout(function () {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }, 0);
   });
+
+  // Back from FormSubmit after a successful application
+  if (new URLSearchParams(location.search).get('applied') === '1') {
+    var label = document.getElementById('crDialogLabel');
+    var intro = dialog.querySelector('.cr-dialog-intro');
+    if (label) label.textContent = 'Thank you';
+    if (intro) intro.hidden = true;
+    titleEl.textContent = 'Application sent';
+    form.hidden = true;
+    successBox.hidden = false;
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+    document.body.classList.add('cr-locked');
+    // tidy the address bar so a refresh doesn't show this again
+    if (history.replaceState) history.replaceState(null, '', location.pathname);
+  }
 
   /* ---------- deep links ----------
      careers.html#<id>          scrolls to the role and opens its description
