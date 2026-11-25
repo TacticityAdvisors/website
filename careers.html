@@ -64,8 +64,8 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="what-we-do.css">
   <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="nav.css?v=20261125d">
-  <link rel="stylesheet" href="careers.css?v=20261125d">
+  <link rel="stylesheet" href="nav.css?v=20261125e">
+  <link rel="stylesheet" href="careers.css?v=20261125e">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
   <script type="application/ld+json">
@@ -284,13 +284,17 @@
   FORM BACKEND: read before going live:
   Applications are posted to FormSubmit (https://formsubmit.co), a free
   form-to-email service, which emails each one, with the resume
-  attached, to the careers inbox. The form uses FormSubmit's private
-  alias (formsubmit.co/el/...) so the inbox address is not in the page
-  source. It is set in the action below and in CAREERS_FORM_ENDPOINT
-  in careers-data.js; keep the two the same.
+  attached, to the careers inbox. The address is set in the action
+  below and in CAREERS_FORM_ENDPOINT in careers-data.js; keep the two
+  the same.
 
-  CHECK: send a test application with a PDF from the live site and
-  confirm it arrives in the careers inbox with the resume attached.
+  Use the form address formsubmit.co/<email>, NOT a FormSubmit "Email
+  Link" (formsubmit.co/el/...): that is a separate hosted contact page
+  and rejects submissions from this form.
+
+  ACTIVATION: the first submission from the live site makes FormSubmit
+  email the inbox an "Activate Form" link. Nothing is delivered until
+  it is clicked. Then send a test application with a PDF.
 
   NOTES:
   - FormSubmit keeps submissions for only 30 days and resumes exist
@@ -309,7 +313,7 @@
     <h2 class="cr-dialog-title" id="crDialogTitle"></h2>
     <p class="cr-dialog-intro">All fields are required. This takes about two minutes.</p>
 
-    <form action="https://formsubmit.co/el/yibozu" method="POST" class="contact-form" id="careerForm" enctype="multipart/form-data" novalidate>
+    <form action="https://formsubmit.co/careers@tacticityadvisors.com" method="POST" class="contact-form" id="careerForm" enctype="multipart/form-data" novalidate>
 
       <div class="form-row">
         <div class="form-field">
@@ -408,8 +412,8 @@
 </footer>
 
   <script src="script.js" defer></script>
-  <script src="careers-data.js?v=20261125d"></script>
-  <script src="careers.js?v=20261125d" defer></script>
+  <script src="careers-data.js?v=20261125e"></script>
+  <script src="careers.js?v=20261125e" defer></script>
   <script>
   /* Decorative 3D hero: loaded after the page is interactive, and only started automatically on a real GPU.
      Headless / software-WebGL browsers (e.g. Lighthouse) wait for a genuine user interaction instead. */
