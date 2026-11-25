@@ -66,7 +66,7 @@
 
     var meta = el('ul', 'cr-meta');
     meta.setAttribute('role', 'list');
-    [job.team, job.location, job.type, job.experience && ('Experience: ' + job.experience), job.posted && ('Posted ' + formatDate(job.posted))]
+    [job.team, job.type, job.location, job.experience, job.stipend && ('Stipend ' + job.stipend), job.posted && ('Posted ' + formatDate(job.posted))]
       .filter(Boolean).forEach(function (m) { meta.appendChild(el('li', null, m)); });
     info.appendChild(meta);
     if (job.summary) info.appendChild(el('p', 'cr-summary', job.summary));
@@ -113,7 +113,7 @@
   if (openings.length) {
     var ld = openings.map(function (job) {
       var body = (job.sections || []).map(function (s) {
-        return '<p><strong>' + (s.heading || '') + '</strong></p>' +
+        return (s.heading ? '<p><strong>' + s.heading + '</strong></p>' : '') +
           (s.text ? '<p>' + s.text + '</p>' : '') +
           (s.points ? '<ul>' + s.points.map(function (p) { return '<li>' + p + '</li>'; }).join('') + '</ul>' : '');
       }).join('');
@@ -160,7 +160,7 @@
     if (intro) intro.hidden = false;
     titleEl.textContent = job.title;
     positionInput.value = job.title;
-    subjectInput.value = 'Job application: ' + job.title;
+    subjectInput.value = 'Application – ' + job.title;
     if (typeof dialog.showModal === 'function') dialog.showModal();
     else dialog.setAttribute('open', '');
     document.body.classList.add('cr-locked');

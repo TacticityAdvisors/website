@@ -64,8 +64,8 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="what-we-do.css">
   <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="nav.css?v=20261125e">
-  <link rel="stylesheet" href="careers.css?v=20261125e">
+  <link rel="stylesheet" href="nav.css?v=20261125f">
+  <link rel="stylesheet" href="careers.css?v=20261125f">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
   <script type="application/ld+json">
@@ -311,7 +311,7 @@
 
     <p class="ct-label" id="crDialogLabel">Apply for</p>
     <h2 class="cr-dialog-title" id="crDialogTitle"></h2>
-    <p class="cr-dialog-intro">All fields are required. This takes about two minutes.</p>
+    <p class="cr-dialog-intro">Fields marked * are required. This takes about two minutes.</p>
 
     <form action="https://formsubmit.co/careers@tacticityadvisors.com" method="POST" class="contact-form" id="careerForm" enctype="multipart/form-data" novalidate>
 
@@ -346,6 +346,11 @@
           <label for="crCgpa">CGPA <span class="required">*</span></label>
           <input type="text" id="crCgpa" name="cgpa" inputmode="decimal" placeholder="e.g. 8.4 / 10" required>
         </div>
+      </div>
+
+      <div class="form-field">
+        <label for="crPortfolio">Portfolio / GitHub / LinkedIn link</label>
+        <input type="text" id="crPortfolio" name="portfolio" inputmode="url" autocomplete="url" placeholder="Optional. Requested for technology roles">
       </div>
 
       <div class="form-field">
@@ -412,8 +417,8 @@
 </footer>
 
   <script src="script.js" defer></script>
-  <script src="careers-data.js?v=20261125e"></script>
-  <script src="careers.js?v=20261125e" defer></script>
+  <script src="careers-data.js?v=20261125f"></script>
+  <script src="careers.js?v=20261125f" defer></script>
   <script>
   /* Decorative 3D hero: loaded after the page is interactive, and only started automatically on a real GPU.
      Headless / software-WebGL browsers (e.g. Lighthouse) wait for a genuine user interaction instead. */
