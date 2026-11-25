@@ -64,8 +64,8 @@
   <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="what-we-do.css">
   <link rel="stylesheet" href="contact.css">
-  <link rel="stylesheet" href="nav.css?v=20261125">
-  <link rel="stylesheet" href="careers.css?v=20261125">
+  <link rel="stylesheet" href="nav.css?v=20261125b">
+  <link rel="stylesheet" href="careers.css?v=20261125b">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
   <script type="application/ld+json">
@@ -282,29 +282,18 @@
 <!-- ══ APPLICATION FORM (opens when a candidate clicks "Apply") ══ -->
 <!--
   FORM BACKEND: read before going live:
-  Applications are posted to FormSubmit (https://formsubmit.co), a free
-  form-to-email service, which emails each one, with the resume
-  attached, to careers@tacticityadvisors.com. The address is set in
-  CAREERS_FORM_ENDPOINT at the bottom of careers-data.js.
+  Applications are posted to Formspree (https://formspree.io/f/mjywjqbj),
+  which emails each one to the inbox set in that form's settings on
+  formspree.io. The endpoint is also set in CAREERS_FORM_ENDPOINT at
+  the bottom of careers-data.js; keep the two in sync.
 
-  SETUP (one time):
-  1. After this page is live, submit one test application yourself.
-     FormSubmit then emails careers@tacticityadvisors.com asking to
-     confirm the address. Click the link in that email. Applications
-     are not delivered until this is done.
-  2. Optional: the confirmation gives you a random alias string. Put
-     https://formsubmit.co/<that-string> into CAREERS_FORM_ENDPOINT so
-     the real address is not visible in the page source.
-  3. Send a second test application with a PDF and confirm it
-     arrives with the resume attached.
-
-  NOTES:
-  - FormSubmit keeps submissions for only 30 days, and resumes are
-    available only as email attachments, so the careers inbox is the
-    record. Don't delete those emails.
-  - Total upload limit per application is 10 MB (the form allows 5 MB).
-  - Candidates may see a short "I'm not a robot" check on FormSubmit's
-    page before being returned here (careers.html?applied=1).
+  CHECK IN FORMSPREE:
+  - The form's notification email is careers@tacticityadvisors.com.
+  - File uploads (the resume) are allowed on your plan. If they are
+    not, Formspree rejects the submission and the candidate sees
+    Formspree's error message in the form.
+  - Send one real test application with a PDF and confirm it arrives
+    with the resume attached.
 -->
 <dialog class="cr-dialog" id="crDialog" aria-labelledby="crDialogTitle">
   <div class="cr-dialog-inner">
@@ -316,7 +305,7 @@
     <h2 class="cr-dialog-title" id="crDialogTitle"></h2>
     <p class="cr-dialog-intro">All fields are required. This takes about two minutes.</p>
 
-    <form action="https://formsubmit.co/careers@tacticityadvisors.com" method="POST" class="contact-form" id="careerForm" enctype="multipart/form-data" novalidate>
+    <form action="https://formspree.io/f/mjywjqbj" method="POST" class="contact-form" id="careerForm" enctype="multipart/form-data" novalidate>
 
       <div class="form-row">
         <div class="form-field">
@@ -362,12 +351,9 @@
       </div>
 
       <input type="hidden" name="position" id="crPosition" value="">
-      <!-- FormSubmit settings -->
+      <!-- Formspree settings: email subject line, and a spam trap real people never see or fill -->
       <input type="hidden" name="_subject" id="crSubject" value="New job application - Tacticity Advisors website">
-      <input type="hidden" name="_next" id="crNext" value="https://tacticityadvisors.com/careers.html?applied=1">
-      <input type="hidden" name="_template" value="table">
-      <!-- spam trap: real people never see or fill this -->
-      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="cr-trap" aria-hidden="true">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="cr-trap" aria-hidden="true">
 
       <p class="form-error cr-error" id="crError" role="alert" hidden></p>
 
@@ -415,8 +401,8 @@
 </footer>
 
   <script src="script.js" defer></script>
-  <script src="careers-data.js?v=20261125"></script>
-  <script src="careers.js?v=20261125" defer></script>
+  <script src="careers-data.js?v=20261125b"></script>
+  <script src="careers.js?v=20261125b" defer></script>
   <script>
   /* Decorative 3D hero: loaded after the page is interactive, and only started automatically on a real GPU.
      Headless / software-WebGL browsers (e.g. Lighthouse) wait for a genuine user interaction instead. */

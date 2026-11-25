@@ -78,10 +78,7 @@ window.CAREERS_OPENINGS = [
   }
 ];
 
-/* Where applications are sent: FormSubmit (formsubmit.co) emails every
-   application, with the resume attached, to careers@tacticityadvisors.com.
-   After the one-time activation, FormSubmit gives you a random alias;
-   you can replace the email address below with it to hide the address
-   from spam bots, e.g. 'https://formsubmit.co/1a2b3c4d5e...'.
-   See the setup notes in careers.html. */
-window.CAREERS_FORM_ENDPOINT = 'https://formsubmit.co/careers@tacticityadvisors.com';
+/* Where applications are sent: the Careers form on Formspree
+   (formspree.io), which emails each application to the inbox set in
+   that form's Formspree settings. See the notes in careers.html. */
+window.CAREERS_FORM_ENDPOINT = 'https://formspree.io/f/mjywjqbj';
