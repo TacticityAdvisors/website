@@ -78,7 +78,8 @@ window.CAREERS_OPENINGS = [
   }
 ];
 
-/* Where applications are sent: the Careers form on Formspree
-   (formspree.io), which emails each application to the inbox set in
-   that form's Formspree settings. See the notes in careers.html. */
-window.CAREERS_FORM_ENDPOINT = 'https://formspree.io/f/mjywjqbj';
+/* Where applications are sent: FormSubmit (formsubmit.co) emails every
+   application, with the resume attached, to careers@tacticityadvisors.com.
+   To send them somewhere else, change the email address at the end.
+   See the notes in careers.html. */
+window.CAREERS_FORM_ENDPOINT = 'https://formsubmit.co/careers@tacticityadvisors.com';

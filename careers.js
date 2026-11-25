@@ -235,43 +235,43 @@
     submitBtn.textContent = 'Submit application';
   }
 
-  /* Sends the application (all fields + resume file) to Formspree in the
-     background, so the candidate stays on the page and sees the
-     confirmation inside the dialog. */
+  /* FormSubmit only accepts file attachments through a normal form post
+     (not a background fetch), so once the form is valid we let the
+     browser submit it. FormSubmit emails the application, resume
+     attached, to careers@tacticityadvisors.com, then sends the
+     candidate back here to careers.html?applied=1. */
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
     errorBox.hidden = true;
-    if (!validate()) return;
+    if (!validate()) { e.preventDefault(); return; }
 
-    var url = endpoint || form.action;
-    if (!url) { showError('Applications are not switched on yet.'); return; }
+    if (endpoint) form.action = endpoint;
+    if (/^https?:$/.test(location.protocol)) {
+      document.getElementById('crNext').value = location.origin + location.pathname + '?applied=1';
+    }
+    if (typeof gtag === 'function') gtag('event', 'job_application', { position: positionInput.value });
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
-    fetch(url, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-      .then(function (res) {
-        if (res.ok) {
-          form.hidden = true;
-          successBox.hidden = false;
-          var label = document.getElementById('crDialogLabel');
-          var intro = dialog.querySelector('.cr-dialog-intro');
-          if (label) label.textContent = 'Thank you';
-          if (intro) intro.hidden = true;
-          if (typeof gtag === 'function') gtag('event', 'job_application', { position: positionInput.value });
-          return;
-        }
-        return res.json().catch(function () { return {}; }).then(function (body) {
-          var msg = body && body.errors && body.errors.length
-            ? body.errors.map(function (x) { return x.message; }).join(' ')
-            : 'Something went wrong sending your application. Please try again.';
-          showError(msg);
-        });
-      })
-      .catch(function () {
-        showError('Something went wrong sending your application. Please check your connection and try again.');
-      });
+    // stop double clicks, without disabling the button before the browser submits
+    setTimeout(function () {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }, 0);
   });
+
+  // Back from FormSubmit after a successful application
+  if (new URLSearchParams(location.search).get('applied') === '1') {
+    var doneLabel = document.getElementById('crDialogLabel');
+    var doneIntro = dialog.querySelector('.cr-dialog-intro');
+    if (doneLabel) doneLabel.textContent = 'Thank you';
+    if (doneIntro) doneIntro.hidden = true;
+    titleEl.textContent = 'Application sent';
+    form.hidden = true;
+    successBox.hidden = false;
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+    document.body.classList.add('cr-locked');
+    // tidy the address bar so a refresh doesn't show this again
+    if (history.replaceState) history.replaceState(null, '', location.pathname);
+  }
 
   /* ---------- deep links ----------
      careers.html#<id>          scrolls to the role and opens its description
