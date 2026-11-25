@@ -79,7 +79,7 @@ window.CAREERS_OPENINGS = [
 ];
 
 /* Where applications are sent: FormSubmit (formsubmit.co) emails every
-   application, with the resume attached, to careers@tacticityadvisors.com.
-   To send them somewhere else, change the email address at the end.
-   See the notes in careers.html. */
-window.CAREERS_FORM_ENDPOINT = 'https://formsubmit.co/careers@tacticityadvisors.com';
+   application, with the resume attached, to the careers inbox. The link
+   below is FormSubmit's private alias for that inbox, so the address
+   itself is not visible in the page source. See careers.html. */
+window.CAREERS_FORM_ENDPOINT = 'https://formsubmit.co/el/yibozu';

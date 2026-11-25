@@ -238,7 +238,7 @@
   /* FormSubmit only accepts file attachments through a normal form post
      (not a background fetch), so once the form is valid we let the
      browser submit it. FormSubmit emails the application, resume
-     attached, to careers@tacticityadvisors.com, then sends the
+     attached, to the careers inbox, then sends the
      candidate back here to careers.html?applied=1. */
   form.addEventListener('submit', function (e) {
     errorBox.hidden = true;
