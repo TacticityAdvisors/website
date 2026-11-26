@@ -34,6 +34,7 @@ const newsletterArticles = [
     image: "assets/newsletter/saudi-sfda-regulatory-reliance-medical-devices.jpg",
     imageFit: "full",
     date: "2026-11-23",
+    modified: "2026-11-26",
     seoTitle: "SFDA Regulatory Reliance for Medical Devices (MDS-G-030)",
     metaDescription: "How the SFDA's September 2026 Reliance Approach (MDS-G-030) lets medical device manufacturers use existing FDA, EU, UK, Canada, TGA or PMDA approvals for a Saudi MDMA.",
     summary: "The SFDA's September 2026 Reliance Approach for Medical Devices (MDS-G-030) allows eligible manufacturers to leverage existing approvals from six reference jurisdictions when applying for a Saudi MDMA. This guide covers eligibility, exclusions, reusable evidence, the 35–60 working-day review timeline and a practical pre-submission check.",
