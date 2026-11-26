@@ -288,3 +288,46 @@
     else if (item) setTimeout(function () { item.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
   }
 })();
+
+/* ── "Email your resume": a button (not a link) that opens a small menu,
+   so no URL shows in the browser's status bar and visitors without a
+   desktop email app can still reach careers@ through webmail. ── */
+(function () {
+  var btn = document.getElementById('crMailBtn');
+  var menu = document.getElementById('crMailMenu');
+  if (!btn || !menu) return;
+  var TO = 'careers@tacticityadvisors.com';
+  var SUBJ = 'Open application';
+  var e = encodeURIComponent;
+  var urls = {
+    gmail: 'https://mail.google.com/mail/?view=cm&fs=1&to=' + e(TO) + '&su=' + e(SUBJ),
+    outlook: 'https://outlook.office.com/mail/deeplink/compose?to=' + e(TO) + '&subject=' + e(SUBJ),
+    app: 'mailto:' + TO + '?subject=' + e(SUBJ)
+  };
+  var copyBtn = menu.querySelector('[data-mail="copy"]');
+  var copyLabel = copyBtn ? copyBtn.textContent : '';
+
+  function setOpen(open) {
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) { var first = menu.querySelector('button'); if (first) first.focus(); }
+  }
+  btn.addEventListener('click', function (ev) { ev.stopPropagation(); setOpen(menu.hidden); });
+  document.addEventListener('click', function (ev) { if (!menu.hidden && !menu.contains(ev.target)) setOpen(false); });
+  document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !menu.hidden) { setOpen(false); btn.focus(); } });
+
+  menu.addEventListener('click', function (ev) {
+    var item = ev.target.closest('[data-mail]');
+    if (!item) return;
+    var kind = item.getAttribute('data-mail');
+    if (kind === 'copy') {
+      var done = function () { item.textContent = 'Copied: ' + TO; setTimeout(function () { item.textContent = copyLabel; }, 2500); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(TO).then(done, function () { window.prompt('Copy this address:', TO); });
+      else window.prompt('Copy this address:', TO);
+      return;
+    }
+    if (kind === 'app') window.location.href = urls.app;
+    else window.open(urls[kind], '_blank', 'noopener');
+    setOpen(false);
+  });
+})();

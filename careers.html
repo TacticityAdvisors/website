@@ -65,7 +65,7 @@
   <link rel="stylesheet" href="what-we-do.css">
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="nav.css?v=20261125f">
-  <link rel="stylesheet" href="careers.css?v=20261125f">
+  <link rel="stylesheet" href="careers.css?v=20261126a">
   <link rel="stylesheet" href="dark.css">
   <script src="theme.js"></script>
   <script type="application/ld+json">
@@ -274,7 +274,16 @@
         <h2 id="cr-open-app-h" class="reveal">Don&rsquo;t see the right role?</h2>
         <p class="ct-note reveal reveal-d1">We are always glad to hear from people who care about healthcare and medical technology, whether your background is in science, regulation, finance, business or operations. Email your resume with a few lines on the work you would like to do.</p>
       </div>
-      <a href="mailto:careers@tacticityadvisors.com?subject=Open%20application" class="btn btn-primary cr-open-app-btn reveal reveal-d1">Email your resume</a>
+      <div class="cr-mail reveal reveal-d1">
+        <button type="button" class="btn btn-primary cr-open-app-btn" id="crMailBtn" aria-haspopup="true" aria-expanded="false" aria-controls="crMailMenu">Email your resume</button>
+        <div class="cr-mail-menu" id="crMailMenu" role="menu" hidden>
+          <span class="cr-mail-to">To: careers@tacticityadvisors.com</span>
+          <button type="button" role="menuitem" data-mail="gmail">Open in Gmail</button>
+          <button type="button" role="menuitem" data-mail="outlook">Open in Outlook</button>
+          <button type="button" role="menuitem" data-mail="app">Use my email app</button>
+          <button type="button" role="menuitem" data-mail="copy">Copy email address</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -418,7 +427,7 @@
 
   <script src="script.js" defer></script>
   <script src="careers-data.js?v=20261125f"></script>
-  <script src="careers.js?v=20261125f" defer></script>
+  <script src="careers.js?v=20261126a" defer></script>
   <script>
   /* Decorative 3D hero: loaded after the page is interactive, and only started automatically on a real GPU.
      Headless / software-WebGL browsers (e.g. Lighthouse) wait for a genuine user interaction instead. */
