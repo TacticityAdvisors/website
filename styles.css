@@ -399,11 +399,9 @@ h2 em { font-style: italic; color: var(--teal); }
 .footer-copy a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .footer-address { display: block; font-size: .7rem; letter-spacing: .03em; color: rgba(255,255,255,.55); margin-top: .5rem; line-height: 1.6; }
 .footer-nav { display: grid; grid-template-columns: repeat(4, auto); column-gap: 1.5rem; row-gap: .6rem; justify-content: end; min-width: 0; }
-.footer-nav a:nth-child(5) { grid-column: 2; }
-.footer-nav a:nth-child(6) { grid-column: 3; }
-.footer-nav a:nth-child(7) { grid-column: 4; }
 .footer-nav a { font-size: .78rem; color: rgba(255,255,255,.68); transition: color .15s; white-space: nowrap; }
 .footer-nav a:hover { color: #ffffff; }
+@media (min-width: 901px) { .footer-nav a:nth-child(7) { justify-self: center; } } /* Careers centred under How We Work */
 
 /* ============================================================
    ANIMATIONS
@@ -434,7 +432,6 @@ h2 em { font-style: italic; color: var(--teal); }
 @media (min-width: 601px) and (max-width: 900px) {
   .footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; text-align: center; }
   .footer-nav { display: grid; grid-template-columns: repeat(4, auto); column-gap: 1.1rem; row-gap: .75rem; justify-content: center; text-align: center; }
-  .footer-nav a:nth-child(5), .footer-nav a:nth-child(6), .footer-nav a:nth-child(7) { grid-column: auto; }
 }
 
 /* ============================================================
@@ -465,7 +462,6 @@ h2 em { font-style: italic; color: var(--teal); }
   .stat-divider { display: none; }
   .footer { flex-direction: column; gap: 1rem; padding: 2rem 1.5rem; text-align: center; }
   .footer-nav { display: grid; grid-template-columns: repeat(4, auto); column-gap: 1.1rem; row-gap: .75rem; justify-content: center; text-align: center; }
-  .footer-nav a:nth-child(5), .footer-nav a:nth-child(6), .footer-nav a:nth-child(7) { grid-column: auto; }
   .pullquote { padding: 1.5rem; }
   .pullquote p { font-size: 1.05rem; }
 }
