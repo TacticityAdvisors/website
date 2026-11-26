@@ -229,7 +229,7 @@
 
   /* ---------- submit ---------- */
   function showError(msg) {
-    errorBox.textContent = msg + ' If it keeps happening, email your resume to contact@tacticityadvisors.com.';
+    errorBox.textContent = msg + ' If it keeps happening, email your resume to careers@tacticityadvisors.com.';
     errorBox.hidden = false;
     submitBtn.disabled = false;
     submitBtn.textContent = 'Submit application';
